@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% block title %}Pat&Soaze{% endblock %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Bienvenue chez Pat & Soaze</h1>
+        <p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
+            Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
+        <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p>
+    </div>
+    <div class="container mt-4">
+        <h2>Les dernières aquarelles</h2>
+        <div class="row flex">
+            {% for aquarelle in aquarelles %}
+                <div class="col-3">
+                    <div class="card">
+                        <img src="#" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: bold; font-size: 2rem;">
+                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a>
+                            </h5>
+                            <p class="card-text">{{ aquarelle.nom}}</p>
+                            <div class="text">{{ aquarelle.description}}</div>
+                            <div class="text-primary">{{ aquarelle.prix | number_format(0,'',' ') }} euros</div>
+                            {#                            <div class="">{{ aquarelle.createdAt }}</div>#}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{#    <div class="container mt-4">#}
+{#        <h2>Les dernières photos</h2>#}
+{#        <div class="row flex">#}
+{#            {% for aquarelle in aquarelles %}#}
+{#                <div class="col-3">#}
+{#                    <div class="card">#}
+{#                        <img src="#" class="card-img-top" alt="...">#}
+{#                        <div class="card-body">#}
+{#                            <h5 class="card-title" style="font-weight: bold; font-size: 2rem;">#}
+{#                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a>#}
+{#                            </h5>#}
+{#                            <p class="card-text">{{ aquarelle.nom}}</p>#}
+{#                            <div class="text">{{ aquarelle.description}}</div>#}
+{#                            <div class="text-primary">{{ aquarelle.prix | number_format(0,'',' ') }} euros</div>#}
+{#                            #}{#                            <div class="">{{ aquarelle.createdAt }}</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{%  endblock %}
