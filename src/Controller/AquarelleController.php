@@ -20,30 +20,20 @@ class AquarelleController extends AbstractController
      */
     private $em;
 
-    public function __construct(AquarelleRepository $repository,EntityManagerInterface $em)
+    public function __construct(AquarelleRepository $repository, EntityManagerInterface $em)
     {
-
         $this->repository = $repository;
         $this->em = $em;
     }
 
     /**
      * @Route("/aquarelles", name="aquarelle.index")
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index():Response
+    public function index()
     {
-//        $aquarelle = new Aquarelle();
-//        $aquarelle->setNom('Coucher de soleil')
-//            ->setDescription('coucher de soleil sur la pointe du Raz')
-//            ->setPrix(150);
-//        $em = $this->getDoctrine()->getManager();
-//        $em->persist($aquarelle);
-//        $em->flush();
-        $aquarelle = $this->repository->findAll();
-        $this->em->flush();
-        return  $this->render('aquarelles/index.html.twig', [ 'current_menu' => 'aquarelles']);
-
+        $aquarelles = $this->repository->findAll();
+        return $this->render('aquarelles/index.html.twig', compact('aquarelles'));
     }
 
     /**
@@ -52,18 +42,42 @@ class AquarelleController extends AbstractController
      * @param string $slug
      * @return Response
      */
-    public function show(Aquarelle $aquarelle, string $slug):Response
+    public function show(Aquarelle $aquarelle, string $slug): Response
     {
         if ($aquarelle->getSlug() !== $slug) {
             return $this->redirectToRoute('aquarelle.show', [
                 'id' => $aquarelle->getId(),
-                'slug' => $aquarelle->getSlug()
+                'slug' => $aquarelle->getSlug(),
             ], 301);
         }
-
-        return  $this->render('aquarelles/show.html.twig', [
-            'aquarelle' => $aquarelle,
+        return $this->render('aquarelles/show.html.twig', [
+            'aquarelle' => $aquarelle->$this->aquarelleVendue(),
             'current_menu' => 'aquarelles']);
     }
-}
 
+    /**
+     * @Route("/aquarelles/{slug}-{id}", name="aquarelle.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Aquarelle $aquarelle
+     * @param string $slug
+     * @return Response
+     */
+    public function aquarelleVendue(aquarelle $aquarelle, string $slug): Response
+    {
+        $aquarelleVendue = $aquarelle->getVendue();
+        if ($aquarelleVendue == 1) {
+            echo 'vendue';
+        } else if ($aquarelleVendue == 0) {
+            echo 'a vendre';
+        }
+
+        return $this->render('aquarelles/show.html.twig', [
+            'aquarelle' => $aquarelle,
+            'aquarelleVendue' => $aquarelleVendue,
+
+        ]);
+//        return new Response($aquarelleVendue);
+
+
+    }
+
+}

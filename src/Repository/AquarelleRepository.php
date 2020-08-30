@@ -30,6 +30,18 @@ class AquarelleRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    /**
+     * @return int|mixed|string
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function countAllAquarelles()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id)as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
     // /**
     //  * @return Aquarelle[] Returns an array of Aquarelle objects
     //  */

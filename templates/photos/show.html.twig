@@ -2,9 +2,16 @@
 {% block title %}Photos{% endblock %}
 {% block body %}
 
-    <div class="container text-center mt-5">
-        <h1>{{ photo.nom }}</h1>
-        <p>{{ photo.description}}</p>
+    <div class="container text-center">
+        <div class="row-12 mb-5">
+            <h1>{{ photo.nom }}</h1>
+        </div>
+        <div class="row-12">
+            <div class=col-12">
+                <img class="img-fluid photo w-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}">
+                <p></p>
+            </div>
+        </div>
     </div>
 
 

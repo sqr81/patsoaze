@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="" />
+    <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/aquarelles/coucherDeSoleil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/aquarelles/ocean.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/aquarelles/coucherDeSoleil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/patsoaze.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/patsoaze.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AquarelleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AquarelleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PhotoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Aquarelle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Aquarelle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AquarelleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AquarelleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photos/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photos/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,12 +51,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="patsoaze" />
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,6 +59,9 @@
         <option value="twig" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -138,22 +178,41 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1eBF04pF8ZfaLfbPFnRd7PHSUyh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../patsoazeA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\patsoaze" />
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images\admins" />
+      <recent name="D:\wamp64\www\patsoaze\assets\images\aquarelles" />
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images\aquarelles" />
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images" />
+      <recent name="D:\wamp64\www\patsoaze\templates\bundles\EasyAdminBundle" />
+      <recent name="D:\wamp64\www\patsoaze\assets\images\aquarelles" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -166,33 +225,67 @@
       <option name="presentableId" value="Default" />
       <updated>1593786854915</updated>
       <workItem from="1593786863115" duration="7774000" />
-      <workItem from="1593858244488" duration="1062000" />
+      <workItem from="1593858244488" duration="2299000" />
+      <workItem from="1593942791787" duration="82923000" />
+      <workItem from="1595269097548" duration="649000" />
+      <workItem from="1595273213754" duration="18434000" />
+      <workItem from="1596358873465" duration="15021000" />
+      <workItem from="1596879535295" duration="73316000" />
+      <workItem from="1597413146667" duration="36458000" />
+      <workItem from="1597831233407" duration="64000" />
+      <workItem from="1597831391566" duration="56281000" />
+      <workItem from="1598171785150" duration="3786000" />
+      <workItem from="1598194793866" duration="119184000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593797748235">
+    <state x="360" y="93" key="#HTTP_Proxy" timestamp="1597573004859">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593797748235" />
+    <state x="360" y="93" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1597573004859" />
+    <state x="360" y="52" key="#Plugins" timestamp="1597831778040">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="52" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1597831778040" />
+    <state x="448" y="147" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597831290157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="448" y="147" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1597831290157" />
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598364633453">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598364633453" />
+    <state x="437" y="190" key="EditFileWatcherDialog" timestamp="1598550960380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="437" y="190" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1598550960380" />
     <state x="548" y="166" key="FileChooserDialogImpl" timestamp="1593787384378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593787384378" />
-    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1593792305874">
+    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1598290423704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1593792305874" />
-    <state x="603" y="335" key="NewPhpFileDialog" timestamp="1593791167114">
+    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1598290423704" />
+    <state x="603" y="335" key="NewPhpFileDialog" timestamp="1593966712658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="603" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1593791167114" />
-    <state x="276" y="54" key="SettingsEditor" timestamp="1593786899905">
+    <state x="603" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1593966712658" />
+    <state x="276" y="54" key="SettingsEditor" timestamp="1598550985788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="276" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593786899905" />
+    <state x="276" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598550985788" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598357108017">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598357108017" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598533267812">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598533267812" />
   </component>
 </project>

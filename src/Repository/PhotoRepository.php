@@ -47,4 +47,23 @@ class PhotoRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @return Photo[]
+     */
+    public function findLatest(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function countAllPhotos()
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder->select('COUNT(p.id) as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
 }

@@ -1,0 +1,104 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Tableau de bord' %}
+
+{% block page_content %}
+
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col-6 alert-info">
+                <span class="display-4">10</span> visites
+            </div>
+            <div class="col-6 alert-success">
+                <span class="display-4">6+</span>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col-6 alert-info">
+                {% for admin in countAllAdmins %}
+                <span class="display-4">{{ countAllAdmins['value'] }}</span> utilisateurs
+                {% endfor %}
+            </div>
+            <div class="col-6 alert-success">
+                <span class="display-4">6+</span>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col-6 alert-info">
+                {% for aquarelle in countAllAquarelles %}
+                <span class="display-4">{{ countAllAquarelles['value'] }}</span> aquarelles
+                {% endfor %}
+            </div>
+            <div class="col-6 alert-success">
+                <span class="display-4">5+</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 alert-info">
+                {% for photo in countAllPhotos %}
+                <span class="display-4">{{ countAllPhotos['value'] }}</span> photos
+                {% endfor %}
+            </div>
+            <div class="col-6 alert-success">
+                <span class="display-4">15+</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Liste des admins</h3>
+                <ul class="list-group mt-5">
+                    {% for admin in admins %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                            <span class="h2 font-weight-normal">
+                                <i class="fa fa-user-secret"></i>
+                            {{ admin.username }}
+                            </span>
+                            <span class="badge badge-primary badge-pill"></span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        <div class="col-12 mt-5">
+            <h3>Liste des photos</h3>
+                <ul class="list-group mt-5">
+                    {% for photo in photos %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="h2 font-weight-normal">
+                                <i class="fa fa-camera-retro"></i>
+                            {{ photo.nom }}
+                            </span>
+                            <span class="badge badge-primary badge-pill">
+                                <img class="img-thumbnail" src="{{ vich_uploader_asset(photo, 'imageFile') }}" style="width: 150px;height: 103px">
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+        </div>
+            <div class="col-12 mt-5">
+            <h3>Liste des aquarelles</h3>
+                <ul class="list-group mt-5">
+                    {% for aquarelle in aquarelles %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="h2 font-weight-normal">
+                                <i class="fa fa-paint-brush"></i>
+                            {{ aquarelle.nom }}
+                            </span>
+                            <span class="badge badge-primary badge-pill">
+                                <img class="img-thumbnail" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" style="width: 150px;height: 103px">
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -6,3 +6,9 @@
 logout:
   path: /logout
 
+
+#easyAdmin_bundle:
+#  # loads routes from the YAML or XML files found in some bundle directory
+#  resource: '@AppBundle/Resources/config/routing/public/'
+#  type:     directory
+

@@ -2,3 +2,7 @@ easy_admin_bundle:
     resource: '@EasyAdminBundle/Controller/EasyAdminController.php'
     prefix: /admin
     type: annotation
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index

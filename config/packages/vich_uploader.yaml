@@ -1,0 +1,25 @@
+vich_uploader:
+    db_driver: orm
+
+    #mappings:
+    #    products:
+    #        uri_prefix: /images/products
+    #        upload_destination: '%kernel.project_dir%/public/images/products'
+#     ou bien selon doc symfony
+    #    mappings:
+    #        product_images:
+    #            uri_prefix:         '%app.path.product_images%'
+    #            upload_destination: '%kernel.project_dir%/public%app.path.product_images%'
+    mappings:
+        aquarelle_images:
+            uri_prefix: /uploads/images/aquarelles
+            upload_destination: '%kernel.project_dir%/public/uploads/images/aquarelles'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        photo_images:
+            uri_prefix: '%app.path.photo_images%'
+            upload_destination: '%kernel.project_dir%/public%app.path.photo_images%'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        admin_images:
+            uri_prefix: '%app.path.admin_images%'
+            upload_destination: '%kernel.project_dir%/public%app.path.admin_images%'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

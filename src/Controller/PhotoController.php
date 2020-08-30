@@ -40,11 +40,11 @@ class PhotoController extends AbstractController
 //        $em = $this->getDoctrine()->getManager();
 //        $em->persist($aquarelle);
 //        $em->flush();
-        $photo = $this->repository->findAll();
-        dump($photo);
-
+        $photos = $this->repository->findAll();
         $this->em->flush();
-        return  $this->render('photos/index.html.twig', [ 'current_menu' => 'photos']);
+        return  $this->render('photos/index.html.twig',[
+            'photos' => $photos,]
+        );
 
     }
 
