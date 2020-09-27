@@ -7,6 +7,7 @@ easy_admin:
             - { entity: 'Aquarelle', label: 'Aquarelles', icon: 'map-marker' }
             - { entity: 'Photo', label: 'Photos', icon: 'comments' }
             - { entity: 'Admin', label: 'Utilisateurs', icon: 'comments' }
+            - { entity: 'AlbumPhoto', label: 'Album photo', icon: 'comments' }
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'
             - '@VichUploader/Form/fields.html.twig'
@@ -37,6 +38,19 @@ easy_admin:
             show:
                 fields:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.admin_images%' }
+
+        - App\Entity\AlbumPhoto
+            list:
+                fields:
+                    - { property: 'image', type: 'vich_image', base_path: '%app.path.photo_images%' }
+            show:
+                fields:
+                    - { property: 'image', type: 'vich_image', base_path: '%app.path.photo_images%' }
+            form:
+                fields:
+                    - { property: 'photo', type: 'collection', type_options: {entry_type: 'App\Form\PhotoType', by_reference: false} }
+#
+
 #        Comment:
 #            class: App\Entity\Comment
 #            list:

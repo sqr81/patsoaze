@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Controller\Admin\AquarelleCrudController;
 use App\Controller\Admin\PhotoCrudController;
 use App\Entity\Admin;
+use App\Entity\AlbumPhoto;
 use App\Entity\Aquarelle;
 use App\Entity\Photo;
 use App\Repository\AdminRepository;
+use App\Repository\AlbumPhotoRepository;
 use App\Repository\AquarelleRepository;
 use App\Repository\PhotoRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
@@ -26,16 +28,19 @@ class DashboardController extends AbstractDashboardController
     protected $adminRepository;
     protected $aquarelleRepository;
     protected $photoRepository;
+    protected $albumPhotoRepository;
 
     public function __construct(
         AdminRepository $adminRepository,
         AquarelleRepository $aquarelleRepository,
-        PhotoRepository $photoRepository
+        PhotoRepository $photoRepository,
+        AlbumPhotoRepository $albumPhotoRepository
     )
     {
         $this->adminRepository = $adminRepository;
         $this->aquarelleRepository = $aquarelleRepository;
         $this->photoRepository = $photoRepository;
+        $this->albumPhotoRepository = $albumPhotoRepository;
 
     }
 
@@ -59,8 +64,10 @@ class DashboardController extends AbstractDashboardController
         return $this->render('bundles/EasyAdminBundle/welcome.html.twig',[
                 'countAllAdmins'=> $this->adminRepository->countAllAdmins(),
                 'countAllAquarelles'=> $this->aquarelleRepository->countAllAquarelles(),
+                'countAllAlbumPhotos'=> $this->albumPhotoRepository->countAllAlbumPhotos(),
                 'countAllPhotos'=> $this->photoRepository->countAllPhotos(),
                 'aquarelles'=> $this->aquarelleRepository->findLatest(),
+                'albumPhotos'=> $this->albumPhotoRepository->findLatest(),
                 'photos'=> $this->photoRepository->findLatest(),
                 'admins'=> $this->adminRepository->findAll(),
             ]
@@ -113,12 +120,17 @@ class DashboardController extends AbstractDashboardController
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Aquarelle'),
+            MenuItem::section('Aquarelles'),
             MenuItem::linkToCrud('Aquarelles', 'fa fa-paint-brush', Aquarelle::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Photo'),
+            MenuItem::section('Albums photos'),
+            MenuItem::linkToCrud('Albums photos', 'fas fa-image', AlbumPhoto::class)
+                ->setQueryParameter('sortField', 'createdAt')
+                ->setQueryParameter('sortDirection', 'DESC'),
+
+            MenuItem::section('Photos'),
             MenuItem::linkToCrud('Photos', 'fa fa-camera', Photo::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),

@@ -53,6 +53,11 @@ class Photo
      */
     private $admin;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=AlbumPhoto::class, inversedBy="photo")
+     */
+    private $albumPhoto;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +158,18 @@ class Photo
     public function setAdmin(?Admin $admin): self
     {
         $this->admin = $admin;
+
+        return $this;
+    }
+
+    public function getAlbumPhoto(): ?AlbumPhoto
+    {
+        return $this->albumPhoto;
+    }
+
+    public function setAlbumPhoto(?AlbumPhoto $albumPhoto): self
+    {
+        $this->albumPhoto = $albumPhoto;
 
         return $this;
     }
