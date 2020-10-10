@@ -25,5 +25,8 @@
   "directories": {
     "test": "tests"
   },
-  "author": ""
+  "author": "",
+  "dependencies": {
+    "peer": "^0.5.3"
+  }
 }
