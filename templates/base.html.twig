@@ -5,16 +5,14 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     {% block stylesheets %}{% endblock %}
 
 {#        <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">#}
-{#    <link rel="stylesheet" href="{{ asset('build/app.css') }}">#}
-
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-    <a class="navbar-brand" href="{{ path('home') }}">Pat & Soaze</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 fixed-top">
+    <a class="navbar-brand" href="{{ path('home') }}">Pat&Soaze</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,16 +53,14 @@
         </form>
     </div>
 </nav>
+
 {% block body %}{% endblock %}
-
-
 {% block javascripts %}{% endblock %}
-<script src="{{ asset('build/app.js') }}"></script>
 
+<script src="{{ asset('build/app.js') }}"></script>
 {#<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"></script>#}
 {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></script>#}
 {#<script src="https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css"></script>#}
-
 {#<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>#}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 

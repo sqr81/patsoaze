@@ -9,7 +9,7 @@
     <div class="card-deck m-5">
     {% for photo in photos %}
         <div class="card">
-            <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><img class="card-img-top" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="Card image cap"></a>
+            <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="Card image cap"></a>
             <div class="card-body">
                 <p class="card-title"><a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}">{{ photo.nom}}</a></p>
             </div>

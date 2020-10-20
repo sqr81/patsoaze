@@ -5,11 +5,12 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Bienvenue chez Pat & Soaze</div>
+                <div class="intro-lead-in">Bienvenue chez <span>Pat&Soaze</span></div>
                 <div class="intro-heading"><p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
                         Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
                     <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p></div>
                 <a href="#services" class="page-scroll btn btn-xl">A préciser</a>
+
             </div>
         </div>
     </header>
@@ -127,34 +128,28 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="team-member">
-                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="Patrick" style= "width: 250px; height: 200px;">
-                        <h4>Patrick</h4>
-                        <p class="text-muted">Le photographe</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="list-inline-item fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="list-inline-item fa fa-linkedin"></i></a>
+                        <h4>Françoise</h4>
+                        <p class="text-muted">L'artiste peintre</p>
+                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Françoise" style= "width: 250px; height: 200px;">
+
+                        <ul class="list-inline social-buttons d-flex justify-content-center">
+                            <li><a href="#"><i class="list-inline-item"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="team-member">
-                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Françoise" style= "width: 250px; height: 200px;">
-                        <h4>Françoise</h4>
-                        <p class="text-muted">L'artiste peintre</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="list-inline-item fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <h4>Patrick</h4>
+                        <p class="text-muted">Le photographe</p>
+                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="Patrick" style= "width: 250px; height: 200px;">
+                        <ul class="list-inline social-buttons d-flex justify-content-center">
+                            <li><a href="#"><i class="list-inline-item"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col-lg-12 col-lg-offset-2 text-center">
@@ -168,7 +163,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Nous contacter</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Un renseignement, une question ...</h3>
                 </div>
             </div>
             <div class="row">
@@ -209,22 +204,22 @@
 
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row d-flex justify-content-between">
                 <div class="col-md-4">
                     <span class="copyright">Copyright © Pat&Soaze 2020</span>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <ul class="social-buttons list-inline d-flex">
+                        <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
+                    <ul class="quicklinks list-inline d-flex justify-content-around">
                         <li><a href="#">Privacy Policy</a>
                         </li>
                         <li><a href="#">Terms of Use</a>
@@ -235,5 +230,25 @@
         </div>
 
     </footer>
+<script>
+    $(function() {
+        $('a.page-scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
 
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top'
+    })
+
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+</script>
 {%  endblock %}

@@ -9,7 +9,7 @@
     <div class="card-deck m-5">
         {% for aquarelle in aquarelles %}
             <div class="card">
-                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
+                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
                 <div class="card-body">
                     <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>
                     <p>{{ aquarelle.vendue }}</p>
