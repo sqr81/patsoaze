@@ -67,20 +67,6 @@
         <div class="row flex">
             {% for aquarelle in aquarelles %}
                 <div class="card-group col-3">
-{#                    <div class="card">#}
-{#                        <img src="{{ asset("/build/img/aquarelles/coucherDeSoleil.jpg") }}" class="card-img-top" alt="...">#}
-{#                        <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" class="card-img-top" alt="...">#}
-{#                        <div class="card-body">#}
-{#                            <h5 class="card-title" style="font-weight: bold; font-size: 2rem;">#}
-{#                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a>#}
-{#                            </h5>#}
-
-{#                            <p class="card-text">{{ aquarelle.nom}}</p>#}
-{#                            <div class="text">{{ aquarelle.description}}</div>#}
-{#                            <div class="text-primary">{{ aquarelle.prix | number_format(0,'',' ') }} euros</div>#}
-{#                                                        <div class="">{{ aquarelle.createdAt }}</div>#}
-{#                        </div>#}
-{#                    </div>#}
                     <div class="card">
                         <img class="card-img-top " src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap">
                         <div class="card-body">

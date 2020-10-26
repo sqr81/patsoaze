@@ -67,7 +67,7 @@ class AquarelleController extends AbstractController
         if ($aquarelleVendue == 1) {
             echo 'vendue';
         } else if ($aquarelleVendue == 0) {
-            echo 'a vendre';
+            echo 'à vendre';
         }
 
         return $this->render('aquarelles/show.html.twig', [
@@ -75,6 +75,7 @@ class AquarelleController extends AbstractController
             'aquarelleVendue' => $aquarelleVendue,
 
         ]);
+
 //        return new Response($aquarelleVendue);
 
 

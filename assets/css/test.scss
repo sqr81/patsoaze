@@ -1,3 +1,144 @@
 body {
   background: darkcyan;
 }
+
+/*-----------carousel---------------*/
+@mixin transition($transition) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+#carrousel{
+  margin: 10px;
+  @media (max-width: 768px){
+    margin: 70px 0px 0px 0px;
+  }
+  @media (max-width: 425px){
+    margin: 50px 0px 0px 0px;
+  }
+  .title{
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .owl-carousel {
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 300px;
+      object-fit: cover;
+      @include transition(all 0.2s ease);
+      -webkit-box-shadow: 12px 12px 10px -10px rgba(0,0,0,.25);
+      -moz-box-shadow: 12px 12px 10px -10px rgba(0,0,0,.25);
+      box-shadow: 12px 12px 10px -10px rgba(0,0,0,.25);
+    }
+    .owl-item{
+      height: 300px;
+      position: relative;
+      transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transition: all .2s;
+      -webkit-transform: all .2s;
+      z-index: 1;
+      @media (max-width: 768px){
+        height: 270px;
+      }
+      @media (max-width: 380px){
+        height: 200px;
+      }
+    }
+    .owl-stage-outer {
+      padding-bottom: 10px;
+    }
+  }
+
+  .owl-item {
+    &.big{
+      transform: scale(1);
+      -ms-transform: scale(1);
+      z-index: 3;
+    }
+  }
+
+  .owl-item{
+    &.medium{
+      transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      z-index: 2;
+
+      &.mdright{
+        /*border: solid 1px red;*/
+        position: relative;
+        left: -30px;
+        @media (min-width: 768px){
+          left: 0px;
+        }
+      }
+      &.mdleft{
+        /*border: solid 1px blue;*/
+        position: relative;
+        right: -30px;
+        @media (min-width: 768px){
+          right: 0px;
+        }
+      }
+    }
+  }
+
+  .owl-item{
+    &.smallRight{
+      &.active{
+        transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        position: relative;
+        left: -30px;
+      }
+    }
+  }
+  .owl-item {
+    &.smallLeft {
+      &.active {
+        transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        position: relative;
+        right: -30px;
+      }
+    }
+  }
+
+  .owl-nav{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    .owl-prev{
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      background: transparent !important;
+      color: #000 !important;
+      font-size: 40px !important;
+      &:hover{
+        color: #adadad !important;
+      }
+    }
+    .owl-next{
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      background: transparent !important;
+      color: #000 !important;
+      font-size: 40px !important;
+      &:hover{
+        color: #adadad  !important;
+      }
+    }
+  }
+}
