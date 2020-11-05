@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sqr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/patsoaze.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/patsoaze.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/test.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/test.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
     </list>
@@ -223,7 +227,10 @@
       <workItem from="1602958786948" duration="32973000" />
       <workItem from="1603373837124" duration="24528000" />
       <workItem from="1603739452300" duration="17082000" />
-      <workItem from="1603986311901" duration="5437000" />
+      <workItem from="1603986311901" duration="11422000" />
+      <workItem from="1604072276464" duration="21753000" />
+      <workItem from="1604241811575" duration="24643000" />
+      <workItem from="1604517327952" duration="5334000" />
     </task>
     <servers />
   </component>
@@ -295,9 +302,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="242" y="433" key="save.file.as.template.dialog/0.0.1536.824@0.0.1536.824" timestamp="1601738969039" />
-    <state x="660" y="139" width="672" height="678" key="search.everywhere.popup" timestamp="1603204453006">
+    <state x="660" y="138" width="672" height="678" key="search.everywhere.popup" timestamp="1604166931892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="660" y="139" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603204453006" />
+    <state x="660" y="138" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604166931892" />
   </component>
 </project>
