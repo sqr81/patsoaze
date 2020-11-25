@@ -2,256 +2,363 @@
 {% block title %}Pat&Soaze{% endblock %}
 {% block body %}
 
+
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Bienvenue chez <span>Pat&Soaze</span></div>
-                <div class="intro-heading"><p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
-                        Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
-                    <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p></div>
-                <a href="#services" class="page-scroll btn btn-xl">A préciser</a>
+        <div id="title" class="slide header">
+            <div class="image_de_fond"></div>
 
-            </div>
-        </div>
+
+{#        <div id="title" class="slide header">#}
+{#            <div class="container">#}
+{#                <div class="intro-text">#}
+{#                    <div class="intro-lead-in">Bienvenue chez <span>Pat & Soaze</span></div>#}
+{#                    <div class="intro-heading"><p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>#}
+{#                            Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>#}
+{#                        <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p></div>#}
+{#                    <a href="#contact" class="page-scroll btn btn-xl">Contact</a>#}
+{#                </div>#}
+                <!--Carousel Wrapper-->
+                <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                                     alt="First slide">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Bienvenue chez <span>Pat & Soaze</span></h3>
+                                <p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
+                                    Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
+                                <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                                     alt="Second slide">
+                                <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Bienvenue chez <span>Pat & Soaze</span></h3>
+                                <p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
+                                    Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
+                                <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                                     alt="Third slide">
+                                <div class="mask rgba-black-slight"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Bienvenue chez <span>Pat & Soaze</span></h3>
+                                <p>Vous voici donc de nouveau chez nous... Entrez donc.<br/>
+                                    Au fil de ces pages vous trouverez une présentation d'une part de nos créations, aquarelles et photos, présentées en album.</p>
+                                <p>Nous vous laissons errer, papillonner d'aquarelle en image au gré de votre envie et vous souhaitons d'y prendre plaisir.</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <!--/.Slides-->
+                    <!--Controls-->
+
+                                                        <!--/.Controls-->
+                </div>
+        <!--/.Carousel Wrapper-->
+{#                                                </div>#}
+                                            </div>
     </header>
+                                    {#<section>#}
+{#    <div id="slide1" class="slide">#}
+{#        <div class="container mt-4 text-center">#}
+{#            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">#}
+{#                <!--Slides-->#}
+{#                <div class="title">#}
+{#                <div class="carousel-inner" role="listbox" >#}
+{#                    <div class="carousel-item active">#}
+{#                        {% for aquarelle in aquarelles %}#}
+{#                            {% if loop.last %}#}
+{#                                #}{#                        <img class="d-block w-100" src="/assets/images/aquarelles/coucherDeSoleil.jpg" alt="" style="height:1000px">#}
+{#                                <img class="d-block w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="">#}
+{#                            {%  endif %}#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                    <div class="carousel-item">#}
+{#                        {% for aquarelle in aquarelles %}#}
+{#                            {% if loop.first %}#}
+{#                                #}{#                        <img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
+{#                                <img class="d-block w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="">#}
+{#                            {%  endif %}#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                    <div class="carousel-item">#}
+{#                        {% for photo in photos %}#}
+{#                            {% if loop.last %}#}
+{#                                #}{#<img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
+{#                                <img class="d-block w-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="">#}
+{#                            {% endif %}#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                </div>#}
+{#                </div>#}
+{#                <!--/.Slides-->#}
+{#                <!--Controls-->#}
 
+{#                <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">#}
+{#                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#                    <span class="sr-only">Previous</span>#}
+{#                </a>#}
+{#                <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">#}
+{#                    <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#                    <span class="sr-only">Next</span>#}
+{#                </a>#}
+{#                <!--/.Controls-->#}
 
-    <div class="container mt-4 text-center">
-        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox" style="width: 1100px;height: 739px">
-                <div class="carousel-item active">
-                    {% for aquarelle in aquarelles %}
-                        {% if loop.last %}
-                            {#                        <img class="d-block w-100" src="/assets/images/aquarelles/coucherDeSoleil.jpg" alt="" style="height:1000px">#}
-                            <img class="d-block w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="">
-                        {%  endif %}
-                    {% endfor %}
-                </div>
-                <div class="carousel-item">
-                    {% for aquarelle in aquarelles %}
-                        {% if loop.first %}
-                            {#                        <img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
-                            <img class="d-block w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="">
-                        {%  endif %}
-                    {% endfor %}
-                </div>
-                <div class="carousel-item">
-                    {% for photo in photos %}
-                        {% if loop.last %}
-                            {#<img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
-                            <img class="d-block w-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="">
-                        {% endif %}
-                    {% endfor %}
-                </div>
+{#                <ol class="carousel-indicators">#}
+{#                    <li data-target="#carousel-thumb" data-slide-to="0" class="active">#}
+{#                        {% for aquarelle in aquarelles %}#}
+{#                            {% if loop.last %}#}
+{#                                #}{#                        <img class="d-block w-100" src="/assets/images/aquarelles/coucherDeSoleil.jpg" alt="" style="height:1000px">#}
+{#                                <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="" width="100">#}
+{#                            {%  endif %}#}
+{#                        {% endfor %}#}
+{#                    </li>#}
+{#                    <li data-target="#carousel-thumb" data-slide-to="1">#}
+{#                        {% for aquarelle in aquarelles %}#}
+{#                            {% if loop.first %}#}
+{#                                #}{#                        <img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
+{#                                <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="" width="100">#}
+{#                            {%  endif %}#}
+{#                        {% endfor %}#}
+{#                    </li>#}
+{#                    <li data-target="#carousel-thumb" data-slide-to="2">#}
+{#                        {% for photo in photos %}#}
+{#                            {% if loop.last %}#}
+{#                                #}{#<img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
+{#                                <img src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="" width="100">#}
+{#                            {% endif %}#}
+{#                        {% endfor %}#}
+{#                    </li>#}
+{#                </ol>#}
+{#    #}{#            </div>#}
+{#            </div>#}
+
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+    <section>
+    <div id="slide2" class="slide">
+        <div class="container mt-4 text-center">
+            <div class="titre_aquarelle mt-5 mb-5">
+                <h2>Les dernières aquarelles</h2>
             </div>
-            <!--/.Slides-->
-            <!--Controls-->
-            <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            <!--/.Controls-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-thumb" data-slide-to="0" class="active">
-                    {% for aquarelle in aquarelles %}
-                        {% if loop.last %}
-                            {#                        <img class="d-block w-100" src="/assets/images/aquarelles/coucherDeSoleil.jpg" alt="" style="height:1000px">#}
-                            <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="" width="100">
-                        {%  endif %}
-                    {% endfor %}
-                </li>
-                <li data-target="#carousel-thumb" data-slide-to="1">
-                    {% for aquarelle in aquarelles %}
-                        {% if loop.first %}
-                            {#                        <img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
-                            <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="" width="100">
-                        {%  endif %}
-                    {% endfor %}
-                </li>
-                <li data-target="#carousel-thumb" data-slide-to="2">
-                    {% for photo in photos %}
-                        {% if loop.last %}
-                            {#<img class="d-block w-100" src="/assets/images/aquarelles/cascade.jpg" alt="" style="height:1000px">#}
-                            <img src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="" width="100">
-                        {% endif %}
-                    {% endfor %}
-                </li>
-            </ol>
+            <div class="row flex">
+                {% for aquarelle in aquarelles %}
+                    <div class="card-group col-3">
+                        <div class="card">
+                            <img class="card-img-top " src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
+                                <p class="card-text">{{ aquarelle.description}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container mt-5 mb-5 text-center">
+            <div class="titre_photo mt-5 mb-5">
+                <h2>Les dernières photos</h2>
+            </div>
+            <div class="row flex">
+                {% for photo in photos %}
+                    <div class="card-group col-3">
+                        <div class="card">
+                            <img class="card-img-top mh-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}">{{ photo.nom}}</a></h5>
+                                <p class="card-text">{{ photo.description}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Posté le {{ photo.createdAt|date('d-m-Y') }}</small>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-
-    <div class="container mt-4 text-center">
-        <h2>Les dernières aquarelles</h2>
-        <div class="row flex">
-            {% for aquarelle in aquarelles %}
-                <div class="card-group col-3">
-                    <div class="card">
-                        <img class="card-img-top " src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
-                            <p class="card-text">{{ aquarelle.description}}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="container mt-4 mb-5 text-center">
-        <h2>Les dernières photos</h2>
-        <div class="row flex">
-            {% for photo in photos %}
-                <div class="card-group col-3">
-
-                    <div class="card">
-                        <img class="card-img-top mh-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}">{{ photo.nom}}</a></h5>
-                            <p class="card-text">{{ photo.description}}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Posté le {{ photo.createdAt|date('d-m-Y') }}</small>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Les artistes</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="team-member">
-                        <h4>Françoise</h4>
-                        <p class="text-muted">L'artiste peintre</p>
-                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Françoise" style= "width: 250px; height: 200px;">
-
-                        <ul class="d-flex justify-content-center">
-                            <li><a href="#"><i class="fb"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="team-member">
-                        <h4>Patrick</h4>
-                        <p class="text-muted">Le photographe</p>
-                        <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="Patrick" style= "width: 250px; height: 200px;">
-                        <ul class="d-flex justify-content-center">
-                            <li><a href="#"><i class="fb"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
     </section>
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Nous contacter</h2>
-                    <h3 class="section-subheading text-muted">Un renseignement, une question ...</h3>
+<section>
+    <div id="slide2" class="slide">
+        <div class="title">
+            <h1>L'actualité du moment</h1>
+            <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+
+        <div class="img_slide2">
+            <img src="https://lorempixel.com/640/480/abstract/6/">
+        </div>
+        <div class="img_slide2b">
+            <img src="https://lorempixel.com/640/480/abstract/4/">
+        </div>
+        </div>
+    </div>
+</section>
+    <!-- Team Section -->
+    <div id="slide3" class="slide">
+        <section id="team" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Les artistes</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="team-member">
+                            <h4>Françoise</h4>
+                            <p class="text-muted">L'artiste peintre</p>
+                            <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Françoise" style= "width: 250px; height: 200px;">
+
+                            <ul class="d-flex justify-content-center">
+                                <li><a href="#"><i class="fb"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="team-member">
+                            <h4>Patrick</h4>
+                            <p class="text-muted">Le photographe</p>
+                            <img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="Patrick" style= "width: 250px; height: 200px;">
+                            <ul class="d-flex justify-content-center">
+                                <li><a href="#"><i class="fb"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-lg-offset-2 text-center">
+                        <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Votre nom *" id="name" required="" data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
+        </section>
+
+        <section id="contact" style="height: 600px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Nous contacter</h2>
+                        <h3 class="section-subheading text-muted">Un renseignement, une question ...</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form name="sentMessage" id="contactForm" novalidate="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Votre nom *" id="name" required="" data-validation-required-message="Please enter your name.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Votre Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Votre téléphone" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Votre message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Votre téléphone" id="phone" required="" data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Votre message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                        </form>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <span class="copyright" style="color: white">Copyright © Pat & Soaze 2020</span>
+
+
+
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
+                            <div class="col-md-4 text-center">
                                 <div id="success"></div>
                                 <button type="submit" class="btn btn-xl">Envoyer</button>
                             </div>
-                        </div>
-                    </form>
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <ul class="social-buttons list-inline d-flex">
+                                    <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                                    </li>
+                                    <li><a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></a>
+                                    </li>
+                                    <li><a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><ul class="quicklinks list-inline" style="color: white">
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <footer>
+{#        <div id="slide4" class="slide header">#}
+    <div class="footer">
         <div class="container">
             <div class="row d-flex justify-content-between">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright © Pat&Soaze 2020</span>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <ul class="social-buttons list-inline d-flex">
-                        <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-                        </li>
-                        <li><a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/></a>
-                        </li>
-                        <li><a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="quicklinks list-inline d-flex justify-content-around">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="wavecontainer">
-            <div class="wave">
-                <div class="waveWrapper waveAnimation">
-                    <div class="waveWrapperInner bgTop">
-                        <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
-                    </div>
-                    <div class="waveWrapperInner bgMiddle">
-                        <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
-                    </div>
-                    <div class="waveWrapperInner bgBottom">
-                        <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+                <div class="wave">
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+{#        </div>#}
     </footer>
 <script>
     $(function() {

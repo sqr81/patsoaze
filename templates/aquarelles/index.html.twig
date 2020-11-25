@@ -23,36 +23,33 @@
     </div>
     <div class="card-deck m-5">
         {% for aquarelle in aquarelles %}
-    <div class="card">
-
-            <ul class="grid cs-style-3">
-                <li class="mix color-1 check1 radio2 option3">
-                    <figure>
-                        <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
-                        <figcaption>
-{#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
-                            <span>{{ aquarelle.vendue }}</span>
-                        </figcaption>
-                        <div class="blur_bg">
-                            <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}" class="view_link"><i class="fa fa-eye"></i></a>
-{#                            <a href="#" class="goto_link"><i class="fa fa-link"></i></a>#}
-                        </div>
-                    </figure>
-                </li>
-            </ul>
-                        <div class="card-body" style="height: 50px;">
-                            <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</h5>
-                            <p>{{ aquarelle.description }}</p>
-                        </div>
-
-
-        <div class="card-footer text-center w-100">
-            <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
+        <div class="card">
+                <ul class="grid cs-style-3">
+                    <li class="mix color-1 check1 radio2 option3">
+                        <figure>
+                            <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
+                            <figcaption>
+    {#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
+                                <span>{{ aquarelle.vendue }}</span>
+                            </figcaption>
+                            <div class="blur_bg">
+                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}" class="view_link"><i class="fa fa-eye"></i></a>
+    {#                            <a href="#" class="goto_link"><i class="fa fa-link"></i></a>#}
+                            </div>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
+                    <div class="description text-center">
+                        <p>{{ aquarelle.description }}</p>
+                    </div>
+                </div>
+                <div class="card-footer text-center w-100">
+                    <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
+                </div>
         </div>
-    </div>
         {% endfor %}
     </div>
-
-
 
 {%  endblock %}
