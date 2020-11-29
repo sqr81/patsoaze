@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     <link rel="stylesheet" href="{{ asset('build/test.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+
     {% block stylesheets %}{% endblock %}
 
 {#        <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">#}
@@ -22,6 +25,12 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link {% if current_menu is defined and current_menu == 'aquarelles' %}active{% endif %}" href="{{ path('aquarelle.index') }}">Aquarelles <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_menu is defined and current_menu == 'actualites' %}active{% endif %}" >Actualités <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" >Artistes <span class="sr-only">(current)</span></a>
             </li>
 {#            <li class="nav-item">#}
 {#                <a class="nav-link {% if current_menu is defined and current_menu == 'photos' %}active{% endif %}" href="{{ path('photo.index') }}">Photos <span class="sr-only">(current)</span></a>#}
