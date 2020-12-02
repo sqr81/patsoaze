@@ -9,7 +9,7 @@ parameters:
     app.path.aquarelle_images: /uploads/images/aquarelles
     app.path.photo_images: /uploads/images/photos
     app.path.admin_images: /uploads/images/admins
-    app.path.divers_images: /assets/images/divers
+    app.path.admin_divers: /uploads/images/divers
 services:
     # default configuration for services in *this* file
     _defaults:
