@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Controller\Admin\AquarelleCrudController;
 use App\Controller\Admin\PhotoCrudController;
+use App\Entity\Actualite;
 use App\Entity\Admin;
 use App\Entity\AlbumPhoto;
 use App\Entity\Aquarelle;
 use App\Entity\Photo;
+use App\Repository\ActualiteRepository;
 use App\Repository\AdminRepository;
 use App\Repository\AlbumPhotoRepository;
 use App\Repository\AquarelleRepository;
@@ -29,18 +31,21 @@ class DashboardController extends AbstractDashboardController
     protected $aquarelleRepository;
     protected $photoRepository;
     protected $albumPhotoRepository;
+    protected $actualiteRepository;
 
     public function __construct(
         AdminRepository $adminRepository,
         AquarelleRepository $aquarelleRepository,
         PhotoRepository $photoRepository,
-        AlbumPhotoRepository $albumPhotoRepository
+        AlbumPhotoRepository $albumPhotoRepository,
+        ActualiteRepository $actualiteRepository
     )
     {
         $this->adminRepository = $adminRepository;
         $this->aquarelleRepository = $aquarelleRepository;
         $this->photoRepository = $photoRepository;
         $this->albumPhotoRepository = $albumPhotoRepository;
+        $this->actualiteRepository = $actualiteRepository;
 
     }
 
@@ -64,9 +69,12 @@ class DashboardController extends AbstractDashboardController
         return $this->render('bundles/EasyAdminBundle/welcome.html.twig',[
                 'countAllAdmins'=> $this->adminRepository->countAllAdmins(),
                 'countAllAquarelles'=> $this->aquarelleRepository->countAllAquarelles(),
+                'countAllActualites'=> $this->actualiteRepository->countAllActualites(),
                 'countAllAlbumPhotos'=> $this->albumPhotoRepository->countAllAlbumPhotos(),
                 'countAllPhotos'=> $this->photoRepository->countAllPhotos(),
+
                 'aquarelles'=> $this->aquarelleRepository->findLatest(),
+                'actualites' => $this->actualiteRepository->findLatest(),
                 'albumPhotos'=> $this->albumPhotoRepository->findLatest(),
                 'photos'=> $this->photoRepository->findLatest(),
                 'admins'=> $this->adminRepository->findAll(),
@@ -83,7 +91,7 @@ class DashboardController extends AbstractDashboardController
             // the name visible to end users
             ->setTitle('Dashboard Pat & Soaze')
             // you can include HTML contents too (e.g. to link to an image)
-            ->setTitle('<img src="assets/images/logo.png"> Pat & Soaze: <span class="text-small">Photos et Aquarelles</span>')
+            ->setTitle('<img src="/uploads/images/divers/logo2.png"> Pat & Soaze: <span class="text-small">Photos et Aquarelles</span>')
 
             // the path defined in this method is passed to the Twig asset() function
             ->setFaviconPath('favicon.svg')
@@ -122,6 +130,11 @@ class DashboardController extends AbstractDashboardController
 
             MenuItem::section('Aquarelles'),
             MenuItem::linkToCrud('Aquarelles', 'fa fa-paint-brush', Aquarelle::class)
+                ->setQueryParameter('sortField', 'createdAt')
+                ->setQueryParameter('sortDirection', 'DESC'),
+
+            MenuItem::section('Actualités'),
+            MenuItem::linkToCrud('Actualites', 'fa fa-newspaper-o', Actualite::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
