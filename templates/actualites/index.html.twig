@@ -8,27 +8,46 @@
             <p>Les différentes actualités nous concernant</p>
         </div>
         <div class="container">
-            <div class="row m-5">
-                {% for actualite in actualites %}
-                <div class="card">
-                    <div class="card__overlay">
-                        <a href="/news/" target="_blank">
-                            <span>Lire</span>
-                        </a>
-                    </div>
-                    <div class="card__top">
-                        <img src="https://i.ibb.co/8sbB0Z1/news-thumbnail.png" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">
-                    </div>
-                    <div class="card__bottom text-center">
-                        <div class="card-title">
-                            <h2><a href="#">{{ actualite.titre}}</a></h2>
-                        </div>
-                        <div class="card-body">
-                            <p>{{ actualite.description }}</p>
-                        </div>
-                    </div>
+{#            <div class="row m-4">#}
+{#                {% for actualite in actualites %}#}
+{#                <div class="card m-5">#}
+{#                    <div class="card__overlay">#}
+{#                        <a href="/news/" target="_blank">#}
+{#                            <span>Lire</span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <div class="card__top">#}
+{#                        <img src="https://i.ibb.co/8sbB0Z1/news-thumbnail.png" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">#}
+{#                    </div>#}
+{#                    <div class="card__bottom text-center">#}
+{#                        <div class="card">#}
+{#                            <h3></h3>#}
+{#                            <h2>{{ actualite.description }}</h2>#}
+{#                        </div>#}
+{#                        <div class="card-body">#}
+{#                            #}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+            <div class="card-deck">
+            {% for actualite in actualites %}
+            <div class="cardActu m-5">
+                <div class="cardActu__overlay">
+                    <a href="/news/" target="_blank">
+                        <span>Lire</span>
+                    </a>
                 </div>
-                {% endfor %}
+                <div class="cardActu__top">
+                    <img src="https://i.ibb.co/8sbB0Z1/news-thumbnail.png" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">
+                </div>
+                <div class="cardActu__bottom">
+                    <h3><a href="#">{{ actualite.titre}}</a></h3>
+                    <h2>Coloredge is the largest provider of innovative visual</h2>
+                </div>
+            </div>
+            {% endfor %}
             </div>
         </div>
     </body>
