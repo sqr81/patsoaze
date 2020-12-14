@@ -6,6 +6,7 @@ use App\Repository\PhotoRepository;
 use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -34,7 +35,7 @@ class Photo
     private $imageFile;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $nom;
 
@@ -144,11 +145,11 @@ class Photo
 //        return $this->imageName;
 //    }
 
-    public function __toString(): string
-    {
-        return $this->nom;
-
-    }
+//    public function __toString(): string
+//    {
+//        return $this->description;
+//
+//    }
 
     public function getAdmin(): ?Admin
     {

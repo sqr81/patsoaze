@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
@@ -49,7 +50,8 @@ class AquarelleCrudController extends AbstractCrudController
             TextEditorField::new('description'),
             MoneyField::new('prix')->setCurrency('EUR'),
             BooleanField::new('vendue'),
-            AssociationField::new('admin')
+            AssociationField::new('admin'),
+             DateTimeField::new('created_at'),
         ];
 
         //pour pouvoir afficher les photos

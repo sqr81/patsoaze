@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/albumPhoto/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AquarelleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AquarelleCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PhotoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AlbumPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AlbumPhoto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/actualites/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/album_photo/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photos/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +256,7 @@
       <workItem from="1605908377642" duration="42453000" />
       <workItem from="1606410669359" duration="41436000" />
       <workItem from="1606840163229" duration="5294000" />
-      <workItem from="1607094867463" duration="48177000" />
+      <workItem from="1607094867463" duration="137482000" />
     </task>
     <servers />
   </component>
@@ -248,10 +268,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="93" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1600527474424" />
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607270515817">
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607960572191">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607270515817" />
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607960572191" />
     <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1598779076354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -276,10 +296,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1491" height="209" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601733871696" />
-    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1598973406620">
+    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1607972411213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1598973406620" />
+    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607972411213" />
     <state x="603" y="335" key="NewPhpFileDialog" timestamp="1607268057922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -296,10 +316,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="292" y="160" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1604681796233" />
-    <state x="425" y="186" key="run.anything.popup" timestamp="1606757374700">
+    <state x="425" y="186" key="run.anything.popup" timestamp="1607625235642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606757374700" />
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607625235642" />
     <state x="242" y="433" key="save.file.as.template.dialog" timestamp="1601738969039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

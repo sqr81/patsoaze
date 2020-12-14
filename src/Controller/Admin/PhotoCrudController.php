@@ -6,6 +6,7 @@ use App\Entity\Photo;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -53,7 +54,7 @@ class PhotoCrudController extends AbstractCrudController
             TextField::new('nom')->setTemplatePath('bundles/EasyAdminBundle/field_custom.html.twig'),
             TextEditorField::new('description'),
 
-            AssociationField::new('admin')
+            AssociationField::new('admin'),
         ];
         //pour pouvoir afficher les photos
         if ($pageName === Crud::PAGE_INDEX || $pageName === Crud::PAGE_DETAIL) {

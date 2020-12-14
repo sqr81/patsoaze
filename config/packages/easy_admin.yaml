@@ -8,6 +8,7 @@ easy_admin:
             - { entity: 'Photo', label: 'Photos', icon: 'comments' }
             - { entity: 'Admin', label: 'Utilisateurs', icon: 'comments' }
             - { entity: 'AlbumPhoto', label: 'Album photo', icon: 'comments' }
+            - { entity: 'Actualite', label: 'Actualites', icon: 'comments' }
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'
             - '@VichUploader/Form/fields.html.twig'
@@ -49,6 +50,17 @@ easy_admin:
             form:
                 fields:
                     - { property: 'photo', type: 'collection', type_options: {entry_type: 'App\Form\PhotoType', by_reference: false} }
+        - App\Entity\Actualite
+            list:
+                fields:
+                    - { property: 'image', type: 'vich_image', base_path: '%app.path.actualite_images%' }
+                    - { property: 'fichier', type: 'vich_file', base_path: '%app.path.actualite_fichiers%' }
+            show:
+                fields:
+                    - { property: 'image', type: 'vich_image', base_path: '%app.path.actualite_images%' }
+                    - { property: 'fichier', type: 'vich_file', base_path: '%app.path.actualite_fichiers%' }
+
+
 #
 
 #        Comment:

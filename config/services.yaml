@@ -6,10 +6,14 @@
 parameters:
     images_directory:
         '%kernel.project_dir%/public/uploads'
+    fichiers_directory:
+        '%kernel.project_dir%/public/uploads'
     app.path.aquarelle_images: /uploads/images/aquarelles
     app.path.photo_images: /uploads/images/photos
     app.path.admin_images: /uploads/images/admins
     app.path.divers_images: /uploads/images/divers
+    app.path.actualite_images: /uploads/images/actualites
+    app.path.actualite_fichiers: /uploads/fichiers/actualites
 services:
     # default configuration for services in *this* file
     _defaults:

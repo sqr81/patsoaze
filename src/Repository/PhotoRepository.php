@@ -19,6 +19,30 @@ class PhotoRepository extends ServiceEntityRepository
         parent::__construct($registry, Photo::class);
     }
 
+    /**
+     * @return Photo[]
+     */
+    public function findLatest(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @return int|mixed|string
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function countAllPhotos()
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder->select('COUNT(p.id) as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
+
     // /**
     //  * @return Photo[] Returns an array of Photo objects
     //  */
@@ -47,23 +71,4 @@ class PhotoRepository extends ServiceEntityRepository
         ;
     }
     */
-    /**
-     * @return Photo[]
-     */
-    public function findLatest(): array
-    {
-        return $this->createQueryBuilder('p')
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(4)
-            ->getQuery()
-            ->getResult();
-    }
-
-    public function countAllPhotos()
-    {
-        $queryBuilder = $this->createQueryBuilder('p');
-        $queryBuilder->select('COUNT(p.id) as value');
-
-        return $queryBuilder->getQuery()->getOneOrNullResult();
-    }
 }

@@ -32,7 +32,7 @@
                     Photos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ path('album_photo') }}">Albums photos</a>
+                    <a class="dropdown-item" href="{{ path('albumPhoto.index') }}">Albums photos</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href={{ path('photo.index') }}>Photos</a>
                 </div>
@@ -43,9 +43,9 @@
             <li class="nav-item">
                 <a class="nav-link {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" >Artistes <span class="sr-only">(current)</span></a>
             </li>
-{#            <li class="nav-item">#}
-{#                <a class="nav-link {% if current_menu is defined and current_menu == 'photos' %}active{% endif %}" href="{{ path('photo.index') }}">Photos <span class="sr-only">(current)</span></a>#}
-{#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="nav-link {% if current_menu is defined and current_menu == 'photos' %}active{% endif %}" href="{{ path('photo.index') }}">Photos <span class="sr-only">(current)</span></a>#}
+            {#            </li>#}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Billets d'humeur

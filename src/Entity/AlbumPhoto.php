@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\AlbumPhotoRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -48,6 +51,18 @@ class AlbumPhoto
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $created_at;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     *
+     * @Vich\UploadableField(mapping="photo_images", fileNameProperty="image")
+     * @var File|null
+     */
+    private $imageFile;
 
     public function __construct()
     {
@@ -137,5 +152,44 @@ class AlbumPhoto
         $this->created_at = $created_at;
 
         return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $updatedAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function __toString(): string
+    {
+        return $this->description;
+
+    }
+
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->nom);
     }
 }

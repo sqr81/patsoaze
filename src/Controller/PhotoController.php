@@ -33,13 +33,6 @@ class PhotoController extends AbstractController
      */
     public function index():Response
     {
-//        $aquarelle = new Aquarelle();
-//        $aquarelle->setNom('Coucher de soleil')
-//            ->setDescription('coucher de soleil sur la pointe du Raz')
-//            ->setPrix(150);
-//        $em = $this->getDoctrine()->getManager();
-//        $em->persist($aquarelle);
-//        $em->flush();
         $photos = $this->repository->findAll();
         $this->em->flush();
         return  $this->render('photos/index.html.twig',[
