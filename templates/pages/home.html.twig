@@ -167,7 +167,7 @@
     <div id="slide2" class="slide">
         <div class="container mt-4 text-center">
             <div class="titre_aquarelle">
-                <h2>Les dernières aquarelles</h2>
+                <h2>- Les dernières aquarelles -</h2>
             </div>
             <div class="row flex">
                 {% for aquarelle in aquarelles %}
@@ -188,7 +188,7 @@
         </div>
         <div class="container mt-5 mb-5 text-center">
             <div class="titre_photo">
-                <h2>Les dernières photos</h2>
+                <h2>- Les dernières photos -</h2>
             </div>
             <div class="row flex">
                 {% for photo in photos %}
@@ -212,12 +212,13 @@
 <section>
     <div id="slide2" class="slide">
         <div class="title">
-            <h1>L'actualité du moment</h1>
+            <h1>- L'actualité du moment -</h1>
             <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-
+{% for actualite in actualites %}
         <div class="img_slide2">
+{#            <p>{{ actualite.titre }}</p>#}
             <p>
-                <img src="https://4bg9152y9vpz1n78vz28diwy-wpengine.netdna-ssl.com/wp-content/uploads/2012/07/croquis-31-1024x741.jpg"/>
+                <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite 1"/>
             </p>
         </div>
         <div class="img_slide2b">
@@ -226,6 +227,7 @@
             </p>
         </div>
         </div>
+        {% endfor %}
     </div>
 </section>
     <!-- Team Section -->
@@ -234,7 +236,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Les artistes</h2>
+                        <h2 class="section-heading">- Les artistes -</h2>
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>

@@ -19,6 +19,10 @@ vich_uploader:
             uri_prefix: '%app.path.photo_images%'
             upload_destination: '%kernel.project_dir%/public%app.path.photo_images%'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        album_photo_images:
+            uri_prefix: '%app.path.album_photo_images%'
+            upload_destination: '%kernel.project_dir%/public%app.path.photo_images%'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
         admin_images:
             uri_prefix: '%app.path.admin_images%'
             upload_destination: '%kernel.project_dir%/public%app.path.admin_images%'

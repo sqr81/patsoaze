@@ -86,8 +86,9 @@
                                 <i class="fa fa-user-secret"></i>
                             {{ admin.username }}
                             </span>
-                            <span class="badge badge-primary badge-pill"></span>
-                            <img class="img-thumbnail" src="{{ vich_uploader_asset(admin, 'imageFile') }}" style="width: 150px;height: 103px">
+                            <span class="badge badge-primary badge-pill">
+                                <img class="img-thumbnail" src="{{ vich_uploader_asset(admin, 'imageFile') }}" style="width: 150px;height: 103px">
+                            </span>
                         </li>
                     {% endfor %}
                 </ul>
@@ -102,7 +103,7 @@
                             {{ albumPhoto.nom }}
                             </span>
                             <span class="badge badge-primary badge-pill">
-{#                                <img class="img-thumbnail" src="{{ vich_uploader_asset(photo, 'imageFile') }}" style="width: 150px;height: 103px">#}
+                                <img class="img-thumbnail" src="{{ vich_uploader_asset(albumPhoto, 'imageFile') }}" style="width: 150px;height: 103px">
                             </span>
                         </li>
                     {% endfor %}

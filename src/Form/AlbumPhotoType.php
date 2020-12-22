@@ -22,7 +22,7 @@ class AlbumPhotoType extends AbstractType
             ->add('images', FileType::class,[
                 'label' => false,
                 'multiple' => true,
-                'mapped' => false,
+                'mapped' => true,
                 'required' => false
             ])
 

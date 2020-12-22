@@ -6,6 +6,7 @@ use App\Entity\AlbumPhoto;
 use App\Entity\Photo;
 use App\Form\AlbumPhotoType;
 use App\Repository\AlbumPhotoRepository;
+use App\Repository\PhotoRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -50,6 +51,7 @@ class AlbumPhotoController extends AbstractController
     /**
      * @Route("/albumPhoto/{slug}-{id}", name="albumPhoto.show", requirements={"slug": "[a-z0-9\-]*"})
      * @param AlbumPhoto $albumPhoto
+     * @param Photo $photo
      * @param string $slug
      * @return Response
      */
@@ -63,13 +65,41 @@ class AlbumPhotoController extends AbstractController
         }
         return $this->render('albumPhoto/show.html.twig',[
             'albumPhoto'=>$albumPhoto,
+//            'photo'=>$photo,
             'current_menu' => 'albumPhoto',
 
             ]);
 
     }
 
+    /**
+     * @param AlbumPhoto $albumPhoto
+     * @param string $slug
+     * @return Response
+     */
+    public function indexPhotosByAlbum(AlbumPhoto $albumPhoto, string $slug): Response
+    {
+        if ($albumPhoto->getSlug() !== $slug) {
+            return $this->redirectToRoute('albumPhoto.show', [
+                'id' => $albumPhoto->getId(),
+                'slug' => $albumPhoto->getSlug(),
+            ], 301);
+        }
 
+        $photos = $this->getDoctrine()
+            ->getRepository(PhotoRepository::class)
+            ->findPhotosByAlbum($albumPhoto);
+
+//        foreach ($userData as $user) {
+//            $user->getTopics();
+//        }
+
+        return $this->render('albumPhoto/show.html.twig', [
+            'albumPhoto' => $albumPhoto,
+            'photos' => $photos,
+//            'user' => $user,
+        ]);
+    }
 
 //    /**
 //     * @return \Symfony\Component\HttpFoundation\RedirectResponse

@@ -44,6 +44,7 @@ class AlbumPhoto
 
     /**
      * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="albumPhoto", cascade={"persist"})
+     *
      */
     private $photo;
 
@@ -58,7 +59,6 @@ class AlbumPhoto
     private $image;
 
     /**
-     *
      * @Vich\UploadableField(mapping="photo_images", fileNameProperty="image")
      * @var File|null
      */
@@ -192,4 +192,9 @@ class AlbumPhoto
     {
         return (new Slugify())->slugify($this->nom);
     }
+
+//    public function findPhoto()
+//    {
+//        return $this->photo;
+//    }
 }

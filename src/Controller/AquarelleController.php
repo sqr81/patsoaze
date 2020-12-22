@@ -51,34 +51,35 @@ class AquarelleController extends AbstractController
             ], 301);
         }
         return $this->render('aquarelles/show.html.twig', [
-            'aquarelle' => $aquarelle->$this->aquarelleVendue(),
+            'aquarelle' => $aquarelle,
             'current_menu' => 'aquarelles']);
     }
 
-    /**
-     * @Route("/aquarelles/{slug}-{id}", name="aquarelle.show", requirements={"slug": "[a-z0-9\-]*"})
-     * @param Aquarelle $aquarelle
-     * @param string $slug
-     * @return Response
-     */
-    public function aquarelleVendue(aquarelle $aquarelle, string $slug): Response
-    {
-        $aquarelleVendue = $aquarelle->getVendue();
-        if ($aquarelleVendue == 1) {
-            echo 'vendue';
-        } else if ($aquarelleVendue == 0) {
-            echo 'à vendre';
-        }
-
-        return $this->render('aquarelles/show.html.twig', [
-            'aquarelle' => $aquarelle,
-            'aquarelleVendue' => $aquarelleVendue,
-
-        ]);
-
-//        return new Response($aquarelleVendue);
-
-
-    }
+//    /**
+//     * @Route("/aquarelles/{slug}-{id}", name="aquarelle.show", requirements={"slug": "[a-z0-9\-]*"})
+//     * @param Aquarelle $aquarelle
+//     * @param string $slug
+//     * @return Response
+//     */
+//    public function aquarelleVendue(aquarelle $aquarelle, string $slug): Response
+//    {
+//        $aquarelleVendue = $aquarelle->getVendue();
+//        if ($aquarelleVendue == 1) {
+//            echo 'vendue';
+//        }
+//        else if ($aquarelleVendue == 0) {
+//            echo 'à vendre';
+//        }
+//
+//        return $this->render('aquarelles/show.html.twig', [
+//            'aquarelle' => $aquarelle,
+//            'aquarelleVendue' => $aquarelleVendue,
+//
+//        ]);
+//
+//
+//
+//
+//    }
 
 }

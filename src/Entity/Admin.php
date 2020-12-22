@@ -15,7 +15,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @ORM\Entity(repositoryClass=AdminRepository::class)
  * @Vich\Uploadable()
  */
-class Admin implements UserInterface
+class Admin implements UserInterface,\Serializable
 {
 
     /**
@@ -276,35 +276,36 @@ class Admin implements UserInterface
         }
     }
 
-//    /**
-//     * @see \Serializable::serialize()
-//     */
-//    public function serialize()
-//    {
-//        return serialize(array(
-//            $this->id,
-//            $this->username,
-//            $this->password,
-//            // see section on salt below
-//            // $this->salt,
-//        ));
-//    }
-//
-//    /**
-//     * @param $serialized
-//     * @see \Serializable::unserialize()
-//     */
-//    public function unserialize($serialized)
-//    {
-//        list (
-//            $this->id,
-//            $this->username,
-//            $this->password,
-//
-//            // see section on salt below
-//            // $this->salt
-//            ) = unserialize($serialized);
-//    }
+    /**
+     * @see \Serializable::serialize()
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /**
+     * @param $serialized
+     * @see \Serializable::unserialize()
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+
+            // see section on salt below
+            // $this->salt
+            ) = unserialize($serialized);
+    }
 
 
 }

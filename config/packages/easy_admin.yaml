@@ -49,7 +49,7 @@ easy_admin:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.photo_images%' }
             form:
                 fields:
-                    - { property: 'photo', type: 'collection', type_options: {entry_type: 'App\Form\PhotoType', by_reference: false} }
+                    - { property: 'image', type: 'collection', type_options: {entry_type: 'App\Form\PhotoType', by_reference: false} }
         - App\Entity\Actualite
             list:
                 fields:

@@ -60,4 +60,5 @@ class PhotoController extends AbstractController
             'photo' => $photo,
             'current_menu' => 'photos']);
     }
+
 }

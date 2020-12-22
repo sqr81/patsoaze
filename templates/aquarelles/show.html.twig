@@ -9,7 +9,11 @@
         <div class="row-12">
             <div class=col-12">
                 <img class="img-fluid aquarelle w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}">
-                <p>{{ aquarelle.vendue }}</p>
+                {% if aquarelle.vendue == '1' %}
+                    <p><strong><u>Aquarelle vendue</u></strong></p>
+                    {% else %}
+                        <p><strong><u>Aquarelle disponible</u></strong></p>
+                {% endif %}
             </div>
         </div>
 

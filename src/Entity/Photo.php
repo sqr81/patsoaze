@@ -55,7 +55,8 @@ class Photo
     private $admin;
 
     /**
-     * @ORM\ManyToOne(targetEntity=AlbumPhoto::class, inversedBy="photo")
+     * @ORM\ManyToOne(targetEntity=AlbumPhoto::class, inversedBy="photos")
+     * @ORM\JoinColumn(name="album_photo_id", referencedColumnName="id", nullable=true)
      */
     private $albumPhoto;
 

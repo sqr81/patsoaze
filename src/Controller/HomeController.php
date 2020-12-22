@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Repository\ActualiteRepository;
 use App\Repository\AquarelleRepository;
 use App\Repository\PhotoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,16 +18,19 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      * @param AquarelleRepository $repository
      * @param PhotoRepository $photoRepository
+     * @param ActualiteRepository $actualiteRepository
      * @return Response
      */
-    public function index(AquarelleRepository $repository, PhotoRepository $photoRepository): Response
+    public function index(AquarelleRepository $repository, PhotoRepository $photoRepository, ActualiteRepository $actualiteRepository): Response
     {
 
         $aquarelles = $repository->findLatest();
         $photos = $photoRepository->findLatest();
+        $actualites = $actualiteRepository->findLatest();
         return $this->render('pages/home.html.twig', [
             'aquarelles'=>$aquarelles,
             'photos'=>$photos,
+            'actualites'=>$actualites,
 
         ]);
     }

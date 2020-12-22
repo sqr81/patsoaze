@@ -43,6 +43,16 @@ class PhotoRepository extends ServiceEntityRepository
         return $queryBuilder->getQuery()->getOneOrNullResult();
     }
 
+    public function findAlbumByPhotos(Categories $category)
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.topic_cat = :category')
+            ->setParameter('category', $category)
+            ->innerJoin('t.topic_cat', 'c')
+            ->addSelect('c.cat_name')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Photo[] Returns an array of Photo objects
     //  */

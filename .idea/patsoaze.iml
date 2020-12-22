@@ -134,5 +134,6 @@
     <orderEntry type="library" name="jquery-1.11.0" level="application" />
     <orderEntry type="library" name="font-awesome" level="application" />
     <orderEntry type="library" name="c90b3b4ed2" level="application" />
+    <orderEntry type="library" name="ekko-lightbox" level="application" />
   </component>
 </module>

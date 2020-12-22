@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('build/aquarelles.css') }}">
     <body>
     <div class="title-aquarelles container text-center">
-        <h1>Aquarelles</h1>
+        <h1>- Aquarelles -</h1>
         <p>Quelques aquarelles...</p>
     </div>
     <div class="card-deck m-5">
@@ -31,7 +31,12 @@
                             <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
                             <figcaption>
     {#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
-                                <span>{{ aquarelle.vendue }}</span>
+                                {% if aquarelle.vendue == '1' %}
+                                    <p>Aquarelle vendue</p>
+                                    {% else %}
+                                        <p>Aquarelle disponible</p>
+                                {% endif %}
+{#                                <span>{{ aquarelle.vendue }}</span>#}
                             </figcaption>
                             <div class="blur_bg">
                                 <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}" class="view_link"><i class="fa fa-eye"></i></a>

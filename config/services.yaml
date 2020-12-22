@@ -10,6 +10,7 @@ parameters:
         '%kernel.project_dir%/public/uploads'
     app.path.aquarelle_images: /uploads/images/aquarelles
     app.path.photo_images: /uploads/images/photos
+    app.path.album_photo_images: /uploads/images/albumPhotos
     app.path.admin_images: /uploads/images/admins
     app.path.divers_images: /uploads/images/divers
     app.path.actualite_images: /uploads/images/actualites
