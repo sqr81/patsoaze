@@ -2,35 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/patsoaze.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/patsoaze.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/actualites/castelrock-5fd121d2a9ea8550014703.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AquarelleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AquarelleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/photos/121812886-203747374448748-946079640254630524-o-5fd4e20552e71781053573.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdminFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdminFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/AlbumPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AlbumPhoto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AlbumPhotoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AlbumPhotoType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/AlbumPhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AlbumPhotoRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/actualites/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/albumPhoto/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albumPhoto/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photos/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photos/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,11 +177,11 @@
       <recent name="D:\wamp64\www\patsoaze\assets\images\aquarelles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\patsoaze\public\build" />
       <recent name="D:\wamp64\www\patsoaze\public\uploads\images\divers" />
       <recent name="D:\wamp64\www\patsoaze\public\build\images\divers" />
       <recent name="D:\wamp64\www\patsoaze\public\build\images" />
       <recent name="D:\wamp64\www\patsoaze\templates\bundles\EasyAdminBundle" />
-      <recent name="D:\wamp64\www\patsoaze" />
     </key>
   </component>
   <component name="RunManager">
@@ -264,7 +243,7 @@
       <workItem from="1606410669359" duration="41436000" />
       <workItem from="1606840163229" duration="5294000" />
       <workItem from="1607094867463" duration="137713000" />
-      <workItem from="1608042259918" duration="95224000" />
+      <workItem from="1608042259918" duration="109586000" />
     </task>
     <servers />
   </component>
@@ -312,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="292" y="160" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1604681796233" />
-    <state x="425" y="186" key="run.anything.popup" timestamp="1608656785879">
+    <state x="425" y="186" key="run.anything.popup" timestamp="1608748046769">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608656785879" />
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608748046769" />
     <state x="242" y="433" key="save.file.as.template.dialog" timestamp="1601738969039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

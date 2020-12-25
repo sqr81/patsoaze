@@ -27,6 +27,24 @@ class AdminFixtures extends Fixture
         $Admin1->setRoles(['ROLE_ADMIN']);
         $manager->persist($Admin1);
 
+        $Admin2 =new Admin();
+        $Admin2 ->setUsername("Pat");
+        $Admin2->setPassword($this->passwordEncoder->encodePassword(
+            $Admin2,
+            'patsoaze'
+        ));
+        $Admin2->setRoles(['ROLE_ADMIN']);
+        $manager->persist($Admin2);
+
+        $Admin3 =new Admin();
+        $Admin3 ->setUsername("Soaze");
+        $Admin3->setPassword($this->passwordEncoder->encodePassword(
+            $Admin3,
+            'patsoaze'
+        ));
+        $Admin3->setRoles(['ROLE_ADMIN']);
+        $manager->persist($Admin3);
+
         $manager->flush();
     }
 }

@@ -43,9 +43,8 @@ class AlbumPhotoRepository extends ServiceEntityRepository
     {
         $qb = $this->createQueryBuilder('a')
             ->innerJoin('a.album_photo', 'c')
-//        ->innerJoin('t.topic_by', 'u')
-        ->andWhere('a.album_photo = :name')
-        ->setParameter('albumPhoto', $albumPhoto);
+            ->andWhere('a.album_photo = :name')
+            ->setParameter('albumPhoto', $albumPhoto);
         return $qb
             ->orderBy('a.createdAt', 'DESC')
             ->getQuery()

@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 {% block title %}ALbums Photos{% endblock %}
 {% block body %}
-    <link rel="stylesheet" href="{{ asset('build/albumphotos.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/albumphotos_show.css') }}">
     <div class="container text-center mt-5">
         <div class="title-photo row-12 mb-5">
             <h1>- {{ albumPhoto.nom }} -</h1>
@@ -68,7 +68,7 @@
                 </div>
                 {% for photo in albumPhoto.photo %}
                 <div class="gallery-item">
-                    <img class="gallery-image" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="{{ photo.nom }}">
+                    <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><img class="gallery-image" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="{{ photo.nom }}"></a>
                 </div>
                 {% endfor %}
             </div>

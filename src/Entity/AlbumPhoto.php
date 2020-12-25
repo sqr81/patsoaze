@@ -193,8 +193,4 @@ class AlbumPhoto
         return (new Slugify())->slugify($this->nom);
     }
 
-//    public function findPhoto()
-//    {
-//        return $this->photo;
-//    }
 }

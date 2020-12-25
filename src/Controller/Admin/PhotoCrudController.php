@@ -53,7 +53,7 @@ class PhotoCrudController extends AbstractCrudController
             IntegerField::new('id', 'identifiant')->onlyOnIndex(),
             TextField::new('nom')->setTemplatePath('bundles/EasyAdminBundle/field_custom.html.twig'),
             TextEditorField::new('description'),
-
+            AssociationField::new('albumPhoto'),
             AssociationField::new('admin'),
         ];
         //pour pouvoir afficher les photos
