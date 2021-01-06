@@ -5,6 +5,28 @@
 
 {% block page_content %}
 
+    <link rel="stylesheet" href="{{ asset('build/test.css') }}">
+    <div class="container mb-2 d-flex justify-content-center sticky-top mb-5">
+    <ul class="navtest cf">
+        <li><a href="#">Visites</a></li>
+        {% for admin in countAllAdmins %}
+            <li><a href="#" class="new" attr-new={{ countAllAdmins['value'] }}>Admins</a></li>
+        {% endfor %}
+        {% for aquarelle in countAllAquarelles %}
+            <li><a href="#" class="new" attr-new={{ countAllAquarelles['value'] }}>Aquarelles</a></li>
+        {% endfor %}
+        {% for albumPhoto in countAllAlbumPhotos %}
+            <li><a href="#" class="new" attr-new={{ countAllAlbumPhotos['value'] }}>Album photos</a></li>
+        {% endfor %}
+        {% for photo in countAllPhotos %}
+            <li><a href="#" class="new" attr-new={{ countAllPhotos['value'] }}>Photos</a></li>
+        {% endfor %}
+        {% for actualite in countAllActualites %}
+            <li><a href="#" class="new" attr-new={{ countAllActualites['value'] }}>Actualités</a></li>
+        {% endfor %}
+    </ul>
+
+</div>
     <div class="container mb-2">
         <div class="row">
             <div class="col-6 alert-info">
@@ -159,4 +181,9 @@
                 </ul>
         </div>
     </div>
+{#    /*-------navtest------*/#}
+    <script>
+        try{Typekit.load();}catch(e){}
+        <src ="https:////use.typekit.net/spo4ron.js">
+    </script>
 {% endblock %}
