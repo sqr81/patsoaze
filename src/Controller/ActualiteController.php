@@ -6,6 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use App\Repository\ActualiteRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ActualiteController extends AbstractController
@@ -31,7 +32,27 @@ class ActualiteController extends AbstractController
      */
     public function index()
     {
-        $actualites = $this->repository->findAll();
+        $actualites = $this->repository->findAllById();
         return $this->render('actualites/index.html.twig', compact('actualites'));
+    }
+
+    /**
+     * @Route("/actualites/{slug}-{id}", name="actualite.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Actualite $actualite
+     * @param string $slug
+     * @return Response
+     */
+    public function show(Actualite $actualite, string $slug):Response
+    {
+        if ($actualite->getSlug() !== $slug) {
+            return $this->redirectToRoute('actualite.show', [
+                'id' => $actualite->getId(),
+                'slug' => $actualite->getSlug()
+            ], 301);
+        }
+
+        return  $this->render('actualites/show.html.twig', [
+            'actualite' => $actualite,
+            'current_menu' => 'actualites']);
     }
 }

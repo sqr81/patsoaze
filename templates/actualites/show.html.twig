@@ -1,0 +1,469 @@
+{% extends "base.html.twig" %}
+{% block title %}Actualités{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('build/actualites_show.css') }}">
+
+    <table class="body" data-made-with-foundation="">
+        <tr>
+            <td class="float-center" align="center" valign="top">
+                <center data-parsed="">
+
+                    <!-- BROWSER MESSAGE STARTING -->
+
+                    <table id="browser" align="center" class="wrapper float-center" style="background:#f5f5f5;">
+                        <tr>
+                            <td class="wrapper-inner" style="background:#f5f5f5;">
+                                <table align="center" class="container" style="background:#f5f5f5;">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <p class="text-center" style="font-size:12px;">Does the e-mail look strange? <a href="#" style="text-decoration:underline;color:#2177d0;">Open it in the browser</a></p>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- BROWSER MESSAGE ENDING -->
+
+                    <!-- HEADER STARTING -->
+                    <!-- BACKGROUND PICTURE -->
+                    <table id="header" align="center" class="wrapper header float-center" style="background-image:url('https://img.webnode.com/newsletter/bg-ny-min.jpg');">
+                        <tr>
+                            <td class="wrapper-inner">
+                                <table align="center" class="container">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="row collapse" style="margin:0px 0px 20px 0px;">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    <center style="margin:20px 0 20px 0;">
+                                                                        <img src="https://img.webnode.com/newsletter/webnode-logo-blue.png" alt="Webnode" class="float-center">
+                                                                    </center>
+
+                                                                    <!-- HEADER TITLE -->
+                                                                    <h1 class="text-center">{{ actualite.titre }}</h1>
+                                                                    <br>
+                                                                    <!-- HEADER SPOTLIGHT -->
+                                                                    <p class="text-center">Topic 1 • Topic 2 • Topic 3</p>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- HEADER ENDING -->
+
+
+                    <!-- IMPORTANT NEWS STARTING -->
+
+                    <table id="important" align="center" class="wrapper header-blue float-center">
+                        <tr>
+                            <td class="wrapper-inner">
+                                <table align="center" class="container-blue">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    <img src="https://img.webnode.com/newsletter/decor-top-white-less-20opac.png"
+                                                                         alt="decor"
+                                                                         class="float-center">
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    <!-- IMPORTANT NEWS HEADING -->
+                                                                    <h1 class="text-center" style="margin:15px 0;">Heading</h1>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                    <th class="expander"></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th style="width:235px">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    <!-- IMPORTANT NEWS PICTURE -->
+                                                                    <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image article">
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                    <th style="width:335px;margin-top:0;">
+                                                        <table style="margin-top:0;">
+                                                            <tr style="margin-top:0;">
+                                                                <th style="margin-top:0;">
+                                                                    <!-- TEXT BESIDE PICTURE -->
+                                                                    <p style="margin-left:10px;margin-top:0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus. totam sint ratione possimus quo tempore.</p>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                    <th class="expander"></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns last">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+
+                                                                    <!-- TEXT BELOW PICTURE -->
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore.</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore.</p>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                    <th class="expander"></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    <img src="https://img.webnode.com/newsletter/decor-bottom-white-less-20opac.png"
+                                                                         alt="decor"
+                                                                         class="float-center"
+                                                                         style="margin-top:15px;">
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- IMPORTANT NEWS ENDING -->
+
+                    <!-- STORIES STARTING -->
+
+                    <table id="stories" align="center" class="wrapper header float-center">
+                        <tr>
+                            <td class="wrapper-inner">
+                                <br>
+                                <table align="center" class="container">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+
+                                            <!-- NEWS ARTICLE STARTING // With picture -->
+                                            <article>
+                                                <center>
+                                                    <!-- NEWS IMAGE -->
+                                                    <img src="http://placehold.it/600x155.jpg" alt="Image description">
+                                                </center>
+                                                <br>
+                                                <!-- NEWS TITLE -->
+                                                <h1 class="text-center">News with picture</h1>
+                                                <br>
+                                                <!-- NEWS CONTENT -->
+                                                <p class="text-center text-news">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                                    nisl ut aliquip ex ea commodo consequat.</p>
+
+                                                <br>
+                                                <!-- BUTTON STARTING -->
+                                                <table class="row collapse">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th class="small-12 large-12 columns first">
+                                                            <center>
+                                                                <!-- NEWS BUTTON LINK -->
+                                                                <a href="#">
+                                                                    <table class="button-filled float-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <!-- NEWS BUTTON TEXT -->
+                                                                                            <p class="text-center">Read more</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </a>
+                                                            </center>
+                                                        </th>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- BUTTON ENDING -->
+
+                                                <br><br>
+                                            </article>
+                                            <!-- NEWS ARTICLE ENDING // With picture -->
+
+                                            <!-- NEWS ARTICLE STARTING // Without picture -->
+                                            <article>
+                                                <br>
+                                                <!-- NEWS TITLE -->
+                                                <h1 class="text-center">News title</h1>
+                                                <br>
+                                                <!-- NEWS CONTENT -->
+                                                <p class="text-center text-news">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                                                    ea commodo consequat.
+                                                </p>
+                                                <br>
+                                                <!-- NEWS BUTTON -->
+
+                                                <!-- BUTTON STARTING -->
+                                                <table class="row collapse">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th class="small-12 large-12 columns first">
+                                                            <center>
+                                                                <!-- NEWS BUTTON LINK -->
+                                                                <a href="#">
+                                                                    <table class="button-filled float-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <!-- NEWS BUTTON TEXT -->
+                                                                                            <p class="text-center">Read more</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </a>
+                                                            </center>
+                                                        </th>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- BUTTON ENDING -->
+
+                                                <br><br>
+                                            </article>
+                                            <!-- NEWS ARTICLE ENDING // Without picture -->
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- STORIES ENDING -->
+
+
+                    <!-- NEW TEMPLATES STARTING -->
+
+                    <table id="templates" align="center" class="wrapper header float-center" style="background:#f5f5f5;">
+                        <tr>
+                            <td class="wrapper-inner">
+                                <table align="center" class="container" style="background:#f5f5f5;">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <br>
+                                            <h1 class="text-center">New templates</h1>
+
+                                            <table class="row collapse">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-12 columns first">
+                                                        <table class="row text-centered">
+                                                            <tr>
+
+
+                                                                <br><br><br>
+
+                                                                <th class="small-4 large-4 first columns">
+                                                                    <!-- TEMPLATE 1 LINK -->
+                                                                    <a href="#">
+                                                                        <!-- TEMPLATE 1 PICTURE -->
+                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
+                                                                    </a>
+                                                                </th>
+                                                                <th class="small-4 large-4 columns">
+                                                                    <!-- TEMPLATE 2 LINK -->
+                                                                    <a href="#">
+                                                                        <!-- TEMPLATE 2 PICTURE -->
+                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
+                                                                    </a>
+                                                                </th>
+                                                                <th class="small-4 large-4 last columns">
+                                                                    <!-- TEMPLATE 3 LINK -->
+                                                                    <a href="#">
+                                                                        <!-- TEMPLATE 3 PICTURE -->
+                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
+                                                                    </a>
+                                                                </th>
+
+
+                                                                <th class="expander"></th>
+                                                            </tr>
+
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <br><br><br>
+                                            <center>
+                                                <table class="button float-center">
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <!-- TEMPLATE DISCOVER BUTTON -->
+                                                                    <td><a href="https://www.webnode.com/templates">Discover more templates</a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </center>
+
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- NEW TEMPLATES ENDING -->
+
+
+                    <!-- FOOTER STARTING -->
+
+                    <table id="footer" align="center" class="wrapper header-blue float-center">
+                        <tr>
+                            <td class="wrapper-inner">
+                                <table align="center" class="container-blue">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="https://img.webnode.com/newsletter/decor-top-white-less.png" alt="decor" class="float-center">
+                                            <table class="row collapse" style="margin:20px 0px;">
+
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- FOOTER ENDING -->
+
+                </center>
+            </td>
+        </tr>
+    </table>
+{#    <main>#}
+{#        <div class="px-12 my-12 news-article">#}
+
+{#            <figure class="image-big">#}
+{#                <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image top">#}
+{#            </figure>#}
+
+
+{#            <header class="headline self-end pt-12">#}
+{#                <div class="flex items-center mb-4 text-14 text-sm font-semibold text-gray-500">#}
+{#              <span>#}
+{#                News/{{ actualite.createdAt|date('d-m-Y') }}#}
+{#              </span>#}
+{#                    <span class="mx-3">/</span>#}
+{#                    <time class="mb-0 font-black text-lime-500">#}
+{#                        <p>News / {{ actualite.createdAt|date('d-m-Y') }}</p>#}
+{#                    </time>#}
+{#                </div>#}
+
+{#                <h1 class="uppercase font-black text-gray-900 text-24 text-3xl">{{ actualite.titre}}</h1>#}
+{#            </header>#}
+
+{#            <div class="image-small img-thumbnail self-end">#}
+{#                <figure>#}
+{#                    <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image article">#}
+{#                </figure>#}
+{#            </div>#}
+
+
+{#            <article class="article max-w-xl pt-24">#}
+{#                <p>#}
+{#                    {{ actualite.description }}#}
+{#                </p>#}
+{#            </article>#}
+{#        </div>#}
+{#    </main>#}
+
+{% endblock %}

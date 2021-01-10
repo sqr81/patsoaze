@@ -35,7 +35,8 @@
             {% for actualite in actualites %}
             <div class="cardActu m-5">
                 <div class="cardActu__overlay">
-                    <a href="/news/" target="_blank">
+{#                    <a href="/news/" target="_blank">#}
+                        <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}">
                         <span>Lire</span>
                     </a>
                 </div>
@@ -45,12 +46,10 @@
                 </div>
                 <div class="cardActu__body ">
                     <h2><a href="#">{{ actualite.titre}}</a></h2>
-                    <p>{{ actualite.description }}</p>
+                    <h3>{{ actualite.description }}</h3>
                 </div>
                 <div class="cardActu__bottom">
-
                     <p>{{ actualite.createdAt|date('d-m-Y') }}</p>
-{#                    <h2>Coloredge is the largest provider of innovative visual</h2>#}
                 </div>
             </div>
             {% endfor %}

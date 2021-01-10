@@ -62,6 +62,11 @@ class Actualite
      */
     private $fichierFile;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="actualites")
+     */
+    private $categorie;
+
     public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -173,5 +178,17 @@ class Actualite
             // otherwise the event listeners won't be called and the file is lost
             $updatedAt = new \DateTimeImmutable();
         }
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
     }
 }

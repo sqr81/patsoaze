@@ -22,10 +22,23 @@ class ActualiteRepository extends ServiceEntityRepository
     /**
      * @return Actualite[]
      */
+    public function findAllById(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'DESC')
+//            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    /**
+     * @return Actualite[]
+     */
     public function findLatest(): array
     {
         return $this->createQueryBuilder('a')
-            ->orderBy('a.id', 'ASC')
+            ->orderBy('a.id', 'DESC')
             ->setMaxResults(4)
             ->getQuery()
             ->getResult();
