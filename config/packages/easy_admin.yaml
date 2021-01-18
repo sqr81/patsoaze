@@ -17,6 +17,7 @@ easy_admin:
             list:
                 fields:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.aquarelle_images%' }
+                sort: ['createdAt', 'ASC']
             show:
                 fields:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.aquarelle_images%' }
@@ -59,6 +60,12 @@ easy_admin:
                 fields:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.actualite_images%' }
                     - { property: 'fichier', type: 'vich_file', base_path: '%app.path.actualite_fichiers%' }
+
+
+
+
+
+
 
 
 #

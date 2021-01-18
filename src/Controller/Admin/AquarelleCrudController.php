@@ -51,7 +51,8 @@ class AquarelleCrudController extends AbstractCrudController
             MoneyField::new('prix')->setCurrency('EUR'),
             BooleanField::new('vendue'),
             AssociationField::new('admin'),
-             DateTimeField::new('created_at'),
+             DateTimeField::new('created_at')
+                 ->setFormat('EEEE d MMMM yyyy, HH:mm'),
         ];
 
         //pour pouvoir afficher les photos

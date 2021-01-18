@@ -55,6 +55,8 @@ class PhotoCrudController extends AbstractCrudController
             TextEditorField::new('description'),
             AssociationField::new('albumPhoto'),
             AssociationField::new('admin'),
+            DateTimeField::new('created_at')
+                ->setFormat('EEEE d MMMM yyyy, HH:mm')
         ];
         //pour pouvoir afficher les photos
         if ($pageName === Crud::PAGE_INDEX || $pageName === Crud::PAGE_DETAIL) {

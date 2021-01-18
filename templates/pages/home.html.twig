@@ -214,22 +214,27 @@
         <div class="title">
             <h1>- L'actualité du moment -</h1>
             <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-{% for actualite in actualites %}
-        <div class="img_slide2">
+            {% for actualite in actualites %}
+            <h3><a href="#"><img src="./uploads/images/divers/logo2.ico"/> {{ actualite.titre }} </h3>
+            {% endfor %}
+        {% for actualite in actualites %}
+            <div class="img_slide2">
 {#            <p>{{ actualite.titre }}</p>#}
-            <p>
-                <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite 1"/>
-            </p>
-        </div>
-        <div class="img_slide2b">
-            <p>
-{#                <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite 1"/>#}
-
-                                <img src="https://www.letelegramme.fr/ar/imgproxy.php/images/2019/04/10/jusqu-au-30-avril-francoise-sanquer-expose-ses-aquarelles-a_4510846.jpg?article=20190410-1012256452&aaaammjj=20190410"/>
-            </p>
-        </div>
-        </div>
+                <p>
+                    <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite"/>
+                </p>
+            </div>
         {% endfor %}
+{#            {% for actualite in actualites %}#}
+{#        <div class="img_slide2b">#}
+{#            <p>#}
+{#                <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite 2"/>#}
+
+{#                                <img src="https://www.letelegramme.fr/ar/imgproxy.php/images/2019/04/10/jusqu-au-30-avril-francoise-sanquer-expose-ses-aquarelles-a_4510846.jpg?article=20190410-1012256452&aaaammjj=20190410"/>#}
+{#            </p>#}
+{#        </div>#}
+        </div>
+{#        {% endfor %}#}
     </div>
 </section>
     <!-- Team Section -->

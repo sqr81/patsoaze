@@ -3,44 +3,10 @@
 {% block body %}
     <link rel="stylesheet" href="{{ asset('build/actualites_show.css') }}">
 
-    <table class="body" data-made-with-foundation="">
-        <tr>
-            <td class="float-center" align="center" valign="top">
-                <center data-parsed="">
-
-                    <!-- BROWSER MESSAGE STARTING -->
-
-                    <table id="browser" align="center" class="wrapper float-center" style="background:#f5f5f5;">
-                        <tr>
-                            <td class="wrapper-inner" style="background:#f5f5f5;">
-                                <table align="center" class="container" style="background:#f5f5f5;">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th class="small-12 large-12 columns first">
-                                                        <p class="text-center" style="font-size:12px;">Does the e-mail look strange? <a href="#" style="text-decoration:underline;color:#2177d0;">Open it in the browser</a></p>
-                                                    </th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- BROWSER MESSAGE ENDING -->
-
-                    <!-- HEADER STARTING -->
-                    <!-- BACKGROUND PICTURE -->
-                    <table id="header" align="center" class="wrapper header float-center" style="background-image:url('https://img.webnode.com/newsletter/bg-ny-min.jpg');">
-                        <tr>
-                            <td class="wrapper-inner">
+    <div class="body" data-made-with-foundation="">
+            <div class="float-center">
+                    <div id="header" class="wrapper header float-center align-content-center" style="background-image:url('https://img.webnode.com/newsletter/bg-ny-min.jpg');">
+                        <div class="wrapper-inner">
                                 <table align="center" class="container">
                                     <tbody>
                                     <tr>
@@ -58,9 +24,7 @@
 
                                                                     <!-- HEADER TITLE -->
                                                                     <h1 class="text-center">{{ actualite.titre }}</h1>
-                                                                    <br>
-                                                                    <!-- HEADER SPOTLIGHT -->
-                                                                    <p class="text-center">Topic 1 • Topic 2 • Topic 3</p>
+
                                                                 </th>
                                                             </tr>
                                                         </table>
@@ -72,143 +36,16 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                            </td>
-                        </tr>
-                    </table>
+                            </div>
+                    </div>
 
-                    <!-- HEADER ENDING -->
-
-
-                    <!-- IMPORTANT NEWS STARTING -->
-
-                    <table id="important" align="center" class="wrapper header-blue float-center">
-                        <tr>
-                            <td class="wrapper-inner">
-                                <table align="center" class="container-blue">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th class="small-12 large-12 columns first">
-                                                        <table>
-                                                            <tr>
-                                                                <th>
-                                                                    <img src="https://img.webnode.com/newsletter/decor-top-white-less-20opac.png"
-                                                                         alt="decor"
-                                                                         class="float-center">
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th class="small-12 large-12 columns first">
-                                                        <table>
-                                                            <tr>
-                                                                <th>
-                                                                    <!-- IMPORTANT NEWS HEADING -->
-                                                                    <h1 class="text-center" style="margin:15px 0;">Heading</h1>
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                    <th class="expander"></th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th style="width:235px">
-                                                        <table>
-                                                            <tr>
-                                                                <th>
-                                                                    <!-- IMPORTANT NEWS PICTURE -->
-                                                                    <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image article">
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                    <th style="width:335px;margin-top:0;">
-                                                        <table style="margin-top:0;">
-                                                            <tr style="margin-top:0;">
-                                                                <th style="margin-top:0;">
-                                                                    <!-- TEXT BESIDE PICTURE -->
-                                                                    <p style="margin-left:10px;margin-top:0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus. totam sint ratione possimus quo tempore.</p>
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                    <th class="expander"></th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th class="small-12 large-12 columns last">
-                                                        <table>
-                                                            <tr>
-                                                                <th>
-
-                                                                    <!-- TEXT BELOW PICTURE -->
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore.</p>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eum quas tempora optio, atque voluptate soluta cum iusto numquam ducimus aperiam vero beatae dolor, totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore. totam sint ratione possimus quo tempore.</p>
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                    <th class="expander"></th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <table class="row collapse">
-                                                <tbody>
-                                                <tr>
-                                                    <th class="small-12 large-12 columns first">
-                                                        <table>
-                                                            <tr>
-                                                                <th>
-                                                                    <img src="https://img.webnode.com/newsletter/decor-bottom-white-less-20opac.png"
-                                                                         alt="decor"
-                                                                         class="float-center"
-                                                                         style="margin-top:15px;">
-                                                                </th>
-                                                            </tr>
-                                                        </table>
-                                                    </th>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- IMPORTANT NEWS ENDING -->
-
-                    <!-- STORIES STARTING -->
-
-                    <table id="stories" align="center" class="wrapper header float-center">
+                    <div id="stories text-align-center" class="wrapper header float-center">
                         <tr>
                             <td class="wrapper-inner">
                                 <br>
-                                <table align="center" class="container">
+                                <table class="container">
                                     <tbody>
-                                    <tr>
+                                    <tr class="text-align-middle">
                                         <td>
 
                                             <!-- NEWS ARTICLE STARTING // With picture -->
@@ -219,7 +56,9 @@
                                                 </center>
                                                 <br>
                                                 <!-- NEWS TITLE -->
-                                                <h1 class="text-center">News with picture</h1>
+                                                <h1 class="text-center">{{ actualite.titre }}</h1>
+                                                <p><img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" class="float-left" style ="width: 235px; margin-right: 10px" alt="image articl" />
+                                                    {{ actualite.description }}</p>
                                                 <br>
                                                 <!-- NEWS CONTENT -->
                                                 <p class="text-center text-news">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
@@ -314,14 +153,14 @@
                                 </table>
                             </td>
                         </tr>
-                    </table>
+                    </div>
 
                     <!-- STORIES ENDING -->
 
 
                     <!-- NEW TEMPLATES STARTING -->
 
-                    <table id="templates" align="center" class="wrapper header float-center" style="background:#f5f5f5;">
+                    <div id="templates" align="center" class="wrapper header float-center" style="background:#f5f5f5;">
                         <tr>
                             <td class="wrapper-inner">
                                 <table align="center" class="container" style="background:#f5f5f5;">
@@ -396,14 +235,14 @@
                                 </table>
                             </td>
                         </tr>
-                    </table>
+                    </div>
 
                     <!-- NEW TEMPLATES ENDING -->
 
 
                     <!-- FOOTER STARTING -->
 
-                    <table id="footer" align="center" class="wrapper header-blue float-center">
+                    <div id="footer" align="center" class="wrapper header-blue float-center">
                         <tr>
                             <td class="wrapper-inner">
                                 <table align="center" class="container-blue">
@@ -421,14 +260,14 @@
                                 </table>
                             </td>
                         </tr>
-                    </table>
+                    </div>
 
                     <!-- FOOTER ENDING -->
 
-                </center>
-            </td>
-        </tr>
-    </table>
+                </div>
+            </div>
+
+    </div>
 {#    <main>#}
 {#        <div class="px-12 my-12 news-article">#}
 

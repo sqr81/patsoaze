@@ -64,6 +64,7 @@ class Actualite
 
     /**
      * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="actualites")
+     * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id", nullable=true)
      */
     private $categorie;
 

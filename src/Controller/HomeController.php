@@ -26,7 +26,7 @@ class HomeController extends AbstractController
 
         $aquarelles = $repository->findLatest();
         $photos = $photoRepository->findLatest();
-        $actualites = $actualiteRepository->findLatest();
+        $actualites =$actualiteRepository->findLastTwo();
         return $this->render('pages/home.html.twig', [
             'aquarelles'=>$aquarelles,
             'photos'=>$photos,

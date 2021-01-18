@@ -6,14 +6,18 @@
         <div class="title-photo row-12 mb-5">
             <h1>- {{ albumPhoto.nom }} -</h1>
         </div>
-        <div class="row m-5">
+        <div class="row m-5 d-flex justify-content-between">
             <div class="img-thumbnail w-25 row-12 text-center">
                 <div class=col-12">
                     <img class="img-fluid photo w-100" src="{{ vich_uploader_asset(albumPhoto, 'imageFile') }}">
                     <p>Nombre de photos dans l'album: {{ albumPhoto.photo.count }}</p>
                 </div>
             </div>
+            <div class="description ml-5 p-5" style="color: #b9d9eb; font-weight: bold ;border: 2px solid whitesmoke; border-radius: 15px">
+                <p>{{ albumPhoto.description }}</p>
+            </div>
         </div>
+
 {#        <div class="container">#}
 {#            <div class="row m-5">#}
 {#                <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">#}

@@ -47,6 +47,7 @@ class AdminCrudController extends AbstractCrudController
             IntegerField::new('id', 'identifiant')->onlyOnIndex(),
             TextField::new('username')->setTemplatePath('bundles/EasyAdminBundle/field_custom.html.twig'),
             TextField::new('email'),
+
 //            IntegerField::new('roles'),
 //            IntegerField::new('password'),
         ];

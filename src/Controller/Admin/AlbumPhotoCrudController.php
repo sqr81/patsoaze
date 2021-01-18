@@ -63,7 +63,8 @@ class AlbumPhotoCrudController extends AbstractCrudController
 
 //            AssociationField::new('admin'),
 //            AssociationField::new('photo'),
-            DateTimeField::new('created_at'),
+            DateTimeField::new('created_at')
+                ->setFormat('EEEE d MMMM yyyy, HH:mm'),
             CollectionField::new('photo')
                 ->setEntryType(PhotoType::class)
                 ->setFormTypeOption('by_reference',false)

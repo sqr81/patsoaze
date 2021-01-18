@@ -45,6 +45,18 @@ class ActualiteRepository extends ServiceEntityRepository
     }
 
     /**
+     * @return Actualite[]
+     */
+    public function findLastTwo(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'DESC')
+            ->setMaxResults(2)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
      * @return int|mixed|string|null
      * @throws \Doctrine\ORM\NonUniqueResultException
      */

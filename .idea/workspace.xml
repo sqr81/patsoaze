@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/actualites/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ActualiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ActualiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AlbumPhotoCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AquarelleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AquarelleCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PhotoCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PhotoRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/actualites/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photos/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photos/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/actualites/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/albumPhoto/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albumPhoto/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +252,7 @@
       <workItem from="1606410669359" duration="41436000" />
       <workItem from="1606840163229" duration="5294000" />
       <workItem from="1607094867463" duration="137713000" />
-      <workItem from="1608042259918" duration="200383000" />
+      <workItem from="1608042259918" duration="300634000" />
     </task>
     <servers />
   </component>
@@ -257,10 +264,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="93" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1600527474424" />
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608223354457">
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610895383356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608223354457" />
+    <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610895383356" />
     <state width="1491" height="209" key="GridCell.Tab.0.bottom" timestamp="1601733871707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -277,14 +284,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1491" height="209" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601733871696" />
-    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1607972411213">
+    <state x="369" y="228" key="NewPhpClassDialog" timestamp="1610294612419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607972411213" />
-    <state x="603" y="335" key="NewPhpFileDialog" timestamp="1607268057922">
+    <state x="369" y="228" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1610294612419" />
+    <state x="603" y="335" key="NewPhpFileDialog" timestamp="1610470904027">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="603" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607268057922" />
+    <state x="603" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1610470904027" />
     <state x="346" y="113" key="SettingsEditor" timestamp="1604681800206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
