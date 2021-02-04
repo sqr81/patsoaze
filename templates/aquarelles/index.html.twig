@@ -32,9 +32,14 @@
                             <figcaption>
     {#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
                                 {% if aquarelle.vendue == '1' %}
-                                    <p>Aquarelle vendue</p>
+                                    <div class="couleur text-danger fa fa-hand-o-right">
+                                        <p>Aquarelle vendue</p>
+                                    </div>
                                     {% else %}
-                                        <p>Aquarelle disponible</p>
+                                    <div class="couleur text-success fa fa-eur">
+                                        <p>Aquarelle disponible: {{ aquarelle.prix }} euros</p>
+                                        <p>{{ aquarelle.prix }}</p>
+                                    </div>
                                 {% endif %}
 {#                                <span>{{ aquarelle.vendue }}</span>#}
                             </figcaption>

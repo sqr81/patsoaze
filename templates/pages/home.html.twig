@@ -215,16 +215,18 @@
             <h1>- L'actualité du moment -</h1>
             <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
             {% for actualite in actualites %}
-            <h3><a href="#"><img src="./uploads/images/divers/logo2.ico"/> {{ actualite.titre }} </h3>
+                <h3><a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> {{ actualite.titre }}</h3></a>
+
+{#                <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}" class="view_link"><i class="fa fa-hand-o-right"></i></a>#}
             {% endfor %}
-        {% for actualite in actualites %}
-            <div class="img_slide2">
-{#            <p>{{ actualite.titre }}</p>#}
-                <p>
-                    <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite"/>
-                </p>
-            </div>
-        {% endfor %}
+            {% for actualite in actualites %}
+                <div class="img_slide2">
+    {#            <p>{{ actualite.titre }}</p>#}
+                    <p>
+                        <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-left" aria-hidden="true"></i><img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite"/></a>
+                    </p>
+                </div>
+            {% endfor %}
 {#            {% for actualite in actualites %}#}
 {#        <div class="img_slide2b">#}
 {#            <p>#}

@@ -1,12 +1,13 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
 
-{% block page_title 'Tableau de bord' %}
+{#{% block page_title 'Tableau de bord' %}#}
 
 {% block page_content %}
 
-    <link rel="stylesheet" href="{{ asset('build/test.css') }}">
-    <div class="container mb-2 d-flex justify-content-center sticky-top mb-5">
+{#    <link rel="stylesheet" href="{{ asset('build/test.css') }}">#}
+    <link rel="stylesheet" href="{{ asset('easyadmin/app.css') }}">
+    <div class="container mb-2 d-flex justify-content-center sticky-top mb-5;" style="top: 65px">
     <ul class="navtest cf">
         <li><a href="#">Visites</a></li>
         {% for admin in countAllAdmins %}
@@ -183,7 +184,8 @@
     </div>
 {#    /*-------navtest------*/#}
     <script>
+        src ="https:////use.typekit.net/spo4ron.js"
         try{Typekit.load();}catch(e){}
-        <src ="https:////use.typekit.net/spo4ron.js">
+
     </script>
 {% endblock %}

@@ -57,6 +57,49 @@ class ActualiteRepository extends ServiceEntityRepository
     }
 
     /**
+     * @return Actualite[]
+     */
+    public function findLastThree(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    /**
+     * @return Actualite[]
+     */
+    public function findLastSix(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'DESC')
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param Actualite $actualite
+     * @return int|mixed|string
+     */
+    public function findCategoryByActualite(Actualite $actualite)
+    {
+
+        $qb = $this->createQueryBuilder('a')
+            ->innerJoin('c.actualite', 'c' )
+            ->andWhere('c.actualite = :name')
+            ->setParameter('actualite', $actualite);
+
+        return $qb
+//            ->orderBy('a.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
      * @return int|mixed|string|null
      * @throws \Doctrine\ORM\NonUniqueResultException
      */

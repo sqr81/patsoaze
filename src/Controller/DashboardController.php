@@ -67,6 +67,7 @@ class DashboardController extends AbstractDashboardController
         // you can also render some template to display a proper Dashboard
         $routeBuilder = $this->get(CrudUrlGenerator::class)->build();
         return $this->render('bundles/EasyAdminBundle/welcome.html.twig',[
+
                 'countAllAdmins'=> $this->adminRepository->countAllAdmins(),
                 'countAllAquarelles'=> $this->aquarelleRepository->countAllAquarelles(),
                 'countAllActualites'=> $this->actualiteRepository->countAllActualites(),

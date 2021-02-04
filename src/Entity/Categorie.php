@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\CategorieRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -82,9 +83,16 @@ class Categorie
         return $this;
     }
 
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->nom);
+    }
+
     public function __toString(): string
     {
         return $this->nom;
 
     }
+
+
 }

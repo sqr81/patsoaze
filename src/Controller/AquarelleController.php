@@ -3,8 +3,9 @@ namespace App\Controller;
 
 use App\Entity\Aquarelle;
 use App\Repository\AquarelleRepository;
-use Doctrine\Common\Persistence\ObjectManager;
+//use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

@@ -19,22 +19,51 @@ class CategorieRepository extends ServiceEntityRepository
         parent::__construct($registry, Categorie::class);
     }
 
-    // /**
-    //  * @return Categorie[] Returns an array of Categorie objects
-    //  */
-    /*
-    public function findByExampleField($value)
+
+    public function countAllCategories()
+    {
+        $queryBuilder = $this->createQueryBuilder('c');
+        $queryBuilder->select('COUNT(c.id)as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @return Categorie[]
+     */
+    public function findAllById(): array
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
+            ->orderBy('c.id', 'DESC')
+//            ->setMaxResults(4)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
+
+    public function findActuByCategorie(Categorie $categorie)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->innerJoin('a.actualites', 'c')
+            ->andWhere('a.actualites = :name')
+            ->setParameter('categorie', $categorie);
+        return $qb
+//            ->orderBy('a.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+//    public function findByExampleField($value)
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('c.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
+
 
     /*
     public function findOneBySomeField($value): ?Categorie

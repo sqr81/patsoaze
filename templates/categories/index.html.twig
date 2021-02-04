@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block title %}Categories index{% endblock %}
+{% block body %}
+    <div class="header">
+        <h1>Toutes les categories</h1>
+{#        {% for categorie in countAllCategories %}#}
+{#            <span class="display-4">{{ countAllCategories['value'] }}</span> categories#}
+{#        {% endfor %}#}
+        {% for categorie in categories %}
+            <p>{{ categorie.nom }}</p>
+        {% endfor %}
+    </div>
+{%  endblock %}

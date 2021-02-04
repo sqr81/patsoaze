@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="{{ asset('build/actualites_show.css') }}">
 
     <div class="body" data-made-with-foundation="">
-            <div class="float-center">
-                    <div id="header" class="wrapper header float-center align-content-center" style="background-image:url('https://img.webnode.com/newsletter/bg-ny-min.jpg');">
+            <div class="float-center" style="background-color: #2177d0">
+                    <div id="header" class="wrapper header float-center align-content-center" style="background-image:url('http://www.eos-numerique.com/maphoto/1103/191226741.jpg');">
                         <div class="wrapper-inner">
                                 <table align="center" class="container">
                                     <tbody>
@@ -19,11 +19,19 @@
                                                             <tr>
                                                                 <th>
                                                                     <center style="margin:20px 0 20px 0;">
-                                                                        <img src="https://img.webnode.com/newsletter/webnode-logo-blue.png" alt="Webnode" class="float-center">
+                                                                        {% if actualite.categorie == 'exposition' %}
+                                                                        <img src="/uploads/images/categories/expologo.png" alt="expo_logo" class="float-center">
+                                                                        {% elseif actualite.categorie == 'divers' %}
+                                                                            <img src="/uploads/images/categories/diverslogo.png" alt="divers_logo" class="float-center">
+                                                                        {% elseif actualite.categorie == 'aquarelle' %}
+                                                                            <p>hello world aquarelle</p>
+                                                                        {% else %}
+                                                                            <img src="/uploads/images/categories/photologo.png" alt="photo_logo" class="float-center">
+                                                                        {% endif %}
                                                                     </center>
 
                                                                     <!-- HEADER TITLE -->
-                                                                    <h1 class="text-center">{{ actualite.titre }}</h1>
+{#                                                                    <h5 class="text-center">{{ actualite.titre }}</h5>#}
 
                                                                 </th>
                                                             </tr>
@@ -38,7 +46,11 @@
                                 </table>
                             </div>
                     </div>
-
+                    <div class="decor" style="height: 80px">
+                            <img src="https://img.webnode.com/newsletter/decor-top-white-less-20opac.png"
+                                 alt="decor"
+                                 class="float-center">
+                    </div>
                     <div id="stories text-align-center" class="wrapper header float-center">
                         <tr>
                             <td class="wrapper-inner">
@@ -50,21 +62,31 @@
 
                                             <!-- NEWS ARTICLE STARTING // With picture -->
                                             <article>
+                                                <div class ="imageActu">
                                                 <center>
-                                                    <!-- NEWS IMAGE -->
-                                                    <img src="http://placehold.it/600x155.jpg" alt="Image description">
+                                                    {% if actualite.categorie == 'exposition' %}
+                                                        <img src="/uploads/images/categories/expo.jpeg" alt="expo">
+                                                    {% elseif actualite.categorie == 'divers' %}
+                                                        <img src="/uploads/images/categories/divers.jpeg" alt="divers">
+                                                    {% elseif actualite.categorie == 'aquarelle' %}
+                                                        <p>hello world aquarelle</p>
+                                                    {% else %}
+                                                        <img src="/uploads/images/categories/pellicule.jpg" alt="pellicule">
+                                                    {% endif %}
                                                 </center>
+                                                </div>
                                                 <br>
                                                 <!-- NEWS TITLE -->
-                                                <h1 class="text-center">{{ actualite.titre }}</h1>
-                                                <p><img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" class="float-left" style ="width: 235px; margin-right: 10px" alt="image articl" />
-                                                    {{ actualite.description }}</p>
-                                                <br>
-                                                <!-- NEWS CONTENT -->
-                                                <p class="text-center text-news">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                                                    nisl ut aliquip ex ea commodo consequat.</p>
-
-                                                <br>
+                                                <h1 class="text-center m-3">{{ actualite.titre }}</h1>
+                                                <div class="actualites">
+                                                    <p><img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" class="float-left" alt="image_actualite" />
+                                                        {{ actualite.description }}</p>
+                                                    <br>
+                                                    <div class="badgeActu">
+                                                    <p><span class="badge badge-pill badge-primary">{{ actualite.createdAt|date('d-m-Y') }}</span>
+                                                        <a href="{{ path("categorie.show", {id: categorie.id, slug: categorie.slug}) }}"><span class="badge badge-pill badge-primary">{{ actualite.categorie }}</span></a>
+                                                    </div>
+                                                </div>
                                                 <!-- BUTTON STARTING -->
                                                 <table class="row collapse">
                                                     <tbody>
@@ -155,12 +177,8 @@
                         </tr>
                     </div>
 
-                    <!-- STORIES ENDING -->
 
-
-                    <!-- NEW TEMPLATES STARTING -->
-
-                    <div id="templates" align="center" class="wrapper header float-center" style="background:#f5f5f5;">
+                    <div id="templates"  class="wrapper header float-center d-flex justify-content-center" style="background:#f5f5f5">
                         <tr>
                             <td class="wrapper-inner">
                                 <table align="center" class="container" style="background:#f5f5f5;">
@@ -168,7 +186,7 @@
                                     <tr>
                                         <td>
                                             <br>
-                                            <h1 class="text-center">New templates</h1>
+                                            <h1 class="text-center">Dernières actualités</h1>
 
                                             <table class="row collapse">
                                                 <tbody>
@@ -177,58 +195,25 @@
                                                         <table class="row text-centered">
                                                             <tr>
 
-
-                                                                <br><br><br>
-
+                                                                {% for actualite in actualites %}
                                                                 <th class="small-4 large-4 first columns">
-                                                                    <!-- TEMPLATE 1 LINK -->
-                                                                    <a href="#">
-                                                                        <!-- TEMPLATE 1 PICTURE -->
-                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
+
+                                                                    <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}">
+
+                                                                        <div class="actufooter">
+                                                                            <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">
+{#                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">#}
+
+                                                                        </div>
                                                                     </a>
                                                                 </th>
-                                                                <th class="small-4 large-4 columns">
-                                                                    <!-- TEMPLATE 2 LINK -->
-                                                                    <a href="#">
-                                                                        <!-- TEMPLATE 2 PICTURE -->
-                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
-                                                                    </a>
-                                                                </th>
-                                                                <th class="small-4 large-4 last columns">
-                                                                    <!-- TEMPLATE 3 LINK -->
-                                                                    <a href="#">
-                                                                        <!-- TEMPLATE 3 PICTURE -->
-                                                                        <img src="http://placehold.it/180x100.jpg" alt="Template name">
-                                                                    </a>
-                                                                </th>
-
-
-                                                                <th class="expander"></th>
-                                                            </tr>
-
+                                                                {% endfor %}
+                                                            </tr>>
                                                         </table>
                                                     </th>
                                                 </tr>
                                                 </tbody>
                                             </table>
-
-                                            <br><br><br>
-                                            <center>
-                                                <table class="button float-center">
-                                                    <tr>
-                                                        <td>
-                                                            <table>
-                                                                <tr>
-                                                                    <!-- TEMPLATE DISCOVER BUTTON -->
-                                                                    <td><a href="https://www.webnode.com/templates">Discover more templates</a></td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </center>
-
-
                                         </td>
                                     </tr>
                                     </tbody>
@@ -236,73 +221,110 @@
                             </td>
                         </tr>
                     </div>
-
-                    <!-- NEW TEMPLATES ENDING -->
-
-
-                    <!-- FOOTER STARTING -->
-
-                    <div id="footer" align="center" class="wrapper header-blue float-center">
-                        <tr>
-                            <td class="wrapper-inner">
-                                <table align="center" class="container-blue">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src="https://img.webnode.com/newsletter/decor-top-white-less.png" alt="decor" class="float-center">
-                                            <table class="row collapse" style="margin:20px 0px;">
-
-                                            </table>
-
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </div>
-
-                    <!-- FOOTER ENDING -->
-
-                </div>
             </div>
-
     </div>
-{#    <main>#}
-{#        <div class="px-12 my-12 news-article">#}
-
-{#            <figure class="image-big">#}
-{#                <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image top">#}
-{#            </figure>#}
-
-
-{#            <header class="headline self-end pt-12">#}
-{#                <div class="flex items-center mb-4 text-14 text-sm font-semibold text-gray-500">#}
-{#              <span>#}
-{#                News/{{ actualite.createdAt|date('d-m-Y') }}#}
-{#              </span>#}
-{#                    <span class="mx-3">/</span>#}
-{#                    <time class="mb-0 font-black text-lime-500">#}
-{#                        <p>News / {{ actualite.createdAt|date('d-m-Y') }}</p>#}
-{#                    </time>#}
-{#                </div>#}
-
-{#                <h1 class="uppercase font-black text-gray-900 text-24 text-3xl">{{ actualite.titre}}</h1>#}
-{#            </header>#}
-
-{#            <div class="image-small img-thumbnail self-end">#}
-{#                <figure>#}
-{#                    <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="image article">#}
-{#                </figure>#}
-{#            </div>#}
+    <div>
+    <table id="footer" align="center" class="wrapper header-blue float-center">
+        <tr>
+            <td class="wrapper-inner" style="height: 100px">
+                <table align="center" class="container-blue">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://img.webnode.com/newsletter/decor-top-white-less.png" alt="decor" class="float-center">
 
 
-{#            <article class="article max-w-xl pt-24">#}
-{#                <p>#}
-{#                    {{ actualite.description }}#}
-{#                </p>#}
-{#            </article>#}
-{#        </div>#}
-{#    </main>#}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </div>
+{#    //test caroussel card#}
 
+        <div class="row mx-auto my-auto">
+            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+
+                <div class="carousel-inner w-100" role="listbox">
+
+                    <div class="carousel-item active">
+                        {% for actualite in actu %}
+                        <div class="col-md-4">
+                            <div class="card card-body">
+
+{#                                    <img class="img-fluid" src="{{ vich_uploader_asset(actualite, 'imageFile') }}">#}
+                                <img class="img-fluid" src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card card-body">
+                                <img class="img-fluid" src="http://placehold.it/380?text=3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card card-body">
+                                <img class="img-fluid" src="http://placehold.it/380?text=4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card card-body">
+                                <img class="img-fluid" src="http://placehold.it/380?text=5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card card-body">
+                                <img class="img-fluid" src="http://placehold.it/380?text=6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+
+    <script>$('#recipeCarousel').carousel({
+            interval: 10000
+        })
+
+        $('.carousel .carousel-item').each(function(){
+            var minPerSlide = 1;
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i=0;i<minPerSlide;i++) {
+                next=next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
 {% endblock %}

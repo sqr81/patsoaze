@@ -12,6 +12,7 @@ easy_admin:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'
             - '@VichUploader/Form/fields.html.twig'
+            - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
     entities:
         - App\Entity\Aquarelle
             list:
@@ -27,6 +28,7 @@ easy_admin:
 
         - App\Entity\Photo
             list:
+                max_results: 10
                 fields:
                     - { property: 'image', type: 'vich_image', base_path: '%app.path.photo_images%' }
             show:

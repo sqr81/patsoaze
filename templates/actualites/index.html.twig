@@ -48,8 +48,13 @@
                     <h2><a href="#">{{ actualite.titre}}</a></h2>
                     <h3>{{ actualite.description }}</h3>
                 </div>
-                <div class="cardActu__bottom">
-                    <p>{{ actualite.createdAt|date('d-m-Y') }}</p>
+                <div class="cardActu__bottom d-flex justify-content-sm-between">
+                    <div class="date">
+                        <p><span class="badge badge-pill badge-info">{{ actualite.createdAt|date('d-m-Y') }}</span></p>
+                    </div>
+                    <div class="badge">
+                        <p><span class="badge badge-pill badge-primary">{{ actualite.categorie }}</span></p>
+                    </div>
                 </div>
             </div>
             {% endfor %}

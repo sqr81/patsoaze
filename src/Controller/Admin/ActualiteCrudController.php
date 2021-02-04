@@ -49,9 +49,9 @@ class ActualiteCrudController extends AbstractCrudController
             DateTimeField::new('created_at')
                 ->setFormat('EEEE d MMMM yyyy, HH:mm'),
 
-            ChoiceField::new('categorie')
-                ->allowMultipleChoices('multiple')
-                ->setChoices(['exposition' =>0, 'photo'=>1, 'aquarelle'=>2, 'divers'=>3 ]),
+//            ChoiceField::new('categorie')
+//                ->allowMultipleChoices('multiple')
+//                ->setChoices(['exposition' =>0, 'photo'=>1, 'aquarelle'=>2, 'divers'=>3 ]),
 
 
         ];

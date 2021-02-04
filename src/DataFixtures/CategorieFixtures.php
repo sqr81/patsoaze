@@ -26,4 +26,5 @@ class CategorieFixtures extends Fixture
 
         $manager->flush();
     }
+
 }
