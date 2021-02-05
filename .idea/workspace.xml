@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ArtisteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CategorieController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/artistes/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categories/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categories/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/patsoaze.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/patsoaze.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/admins/francoise.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ActualiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ActualiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ActualiteCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlbumPhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AquarelleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AquarelleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/actualites/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/actualites/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artistes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artistes/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/paginator.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/paginator.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photos/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photos/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="twig" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -209,11 +183,11 @@
       <recent name="D:\wamp64\www\patsoaze\assets\images\aquarelles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images\admins" />
       <recent name="D:\wamp64\www\patsoaze\src\Controller" />
       <recent name="D:\wamp64\www\patsoaze\public\uploads\images\categories" />
       <recent name="D:\wamp64\www\patsoaze\public\build" />
       <recent name="D:\wamp64\www\patsoaze\public\uploads\images\divers" />
-      <recent name="D:\wamp64\www\patsoaze\public\build\images\divers" />
     </key>
   </component>
   <component name="RunManager">
@@ -282,7 +256,7 @@
       <workItem from="1611155120366" duration="11570000" />
       <workItem from="1611241762446" duration="17667000" />
       <workItem from="1611506784575" duration="33971000" />
-      <workItem from="1611856140477" duration="96973000" />
+      <workItem from="1611856140477" duration="114015000" />
     </task>
     <servers />
   </component>
