@@ -1,0 +1,115 @@
+body{
+    background-image: url("/uploads/images/divers/paysagePhoto.jpg");
+    background-size: cover;
+    /*position: fixed;*/
+    /*background-repeat: none;*/
+}
+
+.title-actualites{
+    margin-top: 150px;
+}
+
+.cardActu {
+    background: #fff;
+    position: relative;
+    width: 456px;
+    height: 588px;
+    max-width: 100%;
+    /*overflow: hidden;*/
+
+}
+
+.cardActu__top {
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 456px;
+
+}
+
+.cardActu__top img {
+    transform: scale(1.08);
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.cardActu:hover img {
+    transform: scale(1.5);
+}
+
+.cardActu__body {
+    height: 40%;
+    padding: 20px 44px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+
+.cardActu__bottom {
+    padding: 10px 44px;
+    /*text-overflow: ellipsis;*/
+    height: 10%;
+}
+
+.cardActu h2 {
+    color: #000;
+    font-size: 27px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cardActu h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #343B46;
+}
+
+.cardActu__overlay {
+    background: rgba(7,6,6, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    z-index: 999;
+    transition: all 0.5s ease;
+}
+
+.cardActu:hover .cardActu__overlay {
+    display: block;
+}
+
+.cardActu__overlay a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 50%;
+}
+
+.cardActu__overlay a span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 124px;
+    width: 134px;
+    height: 134px;
+    display: block;
+    text-align: center;
+    border: solid 8px #F45319;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
