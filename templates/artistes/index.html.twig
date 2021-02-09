@@ -14,6 +14,7 @@
 {#        </head>#}
 
         <body class="profile-page">
+
 {#        <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="100"  id="sectionsNav">#}
 {#            <div class="container">#}
 {#                <div class="navbar-translate">#}
@@ -67,6 +68,7 @@
 {#        </nav>#}
 
         <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+
         <div class="main main-raised">
             <div class="profile-content">
                 <div class="container">
@@ -79,9 +81,9 @@
                                 <div class="name">
                                     <h3 class="title_artiste">Françoise Sanquer</h3>
                                     <h5>Peintre</h5>
-                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook"></i></a>
-                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                                    <a href="https://www.facebook.com/" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook"></i></a>
+{#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>#}
+{#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>#}
                                 </div>
                             </div>
                         </div>
@@ -89,17 +91,42 @@
                     <div class="description text-center">
                         <p>"Amatrice et autodidacte, j’ai eu le privilège de rencontrer des artistes
                             passionnés et passionnants qui m’ont inspirée, ont su me guider dans
-                            mes choix techniques en respectant mes options artistiques".</p>
+                            mes choix techniques en respectant mes options artistiques".
+                        </p>
                     </div>
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
                             <div class="profile-tabs">
                                 <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#popup1" role="tab" data-toggle="tab">
-                                            <i class="material-icons">brush</i>
-                                            Expositions
-                                        </a>
+                                        <div id="popup1_artiste" class="overlay_artiste">
+                                            <div class="popup_artiste">
+                                                <div class="titre_popup text-center">
+                                                    <h2>Expositions</h2>
+                                                </div>
+                                                <a class="close_artiste" href="#">&times;</a>
+                                                <div class="content_artiste">
+                                                    <p><strong>2019</strong> : Exposition personnelle, L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                        <strong>2018</strong> : 23ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                        <strong>2017</strong> : Exposition personnelle, « Ô Jardin », 29700 Plomelin<br/>
+                                                        <strong>2016</strong> : 21ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                        <strong>2015</strong> : 20ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                        <strong>2014</strong> : 4ème Salon de la Peinture de L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                        <strong>2014</strong> : Sélectionnée au Concours Mondial de l’Aquarelle.<br/>
+                                                        Octobre – novembre <strong>2013</strong> L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                        Avril <strong>2013</strong> : 3ème Salon de la Peinture de L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                        Mars <strong>2013</strong> : Aquarellistes de Bretagne, Alizé, 29490 Guipavas.<br/>
+                                                        Mai <strong>2012</strong> : 17ème Salon régional de l’Aquarelle, 35760 Montgermont.<br/>
+                                                        Mars - avril <strong>2008</strong> : « Reflets et jeux d’eau », Galerie Espace Graphique 74200 Thonon-les-Bains.<br/>
+                                                        <strong>2006</strong> : « Transparences », Galerie St Jean, 74200 Thonon-les-Bains.<br/>
+                                                        <strong>2003</strong> : « Aqua rêves », Galerie St Jean, 74200 Thonon-les-Bains.<br/>
+                                                        <strong>1999</strong> : Participation à « Les Peintres du Léman », Palais des Congrès, 74500 Evian-les-Bains.<br/>
+                                                        <strong>1999</strong> : « Regards sur le Léman » Galerie Nymphéa, 74200 Thonon-les-Bains
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="nav-link active" href="#popup1_artiste"><i class="material-icons">brush</i>Expositions</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#works" role="tab" data-toggle="tab">
@@ -117,8 +144,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="tab-content tab-space">
                         <div class="tab-pane active text-center gallery" id="studio">
                             <div class="row">
@@ -161,23 +186,15 @@
                 </div>
             </div>
         </div>
-
-<div class="box_artiste">
-    <a class="button_artiste" href="#popup1">Let me Pop up</a>
-</div>
-<div id="popup1" class="overlay">
-    <div class="popup">
-        <h2>Here i am</h2>
-        <a class="close_artiste" href="#">&times;</a>
-        <div class="content_artiste">
-            Thank to pop me out of that button, but now i'm done so you can close this window.
-        </div>
-    </div>
-</div>
-
         <footer class="footer_footer text-center ">
             <p>Made with <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Material Kit</a> by Creative Tim</p>
         </footer>
+
+
+<script>
+    alert( 'Hello, world!' );
+</script>
+
 
 {#        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>#}
 {#        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}

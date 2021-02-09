@@ -403,33 +403,46 @@ footer p a:hover {
     color: #9f26aa;
     text-decoration: none;
 }
-/*---------------------popup-*/
+/*---------------------popup-------------------*/
 .box_artiste {
-    width: 40%;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.2);
-    padding: 35px;
-    border: 2px solid #fff;
-    border-radius: 20px/50px;
-    background-clip: padding-box;
-    text-align: center;
+    /*width: 40%;*/
+    /*margin: 0 auto;*/
+    /*background: rgba(255,255,255,0.2);*/
+    /*padding: 35px;*/
+    /*border: 2px solid #fff;*/
+    /*border-radius: 20px/50px;*/
+    /*background-clip: padding-box;*/
+    /*text-align: center;*/
+    display: flex;
+    justify-content:center;
+    box-sizing: border-box;
 }
 
 .button_artiste {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    /*color: black;*/
+    /*border: 2px solid #06D85F;*/
+    /*border-radius: 20px/50px;*/
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    color: #fff;
+    background-color: #9c27b0;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+    border: 0;
+    border-radius: 3px;
+
 }
 .button_artiste:hover {
     background: #06D85F;
+    color: #0a0a0a;
 }
 
-.overlay {
+.content_artiste{
+    text-align: justify;
+}
+.overlay_artiste {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -440,12 +453,12 @@ footer p a:hover {
     visibility: hidden;
     opacity: 0;
 }
-.overlay:target {
+.overlay_artiste:target {
     visibility: visible;
     opacity: 1;
 }
 
-.popup {
+.popup_artiste {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -453,14 +466,15 @@ footer p a:hover {
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
+    content: "";
 }
 
-.popup h2 {
+.popup_artiste h2 {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
 }
-.popup .close_artiste {
+.popup_artiste .close_artiste {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -470,19 +484,19 @@ footer p a:hover {
     text-decoration: none;
     color: #333;
 }
-.popup .close_artiste:hover {
+.popup_artiste .close_artiste:hover {
     color: #06D85F;
 }
-.popup .content_artiste {
+.popup_artiste .content_artiste {
     max-height: 30%;
     overflow: auto;
 }
 
 @media screen and (max-width: 700px){
-    .box{
+    .box_artiste{
         width: 70%;
     }
-    .popup{
+    .popup_artiste{
         width: 70%;
     }
 }

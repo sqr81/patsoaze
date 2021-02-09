@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/artistes.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/artistes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/artistes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artistes/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +170,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -253,7 +255,8 @@
       <workItem from="1611241762446" duration="17667000" />
       <workItem from="1611506784575" duration="33971000" />
       <workItem from="1611856140477" duration="116198000" />
-      <workItem from="1612542591217" duration="4377000" />
+      <workItem from="1612542591217" duration="38978000" />
+      <workItem from="1612857257805" duration="5807000" />
     </task>
     <servers />
   </component>
