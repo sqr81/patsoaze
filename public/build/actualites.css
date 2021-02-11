@@ -7,6 +7,7 @@ body{
 
 .title-actualites{
     margin-top: 150px;
+    text-shadow: 2px 2px 2px white;
 }
 
 .cardActu {

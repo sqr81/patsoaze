@@ -15,60 +15,12 @@
 
         <body class="profile-page">
 
-{#        <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="100"  id="sectionsNav">#}
-{#            <div class="container">#}
-{#                <div class="navbar-translate">#}
-{#                    <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Material Kit </a>#}
-{#                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">#}
-{#                        <span class="navbar-toggler-icon"></span>#}
-{#                        <span class="navbar-toggler-icon"></span>#}
-{#                        <span class="navbar-toggler-icon"></span>#}
-{#                    </button>#}
-{#                </div>#}
 
-{#                <div class="collapse navbar-collapse">#}
-{#                    <ul class="navbar-nav ml-auto">#}
-{#                        <li class="dropdown nav-item">#}
-{#                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">#}
-{#                                <i class="material-icons">apps</i> Components#}
-{#                            </a>#}
-{#                            <div class="dropdown-menu dropdown-with-icons">#}
-{#                                <a href="../index.html" class="dropdown-item">#}
-{#                                    <i class="material-icons">layers</i> All Components#}
-{#                                </a>#}
-
-{#                                <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">#}
-{#                                    <i class="material-icons">content_paste</i> Documentation#}
-{#                                </a>#}
-{#                            </div>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="javascript:void(0)">#}
-{#                                <i class="material-icons">cloud_download</i> Download#}
-{#                            </a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="https://twitter.com/CreativeTim" target="_blank">#}
-{#                                <i class="fa fa-twitter"></i>#}
-{#                            </a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank">#}
-{#                                <i class="fa fa-facebook-square"></i>#}
-{#                            </a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link"  href="https://www.instagram.com/CreativeTimOfficial" target="_blank">#}
-{#                                <i class="fa fa-instagram"></i>#}
-{#                            </a>#}
-{#                        </li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </nav>#}
-
-        <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
-
+        <div class="page-header header-filter" data-parallax="true">
+            <div class="next_artiste" style="width: 50px; height: 50px;">
+                <a href="/artistes"><img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="artiste patrick"></a>
+            </div>
+        </div>
         <div class="main main-raised">
             <div class="profile-content">
                 <div class="container">
@@ -126,18 +78,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a class="nav-link active" href="#popup1_artiste"><i class="material-icons">brush</i>Expositions</a>
+                                        <a class="nav-link active" href="#popup1_artiste"><i class="material-icons">brush</i><span>Expositions</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#works" role="tab" data-toggle="tab">
                                             <i class="material-icons">palette</i>
-                                            Au travail
+                                            <span>Au travail</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
                                             <i class="material-icons">favorite</i>
-                                            Favoris
+                                            <span>Favoris</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -172,7 +124,8 @@
                         <div class="tab-pane text-center gallery" id="favorite">
                             <div class="row">
                                 <div class="col-md-3 ml-auto">
-                                    <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded">
+                                    <img src="/uploads/images/aquarelles/coucherDeSoleil.jpg" class="rounded">
+{#                                    <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded">#}
                                     <img src="https://images.unsplash.com/photo-1494028698538-2cd52a400b17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83bf0e71786922a80c420c17b664a1f5&auto=format&fit=crop&w=334&q=80" class="rounded">
                                 </div>
                                 <div class="col-md-3 mr-auto">
@@ -192,7 +145,6 @@
 
 
 <script>
-    alert( 'Hello, world!' );
 </script>
 
 

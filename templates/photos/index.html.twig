@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="{{ asset('build/photos.css') }}">
     <div class="title-photos container text-center">
         <h1>- Photos -</h1>
-        <p>Quelques photos...</p>
+        <h3>Quelques photos...</h3>
+
     </div>
     <div class="cardPhoto-deck">
 {#    {% for photo in photos %}#}
@@ -18,7 +19,6 @@
 {#            </div>#}
 {#        </div>#}
 {#    {% endfor %}#}
-{#        <div class="photo_card_deck card-deck m-5 ">#}
             {% for photo in photos %}
                 <div class="photo_card ">
                     <ul class="grid cs-style-3">
@@ -47,8 +47,18 @@
                     </div>
                 </div>
             {% endfor %}
-        </div>
-
-
+    </div>
+        <div class="container mt-5 d-flex justify-content-around">
+            <div class="row">
+                <div class="nbrphotos col-4 d-flex justify-content-center">
+            Nombre de photos: {{ photos.getTotalItemCount }}
+                </div>
+                <div class="col-8">
+                {{ knp_pagination_render(photos,
+        '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig',
+        ) }}
+                </div>
+            </div>
+    </div>
 
 {%  endblock %}

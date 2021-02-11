@@ -102,3 +102,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
     }
 
 }
+
+h1 {
+    text-shadow: 2px 2px 2px black;
+}

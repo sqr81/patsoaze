@@ -7,3 +7,7 @@ body {
     margin-top: 150px;
     color: whitesmoke;
 }
+
+h1 {
+    text-shadow: 2px 2px 2px black;
+}

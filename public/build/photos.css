@@ -1,8 +1,7 @@
 body{
     background-image: url("/uploads/images/divers/fondSlide2.jpeg");
     background-size: cover;
-    /*position: fixed;*/
-    /*background-repeat: none;*/
+
 }
 
 .cardPhoto-deck{
@@ -15,9 +14,13 @@ body{
     justify-content: space-between;
 }
 
+h1,h3 {
+    text-shadow: 2px 2px 2px white;
+}
 
 .title-photos{
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .photo_card {
@@ -47,3 +50,133 @@ body{
     background-color: rgba(0,0,0,.03);
     border-top: 1px solid rgba(0,0,0,.125);
 }
+
+/*------------animation-----------------------*/
+.photo{
+
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+/*------------------------*/
+
+.nbrphotos{
+    width: 240px;
+    height: 37px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    color:#6c757d;
+    padding: .5rem .75rem;
+    text-align: -webkit-match-parent;
+}
+
+/*!* Imports *!*/
+/*@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');*/
+
+/*!* Color scheme *!*/
+/*:root {*/
+/*    --accent: #444B6E;*/
+/*    --light: #CACFD6;*/
+/*    --dark: #1C3144;*/
+/*}*/
+
+/*!* General Styles *!*/
+/*body {*/
+/*    font-family: 'Red Hat Display', sans-serif;*/
+/*    color: var(--dark);*/
+/*    !*display: flex;*!*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    min-height: 100vh;*/
+/*}*/
+
+/*.wrapper {*/
+/*    max-width: 760px;*/
+/*    margin: auto;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.page {*/
+/*    padding: 5rem;*/
+/*    min-height: 200px;*/
+/*    opacity: 0.05;*/
+/*    transition: opacity 500ms ease-in-out;*/
+/*    border: dotted 5px var(--light);*/
+/*}*/
+
+
+/*.page.active {*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.page > h3 {*/
+/*    font-size: 3rem;*/
+/*    font-weight: bold;*/
+/*    color: rgba(0, 0, 0, 0.5);*/
+/*    color: var(--accent);*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+/*.page > p {*/
+/*    font-size: 1.2rem;*/
+/*    margin-bottom: 0;*/
+/*}*/
+
+/*.paginator {*/
+/*    margin: auto;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*button {*/
+/*    cursor: pointer;*/
+/*    background: var(--light);*/
+/*    color: var(--dark);*/
+/*    border: none;*/
+/*    padding: 0.5em 0.75rem;*/
+/*    transition: transform 50ms ease-out;*/
+/*    margin-top: 0.5rem;*/
+/*}*/
+
+/*button + button {*/
+/*    margin-left: 0.5rem;*/
+/*}*/
+
+/*button.active {*/
+/*    background: var(--accent);*/
+/*    font-weight: bold;*/
+/*    color: white;*/
+/*}*/
+
+/*button:focus, button:hover {*/
+/*    transform: scale(1.1);*/
+/*}*/
+
+/*.page-nums {*/
+/*    margin: 1rem;*/
+/*}*/
