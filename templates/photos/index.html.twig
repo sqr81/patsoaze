@@ -39,7 +39,11 @@
                     <div class="photo_card-body">
                         <h5 class="photo_card-title text-center"><a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}">{{ photo.nom}}</a></h5>
                         <div class="description text-center">
-                            <p>{{ photo.description }}</p>
+                            {% if photo.description == null %}
+                                <p>Pas encore de description pour cette photo.</p>
+                            {% else %}
+                            <p>{{ photo.description | safe }}</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="photo_card-footer text-center w-100">
@@ -51,14 +55,14 @@
         <div class="container mt-5 d-flex justify-content-around">
             <div class="row">
                 <div class="nbrphotos col-4 d-flex justify-content-center">
-            Nombre de photos: {{ photos.getTotalItemCount }}
+                    Nombre de photos: {{ photos.getTotalItemCount }}
                 </div>
                 <div class="col-8">
-                {{ knp_pagination_render(photos,
-        '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig',
-        ) }}
+                    {{ knp_pagination_render(photos,
+                    '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig',
+                    ) }}
                 </div>
             </div>
-    </div>
+        </div>
 
 {%  endblock %}

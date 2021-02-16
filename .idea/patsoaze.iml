@@ -123,6 +123,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/proxy-manager-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-components" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/michelf/php-markdown" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

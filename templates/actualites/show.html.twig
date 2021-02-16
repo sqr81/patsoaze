@@ -77,12 +77,18 @@
                                                 </div>
                                                 <br>
                                                 <!-- NEWS TITLE -->
+
                                                 <h1 class="text-center m-3">{{ actualite.titre }}</h1>
                                                 <div class="actualites">
-                                                    <p><img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" class="float-left" alt="image_actualite" />
-                                                        {{ actualite.description }}</p>
-                                                    <br>
-                                                    <div class="badgeActu">
+                                                    <div class="container">
+                                                        <div class="row mb-5">
+
+                                                            <img src="{{ vich_uploader_asset(actualite, 'imageFile') }}" class="float-left" alt="image_actualite">
+                                                            <p>{{ actualite.description | markdown }}</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="badgeActu mb-5">
                                                     <p><span class="badge badge-pill badge-primary">{{ actualite.createdAt|date('d-m-Y') }}</span>
                                                         <a href="{{ path("categorie.show", {id: categorie.id, slug: categorie.slug}) }}"><span class="badge badge-pill badge-primary">{{ actualite.categorie }}</span></a>
                                                     </div>

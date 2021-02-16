@@ -4,6 +4,38 @@ body{
 
 }
 
+.btn_next {
+    border:none;
+    outline:none;
+    background:white;
+    padding:10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin:10px auto;
+    border-radius: 5px;
+}
+
+.btn_prev {
+    border:none;
+    outline:none;
+    background:white;
+    padding:10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin:10px auto;
+    border-radius: 5px;
+}
+
+.btn_next:hover{
+    background: #0055aa;
+    color: white;
+}
+
+.btn_prev:hover{
+    background: #0055aa;
+    color: white;
+}
+
 .cardPhoto-deck{
     display: -ms-flexbox;
     display: flex;

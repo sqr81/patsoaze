@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Repository\ActualiteRepository;
 use App\Repository\AquarelleRepository;
 use App\Repository\PhotoRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,7 +14,13 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 class HomeController extends AbstractController
 {
 
+    public function __construct(PhotoRepository $repository, EntityManagerInterface $em)
+    {
 
+        $this->repository = $repository;
+        $this->em = $em;
+
+    }
     /**
      * @Route("/", name="home")
      * @param AquarelleRepository $repository

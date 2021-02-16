@@ -53,6 +53,21 @@ class PhotoRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    /**
+     * @return Photo[]
+     */
+    public function findNextPhotoById():array
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
+    }
+
+
+
     // /**
     //  * @return Photo[] Returns an array of Photo objects
     //  */

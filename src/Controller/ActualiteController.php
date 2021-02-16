@@ -54,7 +54,6 @@ class ActualiteController extends AbstractController
             ], 301);
         }
 
-
         $actualites = $this->repository->findLastThree();
         $actu = $this->repository->findLastSix();
         $banniere = $actualite->getCategorie();

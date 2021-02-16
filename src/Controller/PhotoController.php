@@ -28,6 +28,7 @@ class PhotoController extends AbstractController
 
         $this->repository = $repository;
         $this->em = $em;
+        
     }
 
     /**
@@ -61,6 +62,7 @@ class PhotoController extends AbstractController
      */
     public function show(Photo $photo, string $slug):Response
     {
+
         if ($photo->getSlug() !== $slug) {
             return $this->redirectToRoute('photo.show', [
                 'id' => $photo->getId(),
@@ -68,9 +70,15 @@ class PhotoController extends AbstractController
             ], 301);
         }
 
+        $photoById = $this ->repository->findNextPhotoById();
+        $photos = $this->repository->findAll();
         return  $this->render('photos/show.html.twig', [
             'photo' => $photo,
+            'photos' =>$photos,
+            'photoById' => $photoById,
+//            'id' => $id,
             'current_menu' => 'photos']);
+
     }
 
 }
