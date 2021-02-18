@@ -70,15 +70,24 @@ class PhotoController extends AbstractController
             ], 301);
         }
 
-        $photoById = $this ->repository->findNextPhotoById();
+        $id = $photo->getId();
+//        $slug = $photo->getSlug();
+        $photoSuivant = $this->getDoctrine()
+            ->getRepository(Photo::class)
+            ->suivant($id);
+
         $photos = $this->repository->findAll();
+//        $id = !empty($_POST['id']) ? $_POST['id'] : NULL;
+
         return  $this->render('photos/show.html.twig', [
             'photo' => $photo,
             'photos' =>$photos,
-            'photoById' => $photoById,
-//            'id' => $id,
+            'photoSuivant' => $photoSuivant,
+            'id' => $id,
+//            'slug' => $slug,
             'current_menu' => 'photos']);
 
     }
+
 
 }

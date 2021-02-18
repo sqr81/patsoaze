@@ -12,32 +12,41 @@
                 <p></p>
             </div>
         </div>
-
+{#        {% for photo in photos %}#}
+{#            {% set counter = ( counter | default(0) ) + 1 %}#}
+{#            <h2>{{ counter ~ ' => ' ~ photo.id }}</h2>#}
+{#        {% endfor %}#}
 {#        <h1>{{ app.request.get('id') }}</h1>#}
         {% if photo.id  == photo.id  %}
             <h1>hellooo</h1>
-{#                {% for photo in photos %}#}
-                    <h1>{{ photo.id }}</h1>
-{#                    {{ dump(photoById) }}#}
-{#                    die()#}
-{#                    <h1>Hiiii</h1>#}
-{#                    <h1>{{ app.request.get('id') }}#}
-{#                        {{ dump(photo.slug) }}#}
-{#                        die()#}
-{#                    </h1>#}
-{#                <h1><strong>{{ photo.id }}</strong></h1>#}
-{#                {% endfor %}#}
+{#          {% for photo in photos %}#}
+            <h1>{{ photo.id }}</h1>
+
+            <h1>{{ app.request.get('id') }}</h1>
+{#           {% endfor %}#}
         {% endif %}
 
+{#        <script>#}
+{#            alert( 'Hello, world!' );#}
+{#        </script>#}
+        <script>
+            echo( 'Hello, world!' );
+        </script>
+<h1>{{ photoSuivant['2']}}</h1>
+
+{{ dump(photoSuivant) }}
+{#        die()#}
 
 {#        {{ loop.index }} - {{ user.username }}#}
-{#        <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><button class="btn_prev" onclick="prev()">Prev</button>#}
-        <button class="btn_prev" onclick="prev()">Prev</button>
-        <button class="btn_next" onclick="next()">Next</button>
-        <h1></h1>
+{#        <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><button class="btn_next" onclick="suivant()">Prev</button>#}
+        <button class="btn_prev" onclick="precedent()">Prev</button>
+        <button class="btn_next" onclick="suivant(['2'])">Next</button>
+{#        <a onclick="suivant()" class="btn btn-info pull-right" style="padding : 10px 20px 10px 20px; margin-left : 2px;"><span class="glyphicon glyphicon-chevron-right"></span></a>#}
+{#            <a href="{{ photoSuivant['2']}}"><button class="btn_next" onclick="suivant()">Suivant</button>#}
+                <a href="/photos/{{ photoSuivant['2']}}-{{ photo.id }}"><button class="btn_next" onclick="suivant()">Suivant</button>
     </div>
 
-{#    <script>#}
+    {#    <script>#}
 {#        var slider_img = document.querySelector('.slider-img');#}
 {#        var images =[{{ vich_uploader_asset(photo, 'imageFile') }}];#}
 {#        var i = 0;#}

@@ -112,7 +112,7 @@ class AdminCrudController extends AbstractCrudController
         $admin = $adminRepository->find($id);
 
         $counterView = [];
-        $days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];
+        $days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
         foreach ($days as $day) {
             array_push($counterView, random_int(1, 10));
