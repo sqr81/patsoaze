@@ -65,7 +65,7 @@ class PhotoRepository extends ServiceEntityRepository
         $query = $entityManager->createQuery(
             'SELECT s
             FROM App\Entity\Photo s
-            WHERE s.id > :id
+            WHERE s.id > :id 
             ORDER BY s.id ASC'
         )->setParameter('id', $id);
 

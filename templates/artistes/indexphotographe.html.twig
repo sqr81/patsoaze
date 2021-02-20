@@ -1,0 +1,164 @@
+{% extends "base.html.twig" %}
+{% block title %}Artiste photographe{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('build/artistes_photographe.css') }}">
+    <div class="header">
+
+
+    {#        <head>#}
+    {#            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">#}
+    {#            <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">#}
+    {#            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">#}
+    {#            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">#}
+    {#            <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">#}
+    {#        </head>#}
+
+    <body class="profile-page">
+
+
+    <div class="page-header header-filter" data-parallax="true">
+        <div class="next_artiste" style="width: 50px; height: 50px;">
+            <a href="{{ path('artiste_peintre.index') }}"><img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Francoise" ></a>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="profile-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="Patrick" title="Patrick" class="img-raised rounded-circle img-fluid">
+                            </div>
+                            <div class="name">
+                                {% for artiste in artistes %}
+                                    {% if artiste.prenom == "Patrick" %}
+                                        <h3 class="title_artiste">Patrick</h3>
+                                        <h5>Photographe</h5>
+                                        <a href="https://www.facebook.com/" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook"></i></a>
+                                        {#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>#}
+                                        {#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>#}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description text-center">
+                    <p>"Amatrice et autodidacte, j’ai eu le privilège de rencontrer des artistes
+                        passionnés et passionnants qui m’ont inspirée, ont su me guider dans
+                        mes choix techniques en respectant mes options artistiques".
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile-tabs">
+                            <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <div id="popup1_artiste" class="overlay_artiste">
+                                        <div class="popup_artiste">
+                                            <div class="titre_popup text-center">
+                                                <h2>Expositions</h2>
+                                            </div>
+                                            <a class="close_artiste" href="#">&times;</a>
+                                            <div class="content_artiste">
+                                                <p><strong>2019</strong> : Exposition personnelle, L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                    <strong>2018</strong> : 23ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                    <strong>2017</strong> : Exposition personnelle, « Ô Jardin », 29700 Plomelin<br/>
+                                                    <strong>2016</strong> : 21ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                    <strong>2015</strong> : 20ème Salon de l’aquarelle de Montgermont, 35760<br/>
+                                                    <strong>2014</strong> : 4ème Salon de la Peinture de L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                    <strong>2014</strong> : Sélectionnée au Concours Mondial de l’Aquarelle.<br/>
+                                                    Octobre – novembre <strong>2013</strong> L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                    Avril <strong>2013</strong> : 3ème Salon de la Peinture de L’Athéna, 29500 Ergué - Gabéric<br/>
+                                                    Mars <strong>2013</strong> : Aquarellistes de Bretagne, Alizé, 29490 Guipavas.<br/>
+                                                    Mai <strong>2012</strong> : 17ème Salon régional de l’Aquarelle, 35760 Montgermont.<br/>
+                                                    Mars - avril <strong>2008</strong> : « Reflets et jeux d’eau », Galerie Espace Graphique 74200 Thonon-les-Bains.<br/>
+                                                    <strong>2006</strong> : « Transparences », Galerie St Jean, 74200 Thonon-les-Bains.<br/>
+                                                    <strong>2003</strong> : « Aqua rêves », Galerie St Jean, 74200 Thonon-les-Bains.<br/>
+                                                    <strong>1999</strong> : Participation à « Les Peintres du Léman », Palais des Congrès, 74500 Evian-les-Bains.<br/>
+                                                    <strong>1999</strong> : « Regards sur le Léman » Galerie Nymphéa, 74200 Thonon-les-Bains
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="nav-link active" href="#popup1_artiste"><i class="material-icons">panorama</i><span>Expositions</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#works" role="tab" data-toggle="tab">
+                                        <i class="material-icons">camera_roll</i>
+                                        <span>Au travail</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                        <i class="material-icons">auto_awesome</i>
+                                        <span>Favoris</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content tab-space">
+                    <div class="tab-pane active text-center gallery" id="studio">
+                        <div class="row">
+                            <div class="col-md-3 ml-auto">
+                                <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83079913579babb9d2c94a5941b2e69d&auto=format&fit=crop&w=751&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1528249227670-9ba48616014f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66b8e7db17b83084f16fdeadfc93b95b&auto=format&fit=crop&w=357&q=80" class="rounded">
+                            </div>
+                            <div class="col-md-3 mr-auto">
+                                <img src="https://images.unsplash.com/photo-1521341057461-6eb5f40b07ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=72da2f550f8cbd0ec252ad6fb89c96b2&auto=format&fit=crop&w=334&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6326214b7ce18d74dde5e88db4a12dd5&auto=format&fit=crop&w=750&q=80" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane text-center gallery" id="works">
+                        <div class="row">
+                            <div class="col-md-3 ml-auto">
+                                <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83079913579babb9d2c94a5941b2e69d&auto=format&fit=crop&w=751&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6326214b7ce18d74dde5e88db4a12dd5&auto=format&fit=crop&w=750&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec2bdc92a9687b6af5089b335691830e&auto=format&fit=crop&w=750&q=80" class="rounded">  					</div>
+                            <div class="col-md-3 mr-auto">
+                                <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1494028698538-2cd52a400b17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83bf0e71786922a80c420c17b664a1f5&auto=format&fit=crop&w=334&q=80" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane text-center gallery" id="favorite">
+                        <div class="row">
+                            <div class="col-md-3 ml-auto">
+                                <img src="/uploads/images/aquarelles/coucherDeSoleil.jpg" class="rounded">
+                                {#                                    <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded">#}
+                                <img src="https://images.unsplash.com/photo-1494028698538-2cd52a400b17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83bf0e71786922a80c420c17b664a1f5&auto=format&fit=crop&w=334&q=80" class="rounded">
+                            </div>
+                            <div class="col-md-3 mr-auto">
+                                <img src="https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec2bdc92a9687b6af5089b335691830e&auto=format&fit=crop&w=750&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83079913579babb9d2c94a5941b2e69d&auto=format&fit=crop&w=751&q=80" class="rounded">
+                                <img src="https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6326214b7ce18d74dde5e88db4a12dd5&auto=format&fit=crop&w=750&q=80" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_footer text-center ">
+        <p>Made with <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Material Kit</a> by Creative Tim</p>
+    </footer>
+
+
+    <script>
+    </script>
+
+
+    {#        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>#}
+    {#        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+    {#        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>#}
+    {#        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>#}
+
+
+
+
+    </body>
+{%  endblock %}

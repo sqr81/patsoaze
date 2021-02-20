@@ -42,8 +42,18 @@
             <li class="nav-item">
                 <a class="nav-link {% if current_menu is defined and current_menu == 'actualites' %}active{% endif %}" href="{{ path('actualite.index') }}">Actualités <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" href="{{ path('artiste.index') }}">Artistes <span class="sr-only">(current)</span></a>
+{#            <li class="nav-item">#}
+{#                <a class="nav-link {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" href="{{ path('artiste.index') }}">Artistes <span class="sr-only">(current)</span></a>#}
+{#            </li>#}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Artistes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('artiste_peintre.index') }}">La peinture</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ path('artiste_photographe.index') }}">La photo</a>
+                </div>
             </li>
             {#            <li class="nav-item">#}
             {#                <a class="nav-link {% if current_menu is defined and current_menu == 'photos' %}active{% endif %}" href="{{ path('photo.index') }}">Photos <span class="sr-only">(current)</span></a>#}

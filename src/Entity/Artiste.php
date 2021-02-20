@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ArtisteRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -59,6 +60,11 @@ class Artiste
         return $this;
     }
 
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->nom);
+    }
+
     public function getPrenom(): ?string
     {
         return $this->prenom;
@@ -105,5 +111,11 @@ class Artiste
         $this->specialite = $specialite;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->nom;
+
     }
 }

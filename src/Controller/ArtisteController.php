@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Artiste;
 use App\Repository\ArtisteRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,7 +19,7 @@ class ArtisteController extends AbstractController
      */
     private $repository;
     /**
-     * @var EntityManagerInterface
+     * @var ObjectManager
      */
     private $em;
 
@@ -29,14 +30,31 @@ class ArtisteController extends AbstractController
     }
 
     /**
-     * @Route ("/artistes", name="artiste.index")
+     * @Route ("/artistes/indexpeintre", name="artiste_peintre.index")
      * @return Response
      */
-    public function index(): Response
+    public function indexPeintre(): Response
     {
+
         $artistes = $this->repository->findAll();
-        return $this->render('artistes/index.html.twig',[
+        return $this->render('artistes/indexpeintre.html.twig',[
             'artistes'=>$artistes,
+
+        ]);
+
+    }
+
+    /**
+     * @Route ("/artistes/indexphotographe", name="artiste_photographe.index")
+     * @return Response
+     */
+    public function indexPhotographe(): Response
+    {
+
+        $artistes = $this->repository->findAll();
+        return $this->render('artistes/indexphotographe.html.twig',[
+            'artistes'=>$artistes,
+
         ]);
 
     }

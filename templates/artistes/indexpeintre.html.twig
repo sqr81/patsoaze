@@ -1,5 +1,5 @@
 {% extends "base.html.twig" %}
-{% block title %}Artistes index{% endblock %}
+{% block title %}Artiste peintre{% endblock %}
 {% block body %}
     <link rel="stylesheet" href="{{ asset('build/artistes.css') }}">
     <div class="header">
@@ -18,7 +18,7 @@
 
         <div class="page-header header-filter" data-parallax="true">
             <div class="next_artiste" style="width: 50px; height: 50px;">
-                <a href="/artistes"><img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="artiste patrick"></a>
+                <a href="{{ path('artiste_photographe.index') }}"><img class="img-fluid rounded-circle" src="https://www.letelegramme.fr/ar/imgproxy.php/images/2017/03/10/exposition-les-instantanes-de-patrick-sanquer-a-l-epicerie-o_3326803.jpg?article=20170310-1011429109&aaaammjj=20170310" alt="artiste patrick"></a>
             </div>
         </div>
         <div class="main main-raised">
@@ -31,11 +31,15 @@
                                     <img src="https://www.letelegramme.fr/ar/imgproxy.php/images/2013/10/31/2287650_15819215-gabexpo-20131030-r112a.jpg?article=20131031-1002287650&aaaammjj=20131031"  alt="Francoise" class="img-raised rounded-circle img-fluid">
                                 </div>
                                 <div class="name">
-                                    <h3 class="title_artiste">Françoise Sanquer</h3>
-                                    <h5>Peintre</h5>
-                                    <a href="https://www.facebook.com/" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook"></i></a>
-{#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>#}
-{#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>#}
+                                    {% for artiste in artistes %}
+                                        {% if artiste.prenom == "Francoise" %}
+                                            <h3 class="title_artiste">Françoise</h3>
+                                            <h5>Peintre</h5>
+                                            <a href="https://www.facebook.com/" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook"></i></a>
+        {#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>#}
+        {#                                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>#}
+                                        {% endif %}
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

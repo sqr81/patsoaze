@@ -77,7 +77,7 @@ class PhotoController extends AbstractController
             ->suivant($id);
 
         $photos = $this->repository->findAll();
-//        $id = !empty($_POST['id']) ? $_POST['id'] : NULL;
+        $id = !empty($_POST['id']) ? $_POST['id'] : NULL;
 
         return  $this->render('photos/show.html.twig', [
             'photo' => $photo,

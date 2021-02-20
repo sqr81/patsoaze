@@ -26,14 +26,16 @@
 {#           {% endfor %}#}
         {% endif %}
 
-{#        <script>#}
-{#            alert( 'Hello, world!' );#}
-{#        </script>#}
-        <script>
-            echo( 'Hello, world!' );
-        </script>
-<h1>{{ photoSuivant['2']}}</h1>
+        {% set photoSuivants = [photo.id] %}
+        {% for i in 0..3 %}
+            <h5>{{ cycle(photoSuivants, i+1) }}</h5>
+        {% endfor %}
 
+
+
+        {% for photo in photoSuivant %}
+<h1>{{ photoSuivant['2']}}</h1>
+{% endfor %}
 {{ dump(photoSuivant) }}
 {#        die()#}
 
@@ -43,7 +45,7 @@
         <button class="btn_next" onclick="suivant(['2'])">Next</button>
 {#        <a onclick="suivant()" class="btn btn-info pull-right" style="padding : 10px 20px 10px 20px; margin-left : 2px;"><span class="glyphicon glyphicon-chevron-right"></span></a>#}
 {#            <a href="{{ photoSuivant['2']}}"><button class="btn_next" onclick="suivant()">Suivant</button>#}
-                <a href="/photos/{{ photoSuivant['2']}}-{{ photo.id }}"><button class="btn_next" onclick="suivant()">Suivant</button>
+        <a href="/photos/{{ photoSuivant['2']}}-{{ photo.id }}"><button class="btn_next" onclick="suivant()">Suivant</button></a>
     </div>
 
     {#    <script>#}
