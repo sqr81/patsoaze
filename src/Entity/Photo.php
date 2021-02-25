@@ -176,9 +176,14 @@ class Photo
         return $this;
     }
 
-    public function __toString(): string
-    {
-        return $this->nom;
+//    public function __toString(): string
+//    {
+//        return $this->nom;
+//
+//    }
 
+    public function __toString()
+    {
+        return (string)$this->nom;
     }
 }

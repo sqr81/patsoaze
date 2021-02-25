@@ -27,6 +27,7 @@
   },
   "author": "",
   "dependencies": {
+    "lightbox2": "^2.11.3",
     "peer": "^0.5.3"
   }
 }

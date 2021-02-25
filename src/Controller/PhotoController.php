@@ -53,6 +53,11 @@ class PhotoController extends AbstractController
         );
 
     }
+    function photoNext(&$vars) {
+        static $counter = 0;
+        $vars['counter'] = $counter++;
+    }
+
 
     /**
      * @Route("/photos/{slug}-{id}", name="photo.show", requirements={"slug": "[a-z0-9\-]*"})
@@ -71,20 +76,18 @@ class PhotoController extends AbstractController
         }
 
         $id = $photo->getId();
-//        $slug = $photo->getSlug();
-        $photoSuivant = $this->getDoctrine()
+        $photoSuivante = $this->getDoctrine()
             ->getRepository(Photo::class)
-            ->suivant($id);
-
+            ->photoSuivante($id);
         $photos = $this->repository->findAll();
+
         $id = !empty($_POST['id']) ? $_POST['id'] : NULL;
 
         return  $this->render('photos/show.html.twig', [
             'photo' => $photo,
             'photos' =>$photos,
-            'photoSuivant' => $photoSuivant,
+            'photoSuivante' => $photoSuivante,
             'id' => $id,
-//            'slug' => $slug,
             'current_menu' => 'photos']);
 
     }

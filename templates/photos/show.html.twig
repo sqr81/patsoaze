@@ -12,62 +12,13 @@
                 <p></p>
             </div>
         </div>
-{#        {% for photo in photos %}#}
-{#            {% set counter = ( counter | default(0) ) + 1 %}#}
-{#            <h2>{{ counter ~ ' => ' ~ photo.id }}</h2>#}
-{#        {% endfor %}#}
-{#        <h1>{{ app.request.get('id') }}</h1>#}
-        {% if photo.id  == photo.id  %}
-            <h1>hellooo</h1>
-{#          {% for photo in photos %}#}
-            <h1>{{ photo.id }}</h1>
 
-            <h1>{{ app.request.get('id') }}</h1>
-{#           {% endfor %}#}
-        {% endif %}
-
-        {% set photoSuivants = [photo.id] %}
-        {% for i in 0..3 %}
-            <h5>{{ cycle(photoSuivants, i+1) }}</h5>
-        {% endfor %}
-
-
-
-        {% for photo in photoSuivant %}
-<h1>{{ photoSuivant['2']}}</h1>
-{% endfor %}
-{{ dump(photoSuivant) }}
-{#        die()#}
-
-{#        {{ loop.index }} - {{ user.username }}#}
-{#        <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><button class="btn_next" onclick="suivant()">Prev</button>#}
         <button class="btn_prev" onclick="precedent()">Prev</button>
-        <button class="btn_next" onclick="suivant(['2'])">Next</button>
-{#        <a onclick="suivant()" class="btn btn-info pull-right" style="padding : 10px 20px 10px 20px; margin-left : 2px;"><span class="glyphicon glyphicon-chevron-right"></span></a>#}
-{#            <a href="{{ photoSuivant['2']}}"><button class="btn_next" onclick="suivant()">Suivant</button>#}
-        <a href="/photos/{{ photoSuivant['2']}}-{{ photo.id }}"><button class="btn_next" onclick="suivant()">Suivant</button></a>
+
+        {% for photo in photoSuivante %}
+        <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><button class="btn_next" onclick="photoSuivante()">Suivant</button></a>
+        {% endfor %}
     </div>
 
-    {#    <script>#}
-{#        var slider_img = document.querySelector('.slider-img');#}
-{#        var images =[{{ vich_uploader_asset(photo, 'imageFile') }}];#}
-{#        var i = 0;#}
-
-{#        function prev(){#}
-{#            if(i <= 0) i = images.length;#}
-{#            i--;#}
-{#            return setImg();#}
-{#        }#}
-
-{#        function next(){#}
-{#            if(i >= images.length-1 ) i =-1;#}
-{#            i++;#}
-{#            return setImg();#}
-{#        }#}
-
-{#        function setImg(){#}
-{#            return slider_img.setAttribute({{ vich_uploader_asset(photo, 'imageFile') }} + images[i]);#}
-{#        }#}
-{#    </script>#}
 
 {%  endblock %}
