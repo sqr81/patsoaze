@@ -61,20 +61,39 @@ class PhotoRepository extends ServiceEntityRepository
     public function photoSuivante(int $id):array
     {
         $entityManager = $this->getEntityManager();
-
+//        création de la demande
         $query = $entityManager->createQuery(
             'SELECT suivant
             FROM App\Entity\Photo suivant
             WHERE suivant.id > :id 
             ORDER BY suivant.id ASC'
-
-        )->setParameter('id', $id)
+        )
+            ->setParameter('id', $id)
             ->setMaxResults(1);
 
         return $query->getResult();
 
     }
 
+    /**
+     * @param int $id
+     * @return array
+     */
+    public function photoPrecedente(int $id):array
+    {
+        $entityManager = $this->getEntityManager();
+        //        création de la demande
+        $query = $entityManager->createQuery(
+            'SELECT precedent
+            FROM App\Entity\Photo precedent
+            WHERE precedent.id < :id
+            ORDER BY precedent.id DESC'
+
+        )
+            ->setParameter('id', $id)
+            ->setMaxResults(1);
+        return $query->getResult();
+    }
 
     // /**
     //  * @return Photo[] Returns an array of Photo objects

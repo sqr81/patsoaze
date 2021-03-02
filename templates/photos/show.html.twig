@@ -3,21 +3,23 @@
 {% block body %}
     <link rel="stylesheet" href="{{ asset('build/photos.css') }}">
     <div class="container text-center mb-3">
-        <div class="title-photoShow row-12 m-5">
-            <h1>- {{ photo.nom }} -</h1>
-        </div>
-        <div class="slider row-12">
+
+        <div class="slider row-12 d-flex mt-5">
             <div class="photo col-12">
                 <img class="slider-img img-fluid photo w-100" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt ="photo">
-                <p></p>
             </div>
         </div>
+        <div class="chevrons row-12 d-flex justify-content-center mt-3">
 
-        <button class="btn_prev" onclick="precedent()">Prev</button>
+                <h1>- {{ photo.nom }} -</h1>
 
-        {% for photo in photoSuivante %}
-        <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><button class="btn_next" onclick="photoSuivante()">Suivant</button></a>
-        {% endfor %}
+                {% for photo in photoPrecedente %}
+                    <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><h1><i class="fas fa-chevron-left ml-3 pr-3"></i></h1></a>
+                {% endfor %}
+                {% for photo in photoSuivante %}
+                    <a href="{{ path("photo.show", {id: photo.id, slug: photo.slug}) }}"><h1><i class="fas fa-chevron-right ml-2 pl-3"></i></h1></a>
+                {% endfor %}
+        </div>
     </div>
 
 

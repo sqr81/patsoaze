@@ -2,6 +2,25 @@ body{
     background-image: url("/uploads/images/divers/fondgris1.jpg");
 
 }
+
+.btn_contact{
+    background-color: darkblue;
+    border: darkblue;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    color: white;
+    padding: 5px;
+
+}
+
+.btn_contact:hover{
+    background-color: forestgreen;
+    border: forestgreen;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    color: black;
+    padding: 5px;
+}
 /*-----------animation-------*/
 .aquarelle{
 

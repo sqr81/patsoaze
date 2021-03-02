@@ -79,6 +79,9 @@ class PhotoController extends AbstractController
         $photoSuivante = $this->getDoctrine()
             ->getRepository(Photo::class)
             ->photoSuivante($id);
+        $photoPrecedente = $this->getDoctrine()
+            ->getRepository(Photo::class)
+            ->photoPrecedente($id);
         $photos = $this->repository->findAll();
 
         $id = !empty($_POST['id']) ? $_POST['id'] : NULL;
@@ -87,6 +90,7 @@ class PhotoController extends AbstractController
             'photo' => $photo,
             'photos' =>$photos,
             'photoSuivante' => $photoSuivante,
+            'photoPrecedente' =>$photoPrecedente,
             'id' => $id,
             'current_menu' => 'photos']);
 

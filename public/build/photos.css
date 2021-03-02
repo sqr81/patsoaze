@@ -4,36 +4,16 @@ body{
 
 }
 
-.btn_next {
-    border:none;
-    outline:none;
-    background:white;
-    padding:10px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    margin:10px auto;
+.fas{
+    color: black;
+    border: 2px solid grey;
     border-radius: 5px;
+    background: white;
 }
 
-.btn_prev {
-    border:none;
-    outline:none;
-    background:white;
-    padding:10px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    margin:10px auto;
-    border-radius: 5px;
-}
-
-.btn_next:hover{
-    background: #0055aa;
+.fas:hover{
     color: white;
-}
-
-.btn_prev:hover{
-    background: #0055aa;
-    color: white;
+    background: black;
 }
 
 .cardPhoto-deck{
