@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="{{ asset('build/aquarelles_show.css') }}">
     <link rel="stylesheet" href="{{ asset('build/modal.css') }}">
     <div class="container text-center ">
+
+{#        boucle pour message de mail =>'message' se trouve dans AquarelleController#}
+        {% for message in app.flashes('message') %}
+            <div class="alert alert-success" role="alert">{{ message }}</div>
+        {% endfor %}
+
         <div class="row-12 mb-5">
             <h1>- {{ aquarelle.nom }} -</h1>
         </div>
