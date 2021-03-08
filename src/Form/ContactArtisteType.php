@@ -21,6 +21,12 @@ class ContactArtisteType extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
+            ->add('nom', TextType::class, [
+                'label' => 'Votre nom',
+                'attr'=> [
+                    'class' => 'form-control'
+                ]
+            ])
             ->add('email', EmailType::class, [
                 'label' => 'Votre e-mail',
                 'attr'=> [

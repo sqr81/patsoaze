@@ -214,32 +214,6 @@
                 {% endfor %}
             </div>
         </div>
-{#        <div class="mailtest">#}
-{#            {{ form_start(form) }}#}
-{#            <div class="modal-dialog" role="document">#}
-{#                <div class="modal-content">#}
-{#                    <div class="modal-header">#}
-{#                        <h5 class="modal-title" id="exampleModalLabel">Nous contacter</h5>#}
-{#                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
-{#                            <span aria-hidden="true">&times;</span>#}
-{#                        </button>#}
-{#                    </div>#}
-{#                    <div class="modal-body">#}
-{#                        {{ form_row(form.nom) }}#}
-{#                        {{ form_row(form.email) }}#}
-{#                        {{ form_row(form.telephone) }}#}
-{#                        {{ form_row(form.message) }}#}
-{#                    </div>#}
-{#                    <div class="modal-footer">#}
-{#                        #}{#                            <button type="button" class="btn_envoi btn btn-primary">Envoyer</button>#}
-{#                        #}{#                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>#}
-{#                        #}{#                            <button type="button" class="btn btn-primary">Save changes</button>#}
-{#                        <button data-target=modale-contact" class = "btn_contact small secondary modal-trigger btn btn-primary">Envoyer</button>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#            {{ form_end(form) }}#}
-{#        </div>#}
     </div>
     </section>
 <section>
@@ -249,27 +223,15 @@
             <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
             {% for actualite in actualites %}
                 <h3><a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> {{ actualite.titre }}</h3></a>
-
-{#                <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}" class="view_link"><i class="fa fa-hand-o-right"></i></a>#}
             {% endfor %}
             {% for actualite in actualites %}
                 <div class="img_slide2">
-    {#            <p>{{ actualite.titre }}</p>#}
                     <p>
                         <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-left" aria-hidden="true"></i><img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite"/></a>
                     </p>
                 </div>
             {% endfor %}
-{#            {% for actualite in actualites %}#}
-{#        <div class="img_slide2b">#}
-{#            <p>#}
-{#                <img  src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="actualite 2"/>#}
-
-{#                                <img src="https://www.letelegramme.fr/ar/imgproxy.php/images/2019/04/10/jusqu-au-30-avril-francoise-sanquer-expose-ses-aquarelles-a_4510846.jpg?article=20190410-1012256452&aaaammjj=20190410"/>#}
-{#            </p>#}
-{#        </div>#}
         </div>
-{#        {% endfor %}#}
     </div>
 </section>
     <!-- Team Section -->
@@ -307,81 +269,131 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 col-lg-offset-2 text-center">
-                        <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                    </div>
-                </div>
+
             </div>
         </section>
-
         <section id="contact" style="height: 600px">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-12 text-center">
-
                         <h2 class="section-heading">Nous contacter</h2>
                         <h3 class="section-subheading text-muted">Un renseignement, une question ...</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <form name="sentMessage" id="contactForm" novalidate="">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Votre nom *" id="name" required="" data-validation-required-message="Please enter your name.">
-                                        <p class="help-block text-danger"></p>
+{#                    <div class="col-lg-12">#}
+                    {{ form_start(form) }}
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class=row-12">
+                                    <div class="col-md-6">
+    {#                                {{ form_widget(form.title) }}#}
+                                        <div class="form-group">
+                                        {{ form_row(form.nom) }}
+                                        </div>
+                                        <div class="form-group">
+                                        {{ form_row(form.email) }}
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Votre Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="tel" class="form-control" placeholder="Votre téléphone" id="phone" required="" data-validation-required-message="Please enter your phone number.">
-                                        <p class="help-block text-danger"></p>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        {{ form_row(form.message) }}
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Votre message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
+
+                            <div class="modal-footer">
+                                <div class=row-12">
+                                <button data-target=modale-contact" class = "btn_contact small secondary modal-trigger">Envoyer</button>
                                 </div>
-                                <div class="clearfix"></div>
                             </div>
-                        </form>
+
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+{#                        <form name="sentMessage" id="contactForm" novalidate="">#}
+{#                            {{ form_start(form) }}#}
+{#                            <div class="row">#}
+{#                                <div class="modal-dialog col-md-12" role="document">#}
+{#                                    <div class="modal-content">#}
+{#                                                <div class="modal-body">#}
+{#                                            <div class="modal-header">#}
+{#                                                <h5 class="modal-title" id="exampleModalLabel">Nous contacter</h5>#}
+{#                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                                                    <span aria-hidden="true">&times;</span>#}
+{#                                                </button>#}
+{#                                            </div>#}
+{#                                                </div>#}
+
+{#                                        <div class="modal-body">#}
+{#                                            <div class="col-md-6">#}
+{#                                        </div>#}
+{#                                                    <div class="form-group">#}
+{#                #}{#                                        <input type="text" class="form-control" placeholder="Votre nom *" id="name" required="" data-validation-required-message="Please enter your name.">#}
+{#                #}{#                                        <p class="help-block text-danger"></p>#}
+{#                                                        {{ form_row(form.nom) }}#}
+{#                                                    </div>#}
+{#                                                    <div class="form-group">#}
+{#                #}{#                                        <input type="email" class="form-control" placeholder="Votre Email *" id="email" required="" data-validation-required-message="Please enter your email address.">#}
+{#                #}{#                                        <p class="help-block text-danger"></p>#}
+{#                                                        {{ form_row(form.email) }}#}
+{#                                                    </div>#}
+{#                                                    <div class="form-group">#}
+{#                #}{#                                        <input type="tel" class="form-control" placeholder="Votre téléphone" id="phone" required="" data-validation-required-message="Please enter your phone number.">#}
+{#                #}{#                                        <p class="help-block text-danger"></p>#}
+{#                                                        {{ form_row(form.telephone) }}#}
+{#                                                    </div>#}
+{#                                            </div>#}
+{#                                            <div class="col-md-6">#}
+{#                                                <div class="form-group">#}
+{#            #}{#                                        <textarea class="form-control" placeholder="Votre message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>#}
+{#            #}{#                                        <p class="help-block text-danger"></p>#}
+{#                                                    {{ form_row(form.message) }}#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        <div class="clearfix"></div>#}
+{#                                        </div>#}
+{#                                        <div class="modal-footer">#}
+{#                                            <button data-target=modale-contact" class = "btn_contact small secondary modal-trigger btn btn-primary">Envoyer</button>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+
+{#                            {{ form_end(form) }}#}
+{#                        </form>#}
+                </div>
                         <div class="row d-flex justify-content-between">
                             <div class="col-md-4 d-flex justify-content-center align-items-center">
                                 <span class="copyright" style="color: white">Copyright © Pat & Soaze 2020</span>
 
-                                <div class="mailtest">
-                                    {{ form_start(form) }}
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Nous contacter</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                {{ form_row(form.nom) }}
-                                                {{ form_row(form.email) }}
-                                                {{ form_row(form.telephone) }}
-                                                {{ form_row(form.message) }}
-                                            </div>
-                                            <div class="modal-footer">
-                                                {#                            <button type="button" class="btn_envoi btn btn-primary">Envoyer</button>#}
-                                                {#                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>#}
-                                                {#                            <button type="button" class="btn btn-primary">Save changes</button>#}
-                                                <button data-target=modale-contact" class = "btn_contact small secondary modal-trigger btn btn-primary">Envoyer</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {{ form_end(form) }}
-                                </div>
+
+{#                                    {{ form_start(form) }}#}
+{#                                    <div class="modal-dialog" role="document">#}
+{#                                        <div class="modal-content">#}
+{#                                            <div class="modal-header">#}
+{#                                                <h5 class="modal-title" id="exampleModalLabel">Nous contacter</h5>#}
+{#                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                                                    <span aria-hidden="true">&times;</span>#}
+{#                                                </button>#}
+{#                                            </div>#}
+{#                                            <div class="modal-body">#}
+{#                                                {{ form_row(form.nom) }}#}
+{#                                                {{ form_row(form.email) }}#}
+{#                                                {{ form_row(form.telephone) }}#}
+{#                                                {{ form_row(form.message) }}#}
+{#                                            </div>#}
+{#                                            <div class="modal-footer">#}
+{#                                                #}{#                            <button type="button" class="btn_envoi btn btn-primary">Envoyer</button>#}
+{#                                                #}{#                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>#}
+{#                                                #}{#                            <button type="button" class="btn btn-primary">Save changes</button>#}
+{#                                                <button data-target=modale-contact" class = "btn_contact small secondary modal-trigger btn btn-primary">Envoyer</button>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    {{ form_end(form) }}#}
+
 
                             </div>
                             <div class="col-md-4 text-center">
@@ -405,10 +417,10 @@
                             <li><a href="#">Terms of Use</a>
                             </li>
                         </ul>
-                    </div>
+{#                    </div>#}
                 </div>
 
-            </div>
+{#            </div>#}
         </section>
     </div>
 
@@ -437,6 +449,18 @@
     </footer>
 
 <script>
+
+
+        window.onload =()=> {
+        document.querySelector("#contact_home_title").value = "Message concernant Pat&Soaze"
+    }
+
+        $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+
+
+
     $(function() {
         $('a.page-scroll').bind('click', function(event) {
             var $anchor = $(this);

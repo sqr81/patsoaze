@@ -30,9 +30,9 @@ class ContactHomeType extends AbstractType
             ->add('message', TextEditorType::class, [
                 'label' => 'Votre message'
             ])
-            ->add('telephone', TextEditorType::class, [
-                'label' => 'Votre téléphone'
-            ])
+//            ->add('telephone', TextEditorType::class, [
+//                'label' => 'Votre téléphone'
+//            ])
             ->add('envoyer', SubmitType::class,[
                 'attr'=> [
                     'class' => 'btn-primary'

@@ -72,6 +72,7 @@ class AquarelleController extends AbstractController
                 ->htmlTemplate('emails/contact_aquarelle.html.twig')
                 ->context([
                     'aquarelle'=> $aquarelle,
+                    'nom' => $contact->get('nom')->getData(),
                     'mail' => $contact->get('email')->getData(),
                     'message' => $contact->get('message')->getData()
                 ]);
