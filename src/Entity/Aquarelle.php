@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * @ORM\Entity(repositoryClass=AquarelleRepository::class)
+ * @ORM\Table(name="aquarelle", indexes={@ORM\Index(columns={"nom", "description"}, flags={"fulltext"})})
  * @Vich\Uploadable()
  */
 class Aquarelle

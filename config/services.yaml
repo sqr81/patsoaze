@@ -4,6 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    maintenanceFilePath:
+        '%kernel.project_dir%/public/.maintenance'
     images_directory:
         '%kernel.project_dir%/public/uploads'
     fichiers_directory:
@@ -15,6 +17,7 @@ parameters:
     app.path.divers_images: /uploads/images/divers
     app.path.actualite_images: /uploads/images/actualites
     app.path.actualite_fichiers: /uploads/fichiers/actualites
+
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -38,3 +41,10 @@ services:
 
     App\Twig\TwigBootstrapExtension:
         tags: ['twig.extension']
+
+    App\EventListener\MaintenanceListener:
+        arguments:
+            - '%maintenanceFilePath%'
+            - '@twig'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

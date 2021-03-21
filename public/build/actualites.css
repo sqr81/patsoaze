@@ -5,7 +5,52 @@ body{
     /*background-repeat: none;*/
 }
 
-.title-actualites{
+/*formulaire recherche*/
+
+.message_recherche_actu{
+    color:black;
+    text-align: center;
+}
+
+.recherche_actu{
+    display: flex;
+    justify-content: end;
+    position: sticky;
+    top: 20px;
+    /* right: 110px; */
+    margin-right: 0;
+    margin-left: 70%;
+    z-index: 1500;
+}
+
+#recherche_categorie{
+    border: 1px solid black;
+}
+.recherche_actu input{
+
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.recherche_actu button{
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #D5CABD;
+    margin-left: 10px;
+}
+
+.recherche_actu button:hover{
+    background-color: #368098;
+    color: white;
+}
+
+#recherche{
+    display: flex;
+    flex-direction: row;
+}
+
+/*-------------*/
+.title-actu{
     margin-top: 150px;
     text-shadow: 2px 2px 2px white;
 }
@@ -114,3 +159,8 @@ body{
     margin: 0 auto;
 }
 
+.card-deck{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}

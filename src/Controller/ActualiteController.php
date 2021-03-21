@@ -3,11 +3,13 @@ namespace App\Controller;
 
 use App\Entity\Actualite;
 //use Doctrine\Common\Persistence\ObjectManager;
+use App\Form\RechercheType;
 use App\Repository\ActualiteRepository;
 use App\Repository\CategorieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -31,12 +33,33 @@ class ActualiteController extends AbstractController
 
     /**
      * @Route("/actualites", name="actualite.index")
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index(): Response
+    public function index(Request $request): Response
     {
         $actualites = $this->repository->findAllById();
-        return $this->render('actualites/index.html.twig', compact('actualites'));
+
+        //formulaire de recherche
+        $form = $this->createForm(RechercheType::class);
+        $recherche = $form->handleRequest($request);
+        $message = 'Aucune actualité ne correspond à votre recherche';
+
+        if ($form->isSubmitted() && $form->isValid()){
+            //recherche des actus correspondantes
+            $actualites = $this->repository->search(
+                $recherche->get('mots')->getData(),
+                $recherche->get('categorie')->getData(),
+
+            );
+        }
+
+//        $actualites = $this->repository->findAllById();
+        return $this->render('actualites/index.html.twig', [
+            'actualites' => $actualites,
+            'form' => $form->createView(),
+            'message' => $message,
+        ]);
     }
 
     /**

@@ -30,7 +30,7 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {% if current_menu is defined and current_menu == 'photos' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Photos
+                    Photos<span class="caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ path('albumPhoto.index') }}">Albums photos</a>
@@ -46,7 +46,7 @@
 {#            </li>#}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {% if current_menu is defined and current_menu == 'artistes' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Artistes
+                    Artistes<span class="caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ path('artiste_peintre.index') }}">La peinture</a>
@@ -59,7 +59,7 @@
             {#            </li>#}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    L'air du temps
+                    L'air du temps<span class="caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Billet d'humeur</a>
@@ -69,10 +69,10 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cherchez</button>
-        </form>
+{#        <form class="form-inline my-2 my-lg-0">#}
+{#            <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">#}
+{#            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cherchez</button>#}
+{#        </form>#}
     </div>
 </nav>
 

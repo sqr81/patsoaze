@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\Aquarelle;
 use App\Form\ContactArtisteType;
+use App\Form\RechercheAquarelleType;
 use App\Repository\AquarelleRepository;
 //use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -33,12 +34,32 @@ class AquarelleController extends AbstractController
 
     /**
      * @Route("/aquarelles", name="aquarelle.index")
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function index(Request $request): Response
     {
         $aquarelles = $this->repository->findAll();
-        return $this->render('aquarelles/index.html.twig', compact('aquarelles'));
+
+        //formulaire de recherche
+        $form = $this->createForm(RechercheAquarelleType::class);
+        $recherche = $form->handleRequest($request);
+        $message = 'Aucune aquarelle ne correspond à votre recherche';
+
+        if ($form->isSubmitted() && $form->isValid()){
+            //recherche des aquarelle correspondantes
+            $aquarelles = $this->repository->search(
+                $recherche->get('mots')->getData(),
+            );
+        }
+
+        return $this->render('aquarelles/index.html.twig', [
+            'aquarelles' => $aquarelles,
+            'form' => $form->createView(),
+            'recherche' => $recherche,
+            'message' => $message,
+        ]);
+
     }
 
     /**

@@ -14,20 +14,27 @@
             <h1>- {{ aquarelle.nom }} -</h1>
         </div>
         <div class="row-12">
-            <div class="aquarelle col-12">
+            <div class="aquarelle col-12 mb-3">
                 <img class="img-fluid aquarelle w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}">
                 {% if aquarelle.vendue == '1' %}
                     <p><strong><u>Aquarelle vendue</u></strong></p>
-                    {% else %}
-                        <p><strong><u>Aquarelle disponible: {{ aquarelle.prix }} euros</u></strong></p>
-                {% endif %}
+
+                {% else %}
             </div>
             <!-- Button trigger modal -->
-            {% if aquarelle.vendue == '0' %}
+            <div class="bouton_info_contact d-flex justify-content-center">
+                <a href="#" data-tooltip="{{ aquarelle.prix }} €" data-placement="top">
+                    <button type="button" class="btn_info btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-euro-sign" style="color:white"></i>
+                    </button>
+                </a>
                 <button type="button" class="btn_contact btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Contacter l'artiste
+                    <i class="fas fa-envelope-open-text"></i>
+                    Contact
                 </button>
-            {% endif %}
+            </div>
+                {% endif %}
+
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 {{ form_start(form) }}
@@ -66,6 +73,10 @@
 
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
+    })
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
 {% endblock %}

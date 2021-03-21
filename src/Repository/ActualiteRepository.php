@@ -110,22 +110,29 @@ class ActualiteRepository extends ServiceEntityRepository
 
         return $queryBuilder->getQuery()->getOneOrNullResult();
     }
-    // /**
-    //  * @return Actualite[] Returns an array of Actualite objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+
+    /**
+     * recherchez les actus en fonction du formulaire
+     * @param null $mots
+     * @param null $categorie
+     * @return int|mixed|string
+     */
+    public function search($mots = null, $categorie =null){
+        $query = $this->createQueryBuilder('a');
+        if($mots != null){
+            $query->andWhere('MATCH_AGAINST(a.titre, a.description) AGAINST(:mots boolean)>0')
+                ->setParameter('mots', $mots);
+        }
+        if($categorie != null){
+            //on prend les actus qui ont la même catégorie
+            $query->leftJoin('a.categorie', 'c');
+            //on verifie que l id de la categorie est bien l id envoyé
+//            par l'intermediaire de la fonction (en paramètre)
+            $query->andWhere('c.id = :id')
+                ->setParameter('id', $categorie);
+        }
+        return $query->getQuery()->getResult();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Actualite

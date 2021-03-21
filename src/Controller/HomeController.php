@@ -64,6 +64,7 @@ class HomeController extends AbstractController
 
         }
 
+
         $aquarelles = $repository->findLatest();
         $photos = $photoRepository->findLatest();
         $actualites =$actualiteRepository->findLastTwo();
@@ -72,6 +73,7 @@ class HomeController extends AbstractController
             'photos'=>$photos,
             'actualites'=>$actualites,
             'form' => $form->createView(),
+
         ]);
     }
 

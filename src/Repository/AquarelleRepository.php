@@ -42,6 +42,22 @@ class AquarelleRepository extends ServiceEntityRepository
 
         return $queryBuilder->getQuery()->getOneOrNullResult();
     }
+
+    /**
+     * recherchez les actus en fonction du formulaire
+     * @param null $mots
+     * @return int|mixed|string
+     */
+    public function search($mots = null){
+        $query = $this->createQueryBuilder('a');
+        if($mots != null){
+            $query->andWhere('MATCH_AGAINST(a.nom, a.description) AGAINST(:mots boolean)>0')
+                ->setParameter('mots', $mots);
+        }
+
+        return $query->getQuery()->getResult();
+    }
+
     // /**
     //  * @return Aquarelle[] Returns an array of Aquarelle objects
     //  */

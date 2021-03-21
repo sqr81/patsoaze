@@ -3,24 +3,40 @@ body{
 
 }
 
+.btn_info{
+    background-color: #0069d9;
+    border: #0069d9;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    color: white;
+    padding: 10px;
+
+}
+
+.btn_info:hover{
+
+    color: black;
+}
+
 .btn_contact{
-    background-color: darkblue;
-    border: darkblue;
+    background-color: #0069d9;
+    border: #0069d9;
     border-radius: 5px;
     margin-bottom: 50px;
     color: white;
     padding: 5px;
-
 }
 
 .btn_contact:hover{
-    background-color: forestgreen;
-    border: forestgreen;
+    background-color: #00C9A7;
+    border: #00C9A7;
     border-radius: 5px;
     margin-bottom: 50px;
     color: black;
     padding: 5px;
 }
+
 /*-----------animation-------*/
 .aquarelle{
 
@@ -57,6 +73,59 @@ body{
 
 h1{
     text-shadow: 2px 2px 2px white;
-    margin-top: 150px;
+    margin-top: 50px;
 }
-/*------------*/
+/*------info bulle------*/
+
+a[data-tooltip] {
+    position: relative;
+}
+a[data-tooltip]::before,
+a[data-tooltip]::after {
+    position: absolute;
+    display: none;
+    opacity: 0.85;
+}
+a[data-tooltip]::before {
+    /*
+     * using data-tooltip instead of title so we
+     * don't have the real tooltip overlapping
+     */
+    content: attr(data-tooltip);
+    background: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    /* we don't want the text to wrap */
+    white-space: nowrap;
+    text-decoration: none;
+}
+a[data-tooltip]::after {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    content: '';
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+    display: block;
+}
+
+/** positioning **/
+
+/* top tooltip */
+a[data-tooltip][data-placement="top"]::before {
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 10px;
+}
+a[data-tooltip][data-placement="top"]::after {
+    border-top-color: #000;
+    border-bottom: none;
+    bottom: 100%;
+    left: 10px;
+    margin-bottom: 4px;
+}
+

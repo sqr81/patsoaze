@@ -3,10 +3,20 @@
 {% block body %}
     <link rel="stylesheet" href="{{ asset('build/actualites.css') }}">
     <body>
+{#    <div class="recherche">#}
+        <div class="recherche_actu">
+            {{ form(form) }}
+        </div>
+{#    </div>#}
         <div class="title-actualites container text-center">
             <h1>- Actualités -</h1>
             <p>Les différentes actualités nous concernant</p>
         </div>
+        {% if actualites == null %}
+            <div class="container message_recherche_actu">
+                <h3>{{ message }}</h3>
+            </div>
+        {% endif %}
         <div class="container">
 {#            <div class="row m-4">#}
 {#                {% for actualite in actualites %}#}

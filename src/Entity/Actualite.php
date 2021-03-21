@@ -12,6 +12,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ActualiteRepository::class)
+ * @ORM\Table(name="actualite", indexes={@ORM\Index(columns={"titre", "description"}, flags={"fulltext"})})
  * @Vich\Uploadable()
  */
 class Actualite

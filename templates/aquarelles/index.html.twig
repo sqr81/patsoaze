@@ -4,63 +4,58 @@
 {% block body %}
     <link rel="stylesheet" href="{{ asset('build/aquarelles.css') }}">
     <body>
-    <div class="title-aquarelles container text-center">
-        <h1>- Aquarelles -</h1>
-        <p>Quelques aquarelles...</p>
-    </div>
-    <div class="card-deck m-5">
-        {% for aquarelle in aquarelles %}
-            <div class="card">
-                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
-                <div class="card-body">
-                    <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</h5>
-                    <p>{{ aquarelle.vendue }}</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-    <div class="card-deck m-5">
-        {% for aquarelle in aquarelles %}
-        <div class="card">
-                <ul class="grid cs-style-3">
-                    <li class="mix color-1 check1 radio2 option3">
-                        <figure>
-                            <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
-                            <figcaption>
-    {#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
-                                {% if aquarelle.vendue == '1' %}
-                                    <div class="couleur text-danger fa fa-hand-o-right">
-                                        <p>Aquarelle vendue</p>
-                                    </div>
-                                    {% else %}
-                                    <div class="couleur text-success fa fa-eur">
-                                        <p>Aquarelle disponible: {{ aquarelle.prix }} euros</p>
-                                        <p>{{ aquarelle.prix }}</p>
-                                    </div>
-                                {% endif %}
-{#                                <span>{{ aquarelle.vendue }}</span>#}
-                            </figcaption>
-                            <div class="blur_bg">
-                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}" class="view_link"><i class="fa fa-eye"></i></a>
-    {#                            <a href="#" class="goto_link"><i class="fa fa-link"></i></a>#}
-                            </div>
-                        </figure>
-                    </li>
-                </ul>
-                <div class="card-body">
-                    <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
-                    <div class="description text-center">
-                        <p>{{ aquarelle.description | safe }}</p>
-                    </div>
-                </div>
-                <div class="card-footer text-center w-100">
-                    <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
-                </div>
+        {#    formulaire de recherche#}
+        <div class="recherche_aquarelle">
+            {{ form(form) }}
         </div>
-        {% endfor %}
-    </div>
+        <div class="title-aquarelles container text-center">
+            <h1>- Aquarelles -</h1>
+            <p>Quelques aquarelles...</p>
+        </div>
+        {% if aquarelles == null %}
+            <div class="container message_recherche">
+                <h3>{{ message }}</h3>
+            </div>
+        {% endif %}
+        <div class="card-deck m-5">
+            {% for aquarelle in aquarelles %}
+            <div class="card">
+                    <ul class="grid cs-style-3">
+                        <li class="mix color-1 check1 radio2 option3">
+                            <figure>
+                                <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
+                                <figcaption>
+        {#                            <p class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></p>#}
+                                    {% if aquarelle.vendue == '1' %}
+                                        <div class="couleur text-danger fa fa-hand-o-right">
+                                            <p>Aquarelle vendue</p>
+                                        </div>
+                                        {% else %}
+                                        <div class="couleur text-success fa fa-eur">
+                                            <p>Aquarelle disponible: {{ aquarelle.prix }} euros</p>
+                                            <p>{{ aquarelle.prix }}</p>
+                                        </div>
+                                    {% endif %}
+    {#                                <span>{{ aquarelle.vendue }}</span>#}
+                                </figcaption>
+                                <div class="blur_bg">
+                                    <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}" class="view_link"><i class="fa fa-eye"></i></a>
+        {#                            <a href="#" class="goto_link"><i class="fa fa-link"></i></a>#}
+                                </div>
+                            </figure>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
+                        <div class="description text-center">
+                            <p>{{ aquarelle.description | safe }}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center w-100">
+                        <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
     </body>
 {%  endblock %}

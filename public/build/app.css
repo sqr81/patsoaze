@@ -96,13 +96,13 @@ h3 span {
 }
 
 .btn-primary {
-    border-color: #1ee2e7;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
     color: #fff;
-    background-color: #1ee2e7;
+    background-color: #2C73D2;
 }
+
 .btn_valider {
     position: absolute;
     bottom: 10px;
@@ -113,9 +113,9 @@ h3 span {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #17d0d5;
+    border-color: #00C9A7;
     color: #fff;
-    background-color: yellowgreen;
+    background-color: #00C9A7;
 }
 
 .btn-primary:active,
@@ -139,8 +139,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #1ee2e7;
-    background-color: #1ee2e7;
+    border-color: #2C73D2;
+    background-color: #2C73D2;
 }
 
 .btn-primary .badge {
@@ -199,7 +199,130 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
     background-color: #fff;
 }
+
+.contact_footer{
+    margin-bottom: 200px;
+}
+/*message contact*/
+#contact_home_message{
+    width: 100%;
+    height: 195px;
+}
+
+
 /*--------------------------------navbar-----------------------------------*/
+
+.dropdown-toggle::after{
+    /*border-top: 5px;*//*effet laser*/
+    /*border-radius: 50%;*//*effet laser*/
+    color: white;
+    margin-left: .255em;
+    vertical-align: .255em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+
+}
+/* dropdown */
+
+
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 11rem !important;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
+}
+
+.dropdown-menu.show{
+    transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
+}
+
+
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu a:active, .dropdown-menu a:focus, .dropdown-menu a:hover {
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
+    background-color:  #00C9A7;
+    color: #FFF;
+}
+.show .dropdown-toggle:after {
+    transform: rotate(180deg);
+}
+
+.dropdown-toggle:after {
+    will-change: transform;
+    transition: transform .15s linear;
+}
+
+
+.dropdown-menu .dropdown-item, .dropdown-menu li>a {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: .8125rem;
+    border-radius: .125rem;
+    margin: 0 .3125rem;
+    transition: all .15s linear;
+    min-width: 7rem;
+    padding: 0.625rem 1.25rem;
+    min-height: 1rem !important;
+    overflow: hidden;
+    line-height: 1.428571;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.dropdown-menu.dropdown-with-icons .dropdown-item {
+    padding: .75rem 1.25rem .75rem .75rem;
+}
+
+.dropdown-menu.dropdown-with-icons .dropdown-item .material-icons {
+    vertical-align: middle;
+    font-size: 24px;
+    position: relative;
+    margin-top: -4px;
+    top: 1px;
+    margin-right: 12px;
+    opacity: .5;
+}
+/*a.dropdown-item:hover{*/
+/*    !*box-sizing: border-box;*!*/
+/*    background-color:#9c27b0;*/
+/*    !*padding:5px;*!*/
+/*    !*text-align: center;*!*/
+/*}*/
+/*a.dropdown-item{*/
+
+/*    text-align: center;*/
+/*}*/
+
+/*triangle dans dropdown*/
+.caret{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
 
 .navbar-default {
     border-color: transparent;
@@ -377,6 +500,7 @@ fieldset[disabled] .btn-xl.active {
         font-size: 1.5em;
     }
 }
+
 /*----------------image de fond floutage------------*/
 .image_de_fond{
     position: fixed;
@@ -519,6 +643,7 @@ section h3.section-subheading {
     border: 0px solid #fff;
     position: relative;
     top: -30px;
+    left: -50%;
 }
 
 .fb img:hover {
@@ -766,7 +891,7 @@ ul.social-buttons li a:active {
     height:380px;
     width:288px;
     min-height: 200px;
-
+    max-width: 380px;
 }
 
 
