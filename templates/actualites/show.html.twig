@@ -63,18 +63,19 @@
                                             <!-- NEWS ARTICLE STARTING // With picture -->
                                             <article>
                                                 <div class ="imageActu">
-                                                <center>
-                                                    {% if actualite.categorie == 'exposition' %}
-                                                        <img src="/uploads/images/categories/expo.jpeg" alt="expo">
-                                                    {% elseif actualite.categorie == 'divers' %}
-                                                        <img src="/uploads/images/categories/divers.jpeg" alt="divers">
-                                                    {% elseif actualite.categorie == 'aquarelle' %}
-                                                        <p>hello world aquarelle</p>
-                                                    {% else %}
-                                                        <img src="/uploads/images/categories/pellicule.jpg" alt="pellicule">
-                                                    {% endif %}
-                                                </center>
+                                                    <center>
+                                                        {% if actualite.categorie == 'exposition' %}
+                                                            <img src="/uploads/images/categories/expo.jpeg" alt="expo">
+                                                        {% elseif actualite.categorie == 'divers' %}
+                                                            <img src="/uploads/images/categories/divers.jpeg" alt="divers">
+                                                        {% elseif actualite.categorie == 'aquarelle' %}
+                                                            <p>hello world aquarelle</p>
+                                                        {% else %}
+                                                            <img src="/uploads/images/categories/pellicule.jpg" alt="pellicule">
+                                                        {% endif %}
+                                                    </center>
                                                 </div>
+                                                <hr>
                                                 <br>
                                                 <!-- NEWS TITLE -->
 
@@ -93,6 +94,7 @@
 {#                                                        <a href="{{ path("categorie.show", {id: categorie.id, slug: categorie.slug}) }}"><span class="badge badge-pill badge-primary">{{ actualite.categorie }}</span></a>#}
                                                     </div>
                                                 </div>
+                                                <hr>
                                                 <!-- BUTTON STARTING -->
                                                 <table class="row collapse">
                                                     <tbody>
@@ -108,7 +110,7 @@
                                                                                     <tr>
                                                                                         <td>
                                                                                             <!-- NEWS BUTTON TEXT -->
-                                                                                            <p class="text-center">Read more</p>
+                                                                                            <p class="text-center">Lire plus</p>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
@@ -131,45 +133,17 @@
                                             <article>
                                                 <br>
                                                 <!-- NEWS TITLE -->
-                                                <h1 class="text-center">News title</h1>
+                                                <h1 class="text-center">Plus d'actualités dans la catégorie</h1>
                                                 <br>
                                                 <!-- NEWS CONTENT -->
                                                 <p class="text-center text-news">
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                                                    ea commodo consequat.
+                                                    {% for actualite in categorie.actualites %}
+                                                        <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}">{{ actualite.titre }}</a><br>
+                                                    {% endfor %}
                                                 </p>
-                                                <br>
                                                 <!-- NEWS BUTTON -->
 
-                                                <!-- BUTTON STARTING -->
-                                                <table class="row collapse">
-                                                    <tbody>
-                                                    <tr>
-                                                        <th class="small-12 large-12 columns first">
-                                                            <center>
-                                                                <!-- NEWS BUTTON LINK -->
-                                                                <a href="#">
-                                                                    <table class="button-filled float-center">
-                                                                        <tr>
-                                                                            <td>
-                                                                                <table>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <!-- NEWS BUTTON TEXT -->
-                                                                                            <p class="text-center">Read more</p>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </a>
-                                                            </center>
-                                                        </th>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <!-- BUTTON ENDING -->
+                                                <hr>
 
                                                 <br><br>
                                             </article>
@@ -214,7 +188,7 @@
                                                                     </a>
                                                                 </th>
                                                                 {% endfor %}
-                                                            </tr>>
+                                                            </tr>
                                                         </table>
                                                     </th>
                                                 </tr>
@@ -248,89 +222,4 @@
         </tr>
     </table>
     </div>
-{#    //test caroussel card#}
-
-{#        <div class="row mx-auto my-auto">#}
-{#            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">#}
-
-{#                <div class="carousel-inner w-100" role="listbox">#}
-
-{#                    <div class="carousel-item active">#}
-{#                        {% for actualite in actu %}#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="card card-body">#}
-
-{#                                    <img class="img-fluid" src="{{ vich_uploader_asset(actualite, 'imageFile') }}">#}
-{#                                <img class="img-fluid" src="{{ vich_uploader_asset(actualite, 'imageFile') }}" alt="News image" style="background: url('https://images.unsplash.com/photo-1553787762-b5f5721f3270?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center center no-repeat;">#}
-
-{#                            </div>#}
-{#                        </div>#}
-{#                        {% endfor %}#}
-{#                    </div>#}
-
-{#                    <div class="carousel-item">#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="card card-body">#}
-{#                                <img class="img-fluid" src="http://placehold.it/380?text=3">#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="carousel-item">#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="card card-body">#}
-{#                                <img class="img-fluid" src="http://placehold.it/380?text=4">#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="carousel-item">#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="card card-body">#}
-{#                                <img class="img-fluid" src="http://placehold.it/380?text=5">#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="carousel-item">#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="card card-body">#}
-{#                                <img class="img-fluid" src="http://placehold.it/380?text=6">#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-
-{#                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">#}
-{#                    <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>#}
-{#                    <span class="sr-only">Previous</span>#}
-{#                </a>#}
-{#                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">#}
-{#                    <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>#}
-{#                    <span class="sr-only">Next</span>#}
-{#                </a>#}
-{#            </div>#}
-{#        </div>#}
-
-
-
-{#    <script>$('#recipeCarousel').carousel({#}
-{#            interval: 10000#}
-{#        })#}
-
-{#        $('.carousel .carousel-item').each(function(){#}
-{#            var minPerSlide = 1;#}
-{#            var next = $(this).next();#}
-{#            if (!next.length) {#}
-{#                next = $(this).siblings(':first');#}
-{#            }#}
-{#            next.children(':first-child').clone().appendTo($(this));#}
-
-{#            for (var i=0;i<minPerSlide;i++) {#}
-{#                next=next.next();#}
-{#                if (!next.length) {#}
-{#                    next = $(this).siblings(':first');#}
-{#                }#}
-
-{#                next.children(':first-child').clone().appendTo($(this));#}
-{#            }#}
-{#        });#}
-{#    </script>#}
 {% endblock %}

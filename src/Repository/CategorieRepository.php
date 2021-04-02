@@ -40,6 +40,19 @@ class CategorieRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * @return Categorie[]
+     */
+    public function findLastThreeCategorie(): array
+    {
+        return $this->createQueryBuilder('c')
+
+            ->orderBy('c.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
+    }
+
     public function findActuByCategorie(Categorie $categorie)
     {
         $qb = $this->createQueryBuilder('a')

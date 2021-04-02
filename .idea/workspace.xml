@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb59d659-e62c-4f95-b869-041ecb392f6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/artistes/photographe1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/artistes/photographe2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/artistes/photographe3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/artistes/photographe4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/artistes/photographe5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/actualites_show.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/actualites_show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/albumphotos_show.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/albumphotos_show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/photos.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/photos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ActualiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ActualiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/actualites/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actualites/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albumPhoto/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aquarelles/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artistes/indexpeintre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artistes/indexpeintre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artistes/indexphotographe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artistes/indexphotographe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,11 +206,11 @@
       <recent name="D:\wamp64\www\patsoaze\templates\bundles\EasyAdminBundle" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\patsoaze\public\uploads\images\artistes" />
       <recent name="D:\wamp64\www\patsoaze\public\uploads\images\divers" />
       <recent name="D:\wamp64\www\patsoaze\public\bundles\lightbox" />
       <recent name="D:\wamp64\www\patsoaze\public\build" />
       <recent name="D:\wamp64\www\patsoaze" />
-      <recent name="D:\wamp64\www\patsoaze\src\Controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -268,7 +288,12 @@
       <workItem from="1615301262081" duration="37715000" />
       <workItem from="1615718068165" duration="53779000" />
       <workItem from="1616003777114" duration="27497000" />
-      <workItem from="1616324730521" duration="3883000" />
+      <workItem from="1616324730521" duration="21967000" />
+      <workItem from="1616669658073" duration="7144000" />
+      <workItem from="1616760252570" duration="2974000" />
+      <workItem from="1616939167954" duration="877000" />
+      <workItem from="1616940269951" duration="39385000" />
+      <workItem from="1617114056578" duration="4346000" />
     </task>
     <servers />
   </component>

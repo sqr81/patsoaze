@@ -26,6 +26,11 @@ body{
     justify-content: center;
 }
 
+.description p{
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
 h1,h3 {
     text-shadow: 2px 2px 2px white;
 }

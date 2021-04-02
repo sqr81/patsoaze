@@ -81,14 +81,14 @@ class ActualiteController extends AbstractController
         $actu = $this->repository->findLastSix();
         $banniere = $actualite->getCategorie();
         $categorie = $actualite->getCategorie();
-
-
+        $actuByCategorie = $this->repository->findLastThreeByCategorie();
         return  $this->render('actualites/show.html.twig', [
             'actualites' => $actualites,
             'actualite' => $actualite,
             'actu' => $actu,
             'banniere' => $banniere,
             'categorie' => $categorie,
+            'actuByCategorie' => $actuByCategorie,
             'current_menu' => 'actualites']);
     }
 }

@@ -32,7 +32,7 @@
                                         </div>
                                         {% else %}
                                         <div class="couleur text-success fa fa-eur">
-                                            <p>Aquarelle disponible: {{ aquarelle.prix }} euros</p>
+                                            <p>Aquarelle disponible: {{ aquarelle.prix|number_format(0, '.', '.') }} euros</p>
                                             <p>{{ aquarelle.prix }}</p>
                                         </div>
                                     {% endif %}
@@ -48,7 +48,12 @@
                     <div class="card-body">
                         <h5 class="card-title text-center"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
                         <div class="description text-center">
-                            <p>{{ aquarelle.description | safe }}</p>
+                            {% if aquarelle.description == null %}
+                                <p>Pas encore de description pour cette aquarelle.</p>
+                            {% else %}
+                                <p class="card-text">{{ aquarelle.description | safe }}</p>
+                            {% endif %}
+{#                            <p>{{ aquarelle.description | safe }}</p>#}
                         </div>
                     </div>
                     <div class="card-footer text-center w-100">

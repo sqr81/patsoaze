@@ -19,20 +19,20 @@
                 {% if aquarelle.vendue == '1' %}
                     <p><strong><u>Aquarelle vendue</u></strong></p>
 
-                {% else %}
-            </div>
-            <!-- Button trigger modal -->
-            <div class="bouton_info_contact d-flex justify-content-center">
-                <a href="#" data-tooltip="{{ aquarelle.prix }} €" data-placement="top">
-                    <button type="button" class="btn_info btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-euro-sign" style="color:white"></i>
-                    </button>
-                </a>
-                <button type="button" class="btn_contact btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-envelope-open-text"></i>
-                    Contact
-                </button>
-            </div>
+                    {% else %}
+                    </div>
+                    <!-- Button trigger modal -->
+                    <div class="bouton_info_contact d-flex justify-content-center">
+                        <a href="#" data-tooltip="{{ aquarelle.prix }} €" data-placement="top">
+                            <button type="button" class="btn_info btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-euro-sign" style="color:white"></i>
+                            </button>
+                        </a>
+                        <button type="button" class="btn_contact btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-envelope-open-text"></i>
+                            Contact
+                        </button>
+                    </div>
                 {% endif %}
 
             <!-- Modal -->

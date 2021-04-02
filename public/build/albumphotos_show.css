@@ -81,6 +81,10 @@ body {
     transform: scale(1.15);
 }
 
+.photo p{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 /*
 
 The following rule will only run if your browser supports CSS grid.

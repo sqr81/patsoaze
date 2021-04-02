@@ -87,7 +87,6 @@ class ActualiteRepository extends ServiceEntityRepository
      */
     public function findCategoryByActualite(Actualite $actualite)
     {
-
         $qb = $this->createQueryBuilder('a')
             ->innerJoin('c.actualite', 'c' )
             ->andWhere('c.actualite = :name')
@@ -133,6 +132,21 @@ class ActualiteRepository extends ServiceEntityRepository
         }
         return $query->getQuery()->getResult();
     }
+
+    /**
+     * @return Actualite[]
+     */
+    public function findLastThreeByCategorie(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->innerJoin('a.categorie', 'c')
+//            ->orderBy('a.categorie', 'ASC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
+
+    }
+
 
     /*
     public function findOneBySomeField($value): ?Actualite

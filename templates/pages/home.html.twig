@@ -9,6 +9,7 @@
     <header>
         <div id="title" class="slide header">
             <div class="image_de_fond"></div>
+
 {#        <div id="title" class="slide header">#}
 {#            <div class="container">#}
 {#                <div class="intro-text">#}
@@ -179,7 +180,12 @@
                             <a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}"><img class="card-img-top " src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{{ path("aquarelle.show", {id: aquarelle.id, slug: aquarelle.slug}) }}">{{ aquarelle.nom}}</a></h5>
-                                <p class="card-text">{{ aquarelle.description | safe}}</p>
+                                {% if aquarelle.description == null %}
+                                    <p>Pas encore de description pour cette aquarelle.</p>
+                                {% else %}
+                                    <p class="card-text">{{ aquarelle.description | safe }}</p>
+                                {% endif %}
+{#                                <p class="card-text">{{ aquarelle.description | safe}}</p>#}
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Posté le {{ aquarelle.createdAt|date('d-m-Y') }}</small>
@@ -209,6 +215,7 @@
                             <div class="card-footer">
                                 <small class="text-muted">Posté le {{ photo.createdAt|date('d-m-Y') }}</small>
                             </div>
+
                         </div>
                     </div>
                 {% endfor %}
@@ -220,9 +227,16 @@
     <div id="slide2" class="slide">
         <div class="title">
             <h1>- L'actualité du moment -</h1>
-            <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+
+{#            citation du jour api Ouest France https://citations.ouest-france.fr/services/#}
+            <div id="QuoteOFDay"></div>
+
             {% for actualite in actualites %}
-                <h3><a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> {{ actualite.titre }}</a></h3>
+                <div class="actu_titre">
+                    <h3>
+                        <a href="{{ path("actualite.show", {id: actualite.id, slug: actualite.slug}) }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> {{ actualite.titre }}</a>
+                    </h3>
+                </div>
             {% endfor %}
             {% for actualite in actualites %}
                 <div class="img_slide2">
@@ -361,9 +375,14 @@
 {#        </div>#}
     </footer>
 
+
+
 <script>
-
-
+    /*citation du jour*/
+    var type="author";
+    var author="Michel Audiard";
+    /*----------------*/
+    /*mail*/
         window.onload =()=> {
         document.querySelector("#contact_home_title").value = "Message concernant Pat&Soaze"
     }
@@ -371,8 +390,6 @@
         $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
     })
-
-
 
     $(function() {
         $('a.page-scroll').bind('click', function(event) {

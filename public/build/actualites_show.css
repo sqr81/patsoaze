@@ -131,6 +131,7 @@ table.spacer td {
 
 table.container table.row {
     display: table;
+    margin: 0 auto;
 }
 
 td.columns,
@@ -1659,7 +1660,7 @@ body.outlook p {
     background: #2177d0;
 }
 
-#templates img {border:1px solid #2177d0;}
+/*#templates img {border:1px solid #2177d0;}*/
 
 #stories .text-news {
     color: #797879;
@@ -1721,12 +1722,18 @@ body.outlook p {
 overflow: hidden;
     width: 190px;
     height: 150px;
+    border: 0;
+    border-radius: 15px;
 }
 
 .actufooter img {
     background-size: cover;
     width: 100%;
     height: auto;
+}
+
+.actufooter img:hover {
+    filter: grayscale(100%);
 }
 
 .actualites{
@@ -1736,9 +1743,11 @@ overflow: hidden;
 
 .actualites img{
     float: left;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: 10px;
-    width: 40%;
+    max-width: 40%;
+    max-height: 250px;
 }
 
 .badgeActu{
