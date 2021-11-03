@@ -39,6 +39,7 @@ class AdminCrudController extends AbstractCrudController
         $imageField = ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
             ->setLabel('image');
+          //->setUploadDir('/public/uploads/images/admins');
         //pour pouvoir afficher les photos
         $image = ImageField::new('image')
             ->setBasePath("/uploads/images/admins")

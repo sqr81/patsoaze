@@ -1,14 +1,58 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
-{% macro render_menu_item(item) %}
+{% macro render_menu_item(item) %}  
+    {% set idsCrud = { 'Dashboard' : '','Administateurs' : '46adcdd','Aquarelles' : 'eca5f89', 'Actualités' : '4d1eb24',   'Albums photos': '008c060', 'photos': 'deb930e'} %}
+{#{% for Administateurs in idsCrud  %}#}
+
+{#        {% if item.index == 0 %}<h1>helloo</h1>#}
+
+{#        {% endif %}#}
+
     {% if item.isMenuSection %}
         {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
         <span class="{{ item.cssClass }}">{{ item.label }}</span>
     {% else %}
-        <a href="{{ item.linkUrl }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+    {% if item.index == 2 %}
+        <a href="{{ item.linkUrl ~ '&crudId=46adcdd' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
             {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
             <span>{{ item.label }}</span>
             {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
         </a>
+
+    {% elseif item.index == 1 %}
+        <a href="{{ item.linkUrl ~ '&crudId=eca5f89' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+            {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+            <span>{{ item.label }}</span>
+            {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
+        </a>
+
+        {% elseif item.index == 3 %}
+        <a href="{{ item.linkUrl ~ '&crudId=eca5f89' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+            {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+            <span>{{ item.label }}</span>
+            {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
+            </a>
+
+        {% elseif item.index == 4 %}
+            <a href="{{ item.linkUrl ~ '&crudId=4d1eb24' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+                {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+                <span>{{ item.label }}</span>
+                {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
+            </a>
+
+        {% elseif item.index == 5 %}
+            <a href="{{ item.linkUrl ~ '&crudId=008c060' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+                {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+                <span>{{ item.label }}</span>
+                {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
+            </a>
+
+        {% elseif item.index == 6 %}
+            <a href="{{ item.linkUrl ~ '&crudId=deb930e' }}" class="{{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
+                {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+                <span>{{ item.label }}</span>
+                {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right treeview-icon"></i>{% endif %}
+            </a>
+    {% endif %}
     {% endif %}
 {% endmacro %}
 

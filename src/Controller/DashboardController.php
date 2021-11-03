@@ -66,6 +66,7 @@ class DashboardController extends AbstractDashboardController
 
         // you can also render some template to display a proper Dashboard
         $routeBuilder = $this->get(CrudUrlGenerator::class)->build();
+//        dd($routeBuilder);
         return $this->render('bundles/EasyAdminBundle/welcome.html.twig',[
 
                 'countAllAdmins'=> $this->adminRepository->countAllAdmins(),
@@ -124,27 +125,27 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToUrl('Visiter le site', 'fa fa-fighter-jet', '/'),
             MenuItem::linkToDashboard('Tableau de bord', 'fa fa-home'),
 
-            MenuItem::section('Utilisateurs'),
+//            MenuItem::section('Utilisateurs'),
             MenuItem::linkToCrud('Administrateurs', 'fa fa-user-secret', Admin::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Aquarelles'),
+//            MenuItem::section('Aquarelles'),
             MenuItem::linkToCrud('Aquarelles', 'fa fa-paint-brush', Aquarelle::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Actualités'),
+//            MenuItem::section('Actualités'),
             MenuItem::linkToCrud('Actualites', 'fa fa-newspaper-o', Actualite::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Albums photos'),
+//            MenuItem::section('Albums photos'),
             MenuItem::linkToCrud('Albums photos', 'fas fa-image', AlbumPhoto::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),
 
-            MenuItem::section('Photos'),
+//            MenuItem::section('Photos'),
             MenuItem::linkToCrud('Photos', 'fa fa-camera', Photo::class)
                 ->setQueryParameter('sortField', 'createdAt')
                 ->setQueryParameter('sortDirection', 'DESC'),

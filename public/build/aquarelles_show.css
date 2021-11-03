@@ -129,3 +129,49 @@ a[data-tooltip][data-placement="top"]::after {
     margin-bottom: 4px;
 }
 
+/*---modale lightbox----*/
+
+.modallb{
+    display: none;
+    position:fixed;
+    left: 0 ;
+    top:75px;
+    bottom:0;
+    right:0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modallb.show{
+    display: initial;
+}
+
+ .modallb-content{
+     width:90%;
+     margin:auto;
+     max-width: 1200px;
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%, -50%);
+
+ }
+
+ .modallb-content img{
+     width: 100%;
+     border: 5px solid white;
+     box-shadow: 5px 5px 5px black;
+ }
+
+ .closelb{
+     color: white;
+     font-size: 3em;
+     position: fixed;
+     top: 150px;
+     right: 100px;
+     cursor: pointer;
+ }
+
+ #modale{
+     height: 100%;
+
+ }

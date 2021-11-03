@@ -37,7 +37,9 @@ class AquarelleCrudController extends AbstractCrudController
         //pour pouvoir afficher les photos
         $imageField = ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
-            ->setLabel('image');
+            ->setLabel('image')
+            ->hideOnForm()
+            ;
         //pour pouvoir afficher les photos
         $image = ImageField::new('image')
             ->setBasePath("/uploads/images/aquarelles")

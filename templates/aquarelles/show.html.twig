@@ -15,14 +15,15 @@
         </div>
         <div class="row-12">
             <div class="aquarelle col-12 mb-3">
-                <img class="img-fluid aquarelle w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}">
+                <a href="{{ vich_uploader_asset(aquarelle, 'imageFile') }}">
+                <img class="img-fluid aquarelle w-100" src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt=""></a>
                 {% if aquarelle.vendue == '1' %}
                     <p><strong><u>Aquarelle vendue</u></strong></p>
 
                     {% else %}
-                    </div>
+{#                    </div>#}
                     <!-- Button trigger modal -->
-                    <div class="bouton_info_contact d-flex justify-content-center">
+                    <div class="bouton_info_contact d-flex justify-content-center mt-4">
                         <a href="#" data-tooltip="{{ aquarelle.prix }} €" data-placement="top">
                             <button type="button" class="btn_info btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             <i class="fas fa-euro-sign" style="color:white"></i>
@@ -35,6 +36,9 @@
                     </div>
                 {% endif %}
 
+            </div>
+{#            <a href="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" ><h1>test</h1></a>#}
+        </div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 {{ form_start(form) }}
@@ -59,7 +63,16 @@
                 </div>
                 {{ form_end(form) }}
             </div>
-        </div>
+            <!--modale lightbox-->
+            <div id="modale" class="modallb">
+                <span class="closelb">&times;</span>
+                <div class="modallb-content">
+{#                <img src="public/uploads/images/aquarelles/f104-lucio-5fe6303a179e3671581936.jpg" alt="">#}
+                    <div class="test">
+                    <img src="{{ vich_uploader_asset(aquarelle, 'imageFile') }}" alt=""></div>
+                </div>
+            </div>
+
 
     </div>
 
@@ -79,4 +92,33 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+    <script>// modale de lightbox
+        window.onload = () => {
+            const modale = document.querySelector("#modale");
+            const close = document.querySelector(".closelb");
+            const links = document.querySelectorAll(".container .aquarelle img");
+            console.log(links);
+
+            //on ajoute l'écouteur click sur les liens e=evenement
+            for(let link of links){
+                link.addEventListener("click", function(e){
+                    //on desactive le comportement des liens
+                    e.preventDefault();
+                    // on ajoute l image du lien cliqué dans la modale
+                    const image = modale.querySelector(".modallb-content .test");
+                    image.src = this.href;
+                    //on affiche la modale
+                    modale.classList.add("show");
+                });
+            }
+            //on active le bouton close
+            close.addEventListener("click", function(){
+                modale.classList.remove("show");
+            });
+            //on ferme au clic sur la modale
+            modale.addEventListener("click", function(){
+                modale.classList.remove("show");
+            });
+        }
+    </script>
 {% endblock %}
